@@ -13,3 +13,4 @@
 #import "macOSfoundation.h"
 
 #endif /* TFYMacOSAppKit_h */
+/Users/tianfengyou/Documents/GitHub/TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit.podspec

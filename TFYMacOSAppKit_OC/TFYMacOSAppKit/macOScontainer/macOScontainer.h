@@ -46,5 +46,6 @@
 #import "TFYAttributedLabel.h"
 #import "TFYButton.h"
 #import "TFYLabel.h"
+#import "TFYTextField.h"
 
 #endif /* macOScontainer_h */
