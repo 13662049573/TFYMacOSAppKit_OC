@@ -15,6 +15,46 @@
 		36AE675D29961FB00013EF3B /* TFYMacOSAppKit_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE675C29961FB00013EF3B /* TFYMacOSAppKit_OCTests.m */; };
 		36AE676729961FB00013EF3B /* TFYMacOSAppKit_OCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE676629961FB00013EF3B /* TFYMacOSAppKit_OCUITests.m */; };
 		36AE676929961FB00013EF3B /* TFYMacOSAppKit_OCUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE676829961FB00013EF3B /* TFYMacOSAppKit_OCUITestsLaunchTests.m */; };
+		36AE67CC29961FFF0013EF3B /* NSDictionary+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE677829961FFE0013EF3B /* NSDictionary+Dejal.m */; };
+		36AE67CD29961FFF0013EF3B /* NSObject+AppKit+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE677A29961FFE0013EF3B /* NSObject+AppKit+Dejal.m */; };
+		36AE67CE29961FFF0013EF3B /* NSMutableAttributedString+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE677B29961FFE0013EF3B /* NSMutableAttributedString+Parse.m */; };
+		36AE67CF29961FFF0013EF3B /* NSString+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE677D29961FFE0013EF3B /* NSString+Dejal.m */; };
+		36AE67D029961FFF0013EF3B /* NSMutableAttributedString+CTFrameRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE677F29961FFE0013EF3B /* NSMutableAttributedString+CTFrameRef.m */; };
+		36AE67D129961FFF0013EF3B /* NSString+AppKit+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678029961FFE0013EF3B /* NSString+AppKit+Dejal.m */; };
+		36AE67D229961FFF0013EF3B /* NSDate+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678129961FFE0013EF3B /* NSDate+Dejal.m */; };
+		36AE67D329961FFF0013EF3B /* NSAttributedString+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678229961FFE0013EF3B /* NSAttributedString+Dejal.m */; };
+		36AE67D429961FFF0013EF3B /* NSFileManager+AppKit+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678429961FFE0013EF3B /* NSFileManager+AppKit+Dejal.m */; };
+		36AE67D529961FFF0013EF3B /* NSUserDefaults+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678629961FFE0013EF3B /* NSUserDefaults+Dejal.m */; };
+		36AE67D629961FFF0013EF3B /* TFYAttributedImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678729961FFE0013EF3B /* TFYAttributedImageInfo.m */; };
+		36AE67D729961FFF0013EF3B /* NSUserDefaults+AppKit+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678929961FFE0013EF3B /* NSUserDefaults+AppKit+Dejal.m */; };
+		36AE67D829961FFF0013EF3B /* NSData+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678B29961FFE0013EF3B /* NSData+Dejal.m */; };
+		36AE67D929961FFF0013EF3B /* NSDictionary+AppKit+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE678D29961FFE0013EF3B /* NSDictionary+AppKit+Dejal.m */; };
+		36AE67DA29961FFF0013EF3B /* NSObject+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE679229961FFE0013EF3B /* NSObject+Dejal.m */; };
+		36AE67DB29961FFF0013EF3B /* NSAttributedString+AppKit+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE679329961FFE0013EF3B /* NSAttributedString+AppKit+Dejal.m */; };
+		36AE67DC29961FFF0013EF3B /* NSMutableAttributedString+Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE679529961FFE0013EF3B /* NSMutableAttributedString+Config.m */; };
+		36AE67DD29961FFF0013EF3B /* NSFileManager+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE679729961FFE0013EF3B /* NSFileManager+Dejal.m */; };
+		36AE67DE29961FFF0013EF3B /* NSArray+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE679A29961FFE0013EF3B /* NSArray+Dejal.m */; };
+		36AE67DF29961FFF0013EF3B /* NSButton+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE679F29961FFE0013EF3B /* NSButton+Dejal.m */; };
+		36AE67E029961FFF0013EF3B /* NSSplitView+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67A129961FFE0013EF3B /* NSSplitView+Dejal.m */; };
+		36AE67E129961FFF0013EF3B /* NSTextView+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67A529961FFE0013EF3B /* NSTextView+Dejal.m */; };
+		36AE67E229961FFF0013EF3B /* NSColor+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67A729961FFF0013EF3B /* NSColor+Dejal.m */; };
+		36AE67E329961FFF0013EF3B /* NSPopUpButton+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67A829961FFF0013EF3B /* NSPopUpButton+Dejal.m */; };
+		36AE67E429961FFF0013EF3B /* NSToolbar+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67AA29961FFF0013EF3B /* NSToolbar+Dejal.m */; };
+		36AE67E529961FFF0013EF3B /* NSProgressIndicator+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67AB29961FFF0013EF3B /* NSProgressIndicator+Dejal.m */; };
+		36AE67E629961FFF0013EF3B /* NSViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67AC29961FFF0013EF3B /* NSViewController+Hook.m */; };
+		36AE67E729961FFF0013EF3B /* NSView+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67AD29961FFF0013EF3B /* NSView+Dejal.m */; };
+		36AE67E829961FFF0013EF3B /* NSPopover+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67AE29961FFF0013EF3B /* NSPopover+Hook.m */; };
+		36AE67E929961FFF0013EF3B /* NSMenu+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67AF29961FFF0013EF3B /* NSMenu+Dejal.m */; };
+		36AE67EA29961FFF0013EF3B /* NSViewController+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67B029961FFF0013EF3B /* NSViewController+Dejal.m */; };
+		36AE67EB29961FFF0013EF3B /* NSTextField+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67B229961FFF0013EF3B /* NSTextField+Dejal.m */; };
+		36AE67EC29961FFF0013EF3B /* NSWindow+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67B329961FFF0013EF3B /* NSWindow+Dejal.m */; };
+		36AE67ED29961FFF0013EF3B /* NSImage+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67B629961FFF0013EF3B /* NSImage+Dejal.m */; };
+		36AE67EE29961FFF0013EF3B /* NSTableView+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67B729961FFF0013EF3B /* NSTableView+Dejal.m */; };
+		36AE67EF29961FFF0013EF3B /* NSScreen+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67BA29961FFF0013EF3B /* NSScreen+Dejal.m */; };
+		36AE67F029961FFF0013EF3B /* NSOutlineView+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67BC29961FFF0013EF3B /* NSOutlineView+Dejal.m */; };
+		36AE67F129961FFF0013EF3B /* TFYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67C629961FFF0013EF3B /* TFYButton.m */; };
+		36AE67F229961FFF0013EF3B /* TFYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67CA29961FFF0013EF3B /* TFYLabel.m */; };
+		36AE67F329961FFF0013EF3B /* TFYAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67CB29961FFF0013EF3B /* TFYAttributedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +89,90 @@
 		36AE676229961FB00013EF3B /* TFYMacOSAppKit_OCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFYMacOSAppKit_OCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AE676629961FB00013EF3B /* TFYMacOSAppKit_OCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYMacOSAppKit_OCUITests.m; sourceTree = "<group>"; };
 		36AE676829961FB00013EF3B /* TFYMacOSAppKit_OCUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYMacOSAppKit_OCUITestsLaunchTests.m; sourceTree = "<group>"; };
+		36AE677729961FFE0013EF3B /* NSDictionary+AppKit+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AppKit+Dejal.h"; sourceTree = "<group>"; };
+		36AE677829961FFE0013EF3B /* NSDictionary+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Dejal.m"; sourceTree = "<group>"; };
+		36AE677929961FFE0013EF3B /* NSData+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Dejal.h"; sourceTree = "<group>"; };
+		36AE677A29961FFE0013EF3B /* NSObject+AppKit+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AppKit+Dejal.m"; sourceTree = "<group>"; };
+		36AE677B29961FFE0013EF3B /* NSMutableAttributedString+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Parse.m"; sourceTree = "<group>"; };
+		36AE677C29961FFE0013EF3B /* NSAttributedString+AppKit+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+AppKit+Dejal.h"; sourceTree = "<group>"; };
+		36AE677D29961FFE0013EF3B /* NSString+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Dejal.m"; sourceTree = "<group>"; };
+		36AE677E29961FFE0013EF3B /* NSObject+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Dejal.h"; sourceTree = "<group>"; };
+		36AE677F29961FFE0013EF3B /* NSMutableAttributedString+CTFrameRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CTFrameRef.m"; sourceTree = "<group>"; };
+		36AE678029961FFE0013EF3B /* NSString+AppKit+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AppKit+Dejal.m"; sourceTree = "<group>"; };
+		36AE678129961FFE0013EF3B /* NSDate+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Dejal.m"; sourceTree = "<group>"; };
+		36AE678229961FFE0013EF3B /* NSAttributedString+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Dejal.m"; sourceTree = "<group>"; };
+		36AE678329961FFE0013EF3B /* NSFileManager+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Dejal.h"; sourceTree = "<group>"; };
+		36AE678429961FFE0013EF3B /* NSFileManager+AppKit+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+AppKit+Dejal.m"; sourceTree = "<group>"; };
+		36AE678529961FFE0013EF3B /* NSMutableAttributedString+Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Config.h"; sourceTree = "<group>"; };
+		36AE678629961FFE0013EF3B /* NSUserDefaults+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Dejal.m"; sourceTree = "<group>"; };
+		36AE678729961FFE0013EF3B /* TFYAttributedImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYAttributedImageInfo.m; sourceTree = "<group>"; };
+		36AE678829961FFE0013EF3B /* NSArray+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Dejal.h"; sourceTree = "<group>"; };
+		36AE678929961FFE0013EF3B /* NSUserDefaults+AppKit+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+AppKit+Dejal.m"; sourceTree = "<group>"; };
+		36AE678A29961FFE0013EF3B /* NSObject+AppKit+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AppKit+Dejal.h"; sourceTree = "<group>"; };
+		36AE678B29961FFE0013EF3B /* NSData+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Dejal.m"; sourceTree = "<group>"; };
+		36AE678C29961FFE0013EF3B /* NSDictionary+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Dejal.h"; sourceTree = "<group>"; };
+		36AE678D29961FFE0013EF3B /* NSDictionary+AppKit+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AppKit+Dejal.m"; sourceTree = "<group>"; };
+		36AE678E29961FFE0013EF3B /* macOSfoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macOSfoundation.h; sourceTree = "<group>"; };
+		36AE678F29961FFE0013EF3B /* NSString+AppKit+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AppKit+Dejal.h"; sourceTree = "<group>"; };
+		36AE679029961FFE0013EF3B /* NSMutableAttributedString+CTFrameRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CTFrameRef.h"; sourceTree = "<group>"; };
+		36AE679129961FFE0013EF3B /* NSString+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Dejal.h"; sourceTree = "<group>"; };
+		36AE679229961FFE0013EF3B /* NSObject+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Dejal.m"; sourceTree = "<group>"; };
+		36AE679329961FFE0013EF3B /* NSAttributedString+AppKit+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+AppKit+Dejal.m"; sourceTree = "<group>"; };
+		36AE679429961FFE0013EF3B /* NSMutableAttributedString+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Parse.h"; sourceTree = "<group>"; };
+		36AE679529961FFE0013EF3B /* NSMutableAttributedString+Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Config.m"; sourceTree = "<group>"; };
+		36AE679629961FFE0013EF3B /* NSFileManager+AppKit+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+AppKit+Dejal.h"; sourceTree = "<group>"; };
+		36AE679729961FFE0013EF3B /* NSFileManager+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Dejal.m"; sourceTree = "<group>"; };
+		36AE679829961FFE0013EF3B /* NSAttributedString+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Dejal.h"; sourceTree = "<group>"; };
+		36AE679929961FFE0013EF3B /* NSDate+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Dejal.h"; sourceTree = "<group>"; };
+		36AE679A29961FFE0013EF3B /* NSArray+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Dejal.m"; sourceTree = "<group>"; };
+		36AE679B29961FFE0013EF3B /* NSUserDefaults+AppKit+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+AppKit+Dejal.h"; sourceTree = "<group>"; };
+		36AE679C29961FFE0013EF3B /* TFYAttributedImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYAttributedImageInfo.h; sourceTree = "<group>"; };
+		36AE679D29961FFE0013EF3B /* NSUserDefaults+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Dejal.h"; sourceTree = "<group>"; };
+		36AE679F29961FFE0013EF3B /* NSButton+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+Dejal.m"; sourceTree = "<group>"; };
+		36AE67A029961FFE0013EF3B /* macOScategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macOScategory.h; sourceTree = "<group>"; };
+		36AE67A129961FFE0013EF3B /* NSSplitView+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSplitView+Dejal.m"; sourceTree = "<group>"; };
+		36AE67A229961FFE0013EF3B /* NSWindow+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+Dejal.h"; sourceTree = "<group>"; };
+		36AE67A329961FFE0013EF3B /* NSTextField+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextField+Dejal.h"; sourceTree = "<group>"; };
+		36AE67A429961FFE0013EF3B /* NSImage+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Dejal.h"; sourceTree = "<group>"; };
+		36AE67A529961FFE0013EF3B /* NSTextView+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+Dejal.m"; sourceTree = "<group>"; };
+		36AE67A629961FFE0013EF3B /* NSScreen+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScreen+Dejal.h"; sourceTree = "<group>"; };
+		36AE67A729961FFF0013EF3B /* NSColor+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Dejal.m"; sourceTree = "<group>"; };
+		36AE67A829961FFF0013EF3B /* NSPopUpButton+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPopUpButton+Dejal.m"; sourceTree = "<group>"; };
+		36AE67A929961FFF0013EF3B /* NSTableView+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+Dejal.h"; sourceTree = "<group>"; };
+		36AE67AA29961FFF0013EF3B /* NSToolbar+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSToolbar+Dejal.m"; sourceTree = "<group>"; };
+		36AE67AB29961FFF0013EF3B /* NSProgressIndicator+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSProgressIndicator+Dejal.m"; sourceTree = "<group>"; };
+		36AE67AC29961FFF0013EF3B /* NSViewController+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+Hook.m"; sourceTree = "<group>"; };
+		36AE67AD29961FFF0013EF3B /* NSView+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Dejal.m"; sourceTree = "<group>"; };
+		36AE67AE29961FFF0013EF3B /* NSPopover+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPopover+Hook.m"; sourceTree = "<group>"; };
+		36AE67AF29961FFF0013EF3B /* NSMenu+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMenu+Dejal.m"; sourceTree = "<group>"; };
+		36AE67B029961FFF0013EF3B /* NSViewController+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+Dejal.m"; sourceTree = "<group>"; };
+		36AE67B129961FFF0013EF3B /* NSOutlineView+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutlineView+Dejal.h"; sourceTree = "<group>"; };
+		36AE67B229961FFF0013EF3B /* NSTextField+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+Dejal.m"; sourceTree = "<group>"; };
+		36AE67B329961FFF0013EF3B /* NSWindow+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+Dejal.m"; sourceTree = "<group>"; };
+		36AE67B429961FFF0013EF3B /* NSSplitView+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSplitView+Dejal.h"; sourceTree = "<group>"; };
+		36AE67B529961FFF0013EF3B /* NSButton+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+Dejal.h"; sourceTree = "<group>"; };
+		36AE67B629961FFF0013EF3B /* NSImage+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Dejal.m"; sourceTree = "<group>"; };
+		36AE67B729961FFF0013EF3B /* NSTableView+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+Dejal.m"; sourceTree = "<group>"; };
+		36AE67B829961FFF0013EF3B /* NSPopUpButton+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPopUpButton+Dejal.h"; sourceTree = "<group>"; };
+		36AE67B929961FFF0013EF3B /* NSColor+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Dejal.h"; sourceTree = "<group>"; };
+		36AE67BA29961FFF0013EF3B /* NSScreen+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+Dejal.m"; sourceTree = "<group>"; };
+		36AE67BB29961FFF0013EF3B /* NSTextView+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+Dejal.h"; sourceTree = "<group>"; };
+		36AE67BC29961FFF0013EF3B /* NSOutlineView+Dejal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutlineView+Dejal.m"; sourceTree = "<group>"; };
+		36AE67BD29961FFF0013EF3B /* NSViewController+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+Dejal.h"; sourceTree = "<group>"; };
+		36AE67BE29961FFF0013EF3B /* NSMenu+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenu+Dejal.h"; sourceTree = "<group>"; };
+		36AE67BF29961FFF0013EF3B /* NSPopover+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPopover+Hook.h"; sourceTree = "<group>"; };
+		36AE67C029961FFF0013EF3B /* NSViewController+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+Hook.h"; sourceTree = "<group>"; };
+		36AE67C129961FFF0013EF3B /* NSView+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Dejal.h"; sourceTree = "<group>"; };
+		36AE67C229961FFF0013EF3B /* NSProgressIndicator+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSProgressIndicator+Dejal.h"; sourceTree = "<group>"; };
+		36AE67C329961FFF0013EF3B /* NSToolbar+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSToolbar+Dejal.h"; sourceTree = "<group>"; };
+		36AE67C529961FFF0013EF3B /* TFYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYLabel.h; sourceTree = "<group>"; };
+		36AE67C629961FFF0013EF3B /* TFYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYButton.m; sourceTree = "<group>"; };
+		36AE67C729961FFF0013EF3B /* TFYAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYAttributedLabel.h; sourceTree = "<group>"; };
+		36AE67C829961FFF0013EF3B /* macOScontainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macOScontainer.h; sourceTree = "<group>"; };
+		36AE67C929961FFF0013EF3B /* TFYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYButton.h; sourceTree = "<group>"; };
+		36AE67CA29961FFF0013EF3B /* TFYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYLabel.m; sourceTree = "<group>"; };
+		36AE67CB29961FFF0013EF3B /* TFYAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYAttributedLabel.m; sourceTree = "<group>"; };
+		36AE67F42996200B0013EF3B /* TFYMacOSAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYMacOSAppKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +223,7 @@
 		36AE674529961FAF0013EF3B /* TFYMacOSAppKit_OC */ = {
 			isa = PBXGroup;
 			children = (
+				36AE677529961FC50013EF3B /* TFYMacOSAppKit */,
 				36AE674629961FAF0013EF3B /* AppDelegate.h */,
 				36AE674729961FAF0013EF3B /* AppDelegate.m */,
 				36AE674929961FAF0013EF3B /* ViewController.h */,
@@ -126,6 +251,121 @@
 				36AE676829961FB00013EF3B /* TFYMacOSAppKit_OCUITestsLaunchTests.m */,
 			);
 			path = TFYMacOSAppKit_OCUITests;
+			sourceTree = "<group>";
+		};
+		36AE677529961FC50013EF3B /* TFYMacOSAppKit */ = {
+			isa = PBXGroup;
+			children = (
+				36AE67F42996200B0013EF3B /* TFYMacOSAppKit.h */,
+				36AE679E29961FFE0013EF3B /* macOScategory */,
+				36AE67C429961FFF0013EF3B /* macOScontainer */,
+				36AE677629961FFE0013EF3B /* macOSfoundation */,
+			);
+			path = TFYMacOSAppKit;
+			sourceTree = "<group>";
+		};
+		36AE677629961FFE0013EF3B /* macOSfoundation */ = {
+			isa = PBXGroup;
+			children = (
+				36AE677729961FFE0013EF3B /* NSDictionary+AppKit+Dejal.h */,
+				36AE677829961FFE0013EF3B /* NSDictionary+Dejal.m */,
+				36AE677929961FFE0013EF3B /* NSData+Dejal.h */,
+				36AE677A29961FFE0013EF3B /* NSObject+AppKit+Dejal.m */,
+				36AE677B29961FFE0013EF3B /* NSMutableAttributedString+Parse.m */,
+				36AE677C29961FFE0013EF3B /* NSAttributedString+AppKit+Dejal.h */,
+				36AE677D29961FFE0013EF3B /* NSString+Dejal.m */,
+				36AE677E29961FFE0013EF3B /* NSObject+Dejal.h */,
+				36AE677F29961FFE0013EF3B /* NSMutableAttributedString+CTFrameRef.m */,
+				36AE678029961FFE0013EF3B /* NSString+AppKit+Dejal.m */,
+				36AE678129961FFE0013EF3B /* NSDate+Dejal.m */,
+				36AE678229961FFE0013EF3B /* NSAttributedString+Dejal.m */,
+				36AE678329961FFE0013EF3B /* NSFileManager+Dejal.h */,
+				36AE678429961FFE0013EF3B /* NSFileManager+AppKit+Dejal.m */,
+				36AE678529961FFE0013EF3B /* NSMutableAttributedString+Config.h */,
+				36AE678629961FFE0013EF3B /* NSUserDefaults+Dejal.m */,
+				36AE678729961FFE0013EF3B /* TFYAttributedImageInfo.m */,
+				36AE678829961FFE0013EF3B /* NSArray+Dejal.h */,
+				36AE678929961FFE0013EF3B /* NSUserDefaults+AppKit+Dejal.m */,
+				36AE678A29961FFE0013EF3B /* NSObject+AppKit+Dejal.h */,
+				36AE678B29961FFE0013EF3B /* NSData+Dejal.m */,
+				36AE678C29961FFE0013EF3B /* NSDictionary+Dejal.h */,
+				36AE678D29961FFE0013EF3B /* NSDictionary+AppKit+Dejal.m */,
+				36AE678E29961FFE0013EF3B /* macOSfoundation.h */,
+				36AE678F29961FFE0013EF3B /* NSString+AppKit+Dejal.h */,
+				36AE679029961FFE0013EF3B /* NSMutableAttributedString+CTFrameRef.h */,
+				36AE679129961FFE0013EF3B /* NSString+Dejal.h */,
+				36AE679229961FFE0013EF3B /* NSObject+Dejal.m */,
+				36AE679329961FFE0013EF3B /* NSAttributedString+AppKit+Dejal.m */,
+				36AE679429961FFE0013EF3B /* NSMutableAttributedString+Parse.h */,
+				36AE679529961FFE0013EF3B /* NSMutableAttributedString+Config.m */,
+				36AE679629961FFE0013EF3B /* NSFileManager+AppKit+Dejal.h */,
+				36AE679729961FFE0013EF3B /* NSFileManager+Dejal.m */,
+				36AE679829961FFE0013EF3B /* NSAttributedString+Dejal.h */,
+				36AE679929961FFE0013EF3B /* NSDate+Dejal.h */,
+				36AE679A29961FFE0013EF3B /* NSArray+Dejal.m */,
+				36AE679B29961FFE0013EF3B /* NSUserDefaults+AppKit+Dejal.h */,
+				36AE679C29961FFE0013EF3B /* TFYAttributedImageInfo.h */,
+				36AE679D29961FFE0013EF3B /* NSUserDefaults+Dejal.h */,
+			);
+			path = macOSfoundation;
+			sourceTree = "<group>";
+		};
+		36AE679E29961FFE0013EF3B /* macOScategory */ = {
+			isa = PBXGroup;
+			children = (
+				36AE679F29961FFE0013EF3B /* NSButton+Dejal.m */,
+				36AE67A029961FFE0013EF3B /* macOScategory.h */,
+				36AE67A129961FFE0013EF3B /* NSSplitView+Dejal.m */,
+				36AE67A229961FFE0013EF3B /* NSWindow+Dejal.h */,
+				36AE67A329961FFE0013EF3B /* NSTextField+Dejal.h */,
+				36AE67A429961FFE0013EF3B /* NSImage+Dejal.h */,
+				36AE67A529961FFE0013EF3B /* NSTextView+Dejal.m */,
+				36AE67A629961FFE0013EF3B /* NSScreen+Dejal.h */,
+				36AE67A729961FFF0013EF3B /* NSColor+Dejal.m */,
+				36AE67A829961FFF0013EF3B /* NSPopUpButton+Dejal.m */,
+				36AE67A929961FFF0013EF3B /* NSTableView+Dejal.h */,
+				36AE67AA29961FFF0013EF3B /* NSToolbar+Dejal.m */,
+				36AE67AB29961FFF0013EF3B /* NSProgressIndicator+Dejal.m */,
+				36AE67AC29961FFF0013EF3B /* NSViewController+Hook.m */,
+				36AE67AD29961FFF0013EF3B /* NSView+Dejal.m */,
+				36AE67AE29961FFF0013EF3B /* NSPopover+Hook.m */,
+				36AE67AF29961FFF0013EF3B /* NSMenu+Dejal.m */,
+				36AE67B029961FFF0013EF3B /* NSViewController+Dejal.m */,
+				36AE67B129961FFF0013EF3B /* NSOutlineView+Dejal.h */,
+				36AE67B229961FFF0013EF3B /* NSTextField+Dejal.m */,
+				36AE67B329961FFF0013EF3B /* NSWindow+Dejal.m */,
+				36AE67B429961FFF0013EF3B /* NSSplitView+Dejal.h */,
+				36AE67B529961FFF0013EF3B /* NSButton+Dejal.h */,
+				36AE67B629961FFF0013EF3B /* NSImage+Dejal.m */,
+				36AE67B729961FFF0013EF3B /* NSTableView+Dejal.m */,
+				36AE67B829961FFF0013EF3B /* NSPopUpButton+Dejal.h */,
+				36AE67B929961FFF0013EF3B /* NSColor+Dejal.h */,
+				36AE67BA29961FFF0013EF3B /* NSScreen+Dejal.m */,
+				36AE67BB29961FFF0013EF3B /* NSTextView+Dejal.h */,
+				36AE67BC29961FFF0013EF3B /* NSOutlineView+Dejal.m */,
+				36AE67BD29961FFF0013EF3B /* NSViewController+Dejal.h */,
+				36AE67BE29961FFF0013EF3B /* NSMenu+Dejal.h */,
+				36AE67BF29961FFF0013EF3B /* NSPopover+Hook.h */,
+				36AE67C029961FFF0013EF3B /* NSViewController+Hook.h */,
+				36AE67C129961FFF0013EF3B /* NSView+Dejal.h */,
+				36AE67C229961FFF0013EF3B /* NSProgressIndicator+Dejal.h */,
+				36AE67C329961FFF0013EF3B /* NSToolbar+Dejal.h */,
+			);
+			path = macOScategory;
+			sourceTree = "<group>";
+		};
+		36AE67C429961FFF0013EF3B /* macOScontainer */ = {
+			isa = PBXGroup;
+			children = (
+				36AE67C529961FFF0013EF3B /* TFYLabel.h */,
+				36AE67C629961FFF0013EF3B /* TFYButton.m */,
+				36AE67C729961FFF0013EF3B /* TFYAttributedLabel.h */,
+				36AE67C829961FFF0013EF3B /* macOScontainer.h */,
+				36AE67C929961FFF0013EF3B /* TFYButton.h */,
+				36AE67CA29961FFF0013EF3B /* TFYLabel.m */,
+				36AE67CB29961FFF0013EF3B /* TFYAttributedLabel.m */,
+			);
+			path = macOScontainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,9 +497,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36AE67DC29961FFF0013EF3B /* NSMutableAttributedString+Config.m in Sources */,
+				36AE67D529961FFF0013EF3B /* NSUserDefaults+Dejal.m in Sources */,
+				36AE67EA29961FFF0013EF3B /* NSViewController+Dejal.m in Sources */,
+				36AE67D129961FFF0013EF3B /* NSString+AppKit+Dejal.m in Sources */,
+				36AE67DA29961FFF0013EF3B /* NSObject+Dejal.m in Sources */,
 				36AE674B29961FAF0013EF3B /* ViewController.m in Sources */,
+				36AE67E229961FFF0013EF3B /* NSColor+Dejal.m in Sources */,
+				36AE67CC29961FFF0013EF3B /* NSDictionary+Dejal.m in Sources */,
+				36AE67CF29961FFF0013EF3B /* NSString+Dejal.m in Sources */,
+				36AE67CE29961FFF0013EF3B /* NSMutableAttributedString+Parse.m in Sources */,
+				36AE67CD29961FFF0013EF3B /* NSObject+AppKit+Dejal.m in Sources */,
+				36AE67EE29961FFF0013EF3B /* NSTableView+Dejal.m in Sources */,
+				36AE67DE29961FFF0013EF3B /* NSArray+Dejal.m in Sources */,
+				36AE67D929961FFF0013EF3B /* NSDictionary+AppKit+Dejal.m in Sources */,
+				36AE67D029961FFF0013EF3B /* NSMutableAttributedString+CTFrameRef.m in Sources */,
+				36AE67EB29961FFF0013EF3B /* NSTextField+Dejal.m in Sources */,
 				36AE675229961FB00013EF3B /* main.m in Sources */,
+				36AE67DB29961FFF0013EF3B /* NSAttributedString+AppKit+Dejal.m in Sources */,
+				36AE67E429961FFF0013EF3B /* NSToolbar+Dejal.m in Sources */,
+				36AE67D629961FFF0013EF3B /* TFYAttributedImageInfo.m in Sources */,
+				36AE67D329961FFF0013EF3B /* NSAttributedString+Dejal.m in Sources */,
 				36AE674829961FAF0013EF3B /* AppDelegate.m in Sources */,
+				36AE67E829961FFF0013EF3B /* NSPopover+Hook.m in Sources */,
+				36AE67E929961FFF0013EF3B /* NSMenu+Dejal.m in Sources */,
+				36AE67ED29961FFF0013EF3B /* NSImage+Dejal.m in Sources */,
+				36AE67E029961FFF0013EF3B /* NSSplitView+Dejal.m in Sources */,
+				36AE67F229961FFF0013EF3B /* TFYLabel.m in Sources */,
+				36AE67E629961FFF0013EF3B /* NSViewController+Hook.m in Sources */,
+				36AE67F129961FFF0013EF3B /* TFYButton.m in Sources */,
+				36AE67E529961FFF0013EF3B /* NSProgressIndicator+Dejal.m in Sources */,
+				36AE67EF29961FFF0013EF3B /* NSScreen+Dejal.m in Sources */,
+				36AE67D429961FFF0013EF3B /* NSFileManager+AppKit+Dejal.m in Sources */,
+				36AE67E329961FFF0013EF3B /* NSPopUpButton+Dejal.m in Sources */,
+				36AE67F029961FFF0013EF3B /* NSOutlineView+Dejal.m in Sources */,
+				36AE67DF29961FFF0013EF3B /* NSButton+Dejal.m in Sources */,
+				36AE67D729961FFF0013EF3B /* NSUserDefaults+AppKit+Dejal.m in Sources */,
+				36AE67D229961FFF0013EF3B /* NSDate+Dejal.m in Sources */,
+				36AE67E729961FFF0013EF3B /* NSView+Dejal.m in Sources */,
+				36AE67D829961FFF0013EF3B /* NSData+Dejal.m in Sources */,
+				36AE67E129961FFF0013EF3B /* NSTextView+Dejal.m in Sources */,
+				36AE67F329961FFF0013EF3B /* TFYAttributedLabel.m in Sources */,
+				36AE67DD29961FFF0013EF3B /* NSFileManager+Dejal.m in Sources */,
+				36AE67EC29961FFF0013EF3B /* NSWindow+Dejal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
