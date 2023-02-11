@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   macOS 开发基本数据类型封装。最低支持macos 11 
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/TFYMacOSAppKit"
+  spec.homepage     = "https://github.com/13662049573/TFYMacOSAppKit_OC"
   
   spec.license      = "MIT"
   
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   
   spec.osx.deployment_target = "11.0"
   
-  spec.source       = { :git => "http://EXAMPLE/TFYMacOSAppKit.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/13662049573/TFYMacOSAppKit_OC.git", :tag => spec.version }
 
   spec.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/TFYMacOSAppKit.h"
   
