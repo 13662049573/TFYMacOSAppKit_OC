@@ -28,5 +28,15 @@
 #import "NSObject+Dejal.h"
 #import "NSString+Dejal.h"
 #import "NSUserDefaults+Dejal.h"
+#import "NSString+Extend.h"
+#import "NSNumber+TFY_Tools.h"
+#import "NSMutableParagraphStyle+TFY_Chain.h"
+#import "NSMutableAttributedString+TFY_Tools.h"
+#import "NSDictionary+TFY_Tools.h"
+#import "NSData+TFY_Data.h"
+#import "NSAttributedString+TFY_Tools.h"
+#import "NSArray+TFY_Tools.h"
+#import "NSString+TFY_String.h"
+#import "NSFileManager+TFY_Tools.h"
 
 #endif /* macOSfoundation_h */

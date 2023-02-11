@@ -8,7 +8,6 @@
 
 #import "NSFileManager+Dejal.h"
 
-
 @interface NSFileManager (DejalAppKit)
 
 - (BOOL)tfy_isDirectoryAtPath:(NSString *)path butNotPackage:(BOOL)notPackage;

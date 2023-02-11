@@ -28,5 +28,7 @@
 #import "NSViewController+Dejal.h"
 #import "NSWindow+Dejal.h"
 #import "NSColor+Dejal.h"
+#import "NSView+TFY_Tools.h"
+#import "NSGestureRecognizer+TFY_Tools.h"
 
 #endif /* macOScategory_h */
