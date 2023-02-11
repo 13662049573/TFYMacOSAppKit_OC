@@ -6,8 +6,8 @@
 //  Copyright © 2023 MZK. All rights reserved.
 //
 
+#import <Cocoa/Cocoa.h>
 #import "NSFileManager+AppKit+Dejal.h"
-
 
 @implementation NSFileManager (DejalAppKit)
 

@@ -86,9 +86,9 @@
     CGRect contentRect = NSMakeRect(floorf(gapX), floorf(gapY), size.width, size.height);
 
     switch (self.contentVerticalAlignment) {
-        case NSContentVerticalAlignmentCenter:
+        case TFYContentVerticalAlignmentCenter:
             break;
-        case NSContentVerticalAlignmentBottom:
+        case TFYContentVerticalAlignmentBottom:
             gapY *= 2;
             break;
         default:

@@ -7,7 +7,7 @@
 //
 
 #import "NSString+Dejal.h"
-
+#import <Cocoa/Cocoa.h>
 
 @interface NSString (DejalAppKit)
 

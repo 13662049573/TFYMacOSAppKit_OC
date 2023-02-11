@@ -6,12 +6,12 @@
 //  Copyright © 2023 MZK. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 @interface NSView (DejalSubviews)
 /**
- 返回当前外观是否为暗模式。在NSColor+Dejal类别中还提供了一个类似的类方法，用于当视图不可用时。
-
- 如果暗，@返回YES，否则返回NO。
+ 返回当前外观是否为暗模式。在NSColor+Dejal类别中还提供了一个类似的类方法，用于当视图不可用时。如果暗，@返回YES，否则返回NO。
  */
 - (BOOL)tfy_isDark;
 /**

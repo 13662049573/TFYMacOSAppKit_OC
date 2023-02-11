@@ -6,6 +6,7 @@
 //  Copyright © 2023 MZK. All rights reserved.
 //
 
+#import <Cocoa/Cocoa.h>
 
 @interface NSToolbar (Dejal)
 
