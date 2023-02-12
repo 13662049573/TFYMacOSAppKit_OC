@@ -1,0 +1,21 @@
+//
+//  TFYVisualEffectViewChainModel.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2023/2/12.
+//
+
+#import "TFYVisualEffectViewChainModel.h"
+
+#define TFY_CATEGORY_CHAIN_VISUALEFFECT_IMPLEMENTATION(TFYMethod,TFYParaType) TFY_CATEGORY_CHAIN_VIEWCLASS_IMPLEMENTATION(TFYMethod,TFYParaType, TFYVisualEffectViewChainModel *,NSVisualEffectView)
+
+@implementation TFYVisualEffectViewChainModel
+
+TFY_CATEGORY_CHAIN_VISUALEFFECT_IMPLEMENTATION(material, NSVisualEffectMaterial)
+TFY_CATEGORY_CHAIN_VISUALEFFECT_IMPLEMENTATION(blendingMode, NSVisualEffectBlendingMode)
+TFY_CATEGORY_CHAIN_VISUALEFFECT_IMPLEMENTATION(state, NSVisualEffectState)
+TFY_CATEGORY_CHAIN_VISUALEFFECT_IMPLEMENTATION(emphasized, BOOL)
+
+@end
+TFY_CATEGORY_VIEW_IMPLEMENTATION(NSVisualEffectView, TFYVisualEffectViewChainModel)
+#undef TFY_CATEGORY_CHAIN_DATEPICKER_IMPLEMENTATION

@@ -10,5 +10,6 @@
 
 #import "CALayer+TFY_Chain.h"
 #import "TFYNSGesture.h"
+#import "TFYNSView.h"
 
 #endif /* macOSchain_h */

@@ -12,5 +12,6 @@
 #import "TFYPanGestureChainModel.h"
 #import "TFYRotationGestureChainModel.h"
 #import "TFYSwipeGestureChainModel.h"
+#import "TFYMagnificationChainModel.h"
 
 #endif /* TFYNSGesture_h */
