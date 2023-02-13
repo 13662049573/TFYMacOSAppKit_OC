@@ -116,6 +116,7 @@
 		36CA65FA299A3D9C0066B945 /* TFYSearchFieldChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65F9299A3D9C0066B945 /* TFYSearchFieldChainModel.m */; };
 		36CA65FD299A3EE70066B945 /* TFYOutlineViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65FC299A3EE70066B945 /* TFYOutlineViewChainModel.m */; };
 		36CA6600299A406B0066B945 /* TFYPredicateEditorChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65FF299A406B0066B945 /* TFYPredicateEditorChainModel.m */; };
+		36CA6603299A428A0066B945 /* NSView+TFY_Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA6602299A428A0066B945 /* NSView+TFY_Chain.m */; };
 		36E079522998A20B00266645 /* TFYClipViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E079512998A20B00266645 /* TFYClipViewChainModel.m */; };
 		36E079552998A4D800266645 /* TFYCollectionViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E079542998A4D800266645 /* TFYCollectionViewChainModel.m */; };
 		36E079582998B02800266645 /* TFYScrubberChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E079572998B02800266645 /* TFYScrubberChainModel.m */; };
@@ -379,6 +380,8 @@
 		36CA65FC299A3EE70066B945 /* TFYOutlineViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYOutlineViewChainModel.m; sourceTree = "<group>"; };
 		36CA65FE299A406B0066B945 /* TFYPredicateEditorChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYPredicateEditorChainModel.h; sourceTree = "<group>"; };
 		36CA65FF299A406B0066B945 /* TFYPredicateEditorChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYPredicateEditorChainModel.m; sourceTree = "<group>"; };
+		36CA6601299A428A0066B945 /* NSView+TFY_Chain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+TFY_Chain.h"; sourceTree = "<group>"; };
+		36CA6602299A428A0066B945 /* NSView+TFY_Chain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+TFY_Chain.m"; sourceTree = "<group>"; };
 		36E079502998A20B00266645 /* TFYClipViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYClipViewChainModel.h; sourceTree = "<group>"; };
 		36E079512998A20B00266645 /* TFYClipViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYClipViewChainModel.m; sourceTree = "<group>"; };
 		36E079532998A4D800266645 /* TFYCollectionViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCollectionViewChainModel.h; sourceTree = "<group>"; };
@@ -772,6 +775,8 @@
 				36CA65FF299A406B0066B945 /* TFYPredicateEditorChainModel.m */,
 				36CA65E9299A322D0066B945 /* TFYPathControlChainModel.h */,
 				36CA65EA299A322D0066B945 /* TFYPathControlChainModel.m */,
+				36CA6601299A428A0066B945 /* NSView+TFY_Chain.h */,
+				36CA6602299A428A0066B945 /* NSView+TFY_Chain.m */,
 			);
 			path = TFYNSView;
 			sourceTree = "<group>";
@@ -986,6 +991,7 @@
 				36AE67D629961FFF0013EF3B /* TFYAttributedImageInfo.m in Sources */,
 				36AE682D299748480013EF3B /* TFYEmiiterLayerChainModel.m in Sources */,
 				36AE67D329961FFF0013EF3B /* NSAttributedString+Dejal.m in Sources */,
+				36CA6603299A428A0066B945 /* NSView+TFY_Chain.m in Sources */,
 				36AE683629974EC90013EF3B /* TFYReplicatorLayerChainModel.m in Sources */,
 				36CA65F1299A36670066B945 /* TFYTokenFieldChainModel.m in Sources */,
 				36AE674829961FAF0013EF3B /* AppDelegate.m in Sources */,

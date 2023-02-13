@@ -8,8 +8,6 @@
 #ifndef macOSchain_h
 #define macOSchain_h
 
-#import "CALayer+TFY_Chain.h"
-#import "TFYNSGesture.h"
-#import "TFYNSView.h"
+#import "NSView+TFY_Chain.h"
 
 #endif /* macOSchain_h */
