@@ -15,7 +15,7 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    [self.windowController showWindow:self];
 }
 
 
@@ -28,5 +28,11 @@
     return YES;
 }
 
+- (MainWindowController *)windowController {
+    if (!_windowController) {
+        _windowController = MainWindowController.new;
+    }
+    return _windowController;
+}
 
 @end

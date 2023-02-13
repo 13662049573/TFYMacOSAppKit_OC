@@ -5,11 +5,11 @@
 //  Created by 田风有 on 2023/2/12.
 //
 
-#import "TFYBaseViewChainModel.h"
+#import "TFYTextChainModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@class TFYTextViewChainModel;
-@interface TFYTextViewChainModel : TFYBaseViewChainModel<TFYTextViewChainModel *>
+
+@interface TFYTextViewChainModel : TFYTextChainModel
 
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ textContainer) (NSTextContainer*);
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ textContainerInset) (NSSize);
@@ -30,7 +30,7 @@ TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ allowsDocumentBackgroundC
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ defaultParagraphStyle) (NSParagraphStyle*);
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ allowsImageEditing) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ usesRolloverButtonForSelection) (BOOL);
-TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ delegate) (id<NSTextViewDelegate>);
+TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ delegateView) (id<NSTextViewDelegate>);
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ editable) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ selectable) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYTextViewChainModel * (^ richText) (BOOL);

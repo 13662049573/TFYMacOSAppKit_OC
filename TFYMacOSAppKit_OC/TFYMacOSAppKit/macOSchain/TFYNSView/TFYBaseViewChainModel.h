@@ -20,6 +20,18 @@
 }\
 @end
 
+
+#define TFY_CATEGORY_VIEW_IMPLEMENTATION_MACOS13(TFYMacOSClass, modelType)\
+API_AVAILABLE(macos(13.0))\
+@interface modelType(EffectiveEXT)\
+@property (nonatomic, strong, readonly) NSMutableArray <TFYMacOSClass *>* effectiveObjects;\
+@end\
+@implementation TFYMacOSClass (EXT)\
+- (modelType *)makeChain{\
+    return [[modelType alloc] initWithTag:self.tag andView:self modelClass:[TFYMacOSClass class]];\
+}\
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^TFYAssignViewLoad)(__kindof NSView *view);

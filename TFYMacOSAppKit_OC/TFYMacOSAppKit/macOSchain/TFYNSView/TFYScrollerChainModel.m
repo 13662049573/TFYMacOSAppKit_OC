@@ -1,0 +1,20 @@
+//
+//  TFYScrollerChainModel.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2023/2/13.
+//
+
+#import "TFYScrollerChainModel.h"
+
+#define TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(TFYMethod,TFYParaType) TFY_CATEGORY_CHAIN_VIEWCLASS_IMPLEMENTATION(TFYMethod,TFYParaType, TFYScrollerChainModel *,NSScroller)
+
+@implementation TFYScrollerChainModel
+
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(scrollerStyle, NSScrollerStyle)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(knobStyle, NSScrollerKnobStyle)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(knobProportion, CGFloat)
+
+@end
+TFY_CATEGORY_VIEW_IMPLEMENTATION(NSScroller, TFYScrollerChainModel)
+#undef TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION

@@ -11,6 +11,7 @@
 #import <Cocoa/Cocoa.h>
 #import <objc/message.h>
 #import <QuartzCore/QuartzCore.h>
+#import <AppKit/AppKit.h>
 
 #pragma mark-------------------------------------------属性对象---------------------------------------------
 
@@ -86,5 +87,39 @@ CG_INLINE ModelType * TFYMacOSClass##ModelWithArray(NSArray <TFYMacOSClass *>*ob
 TFY_PROPERTY_CHAIN_READONLY ModelType * makeChain;\
 @end
 
+
+#define TFY_CATEGORY_EXINTERFACE_MACOSI3(TFYMacOSClass, ModelType)\
+API_AVAILABLE(macos(13.0))\
+CG_INLINE TFYMacOSClass *TFYMacOSClass##Set(void){\
+       return [TFYMacOSClass new];\
+}\
+API_AVAILABLE(macos(13.0))\
+CG_INLINE ModelType *TFYMacOSClass##ModelSet(void){\
+       return ((id (*)(id, SEL))objc_msgSend)([TFYMacOSClass new],sel_registerName("makeChain"));\
+}\
+API_AVAILABLE(macos(13.0))\
+CG_INLINE ModelType *TFYMacOSClass##NameSet(NSString *className){\
+      Class clas = NSClassFromString(className);\
+      if ([clas isKindOfClass:[TFYMacOSClass class]]) {\
+      return [clas new];\
+      }\
+    return nil;\
+}\
+API_AVAILABLE(macos(13.0))\
+CG_INLINE ModelType *TFYMacOSClass##NameModelSet(NSString *className){\
+      return ((id (*)(id, SEL))objc_msgSend)( TFYMacOSClass##NameSet(className),sel_registerName("makeChain"));\
+}\
+TFY_CATEGORY_EXINTERFACE__MACOSI3(TFYMacOSClass, ModelType)\
+API_AVAILABLE(macos(13.0))\
+CG_INLINE ModelType * TFYMacOSClass##ModelWithArray(NSArray <TFYMacOSClass *>*objects)\
+{\
+    return ((id (*)(id, SEL,id,id))objc_msgSend)([ModelType alloc],sel_registerName("initWithModelObjects:modelClass:"),objects,[TFYMacOSClass class]);\
+}
+
+#define TFY_CATEGORY_EXINTERFACE__MACOSI3(TFYMacOSClass, ModelType)\
+API_AVAILABLE(macos(13.0))\
+@interface TFYMacOSClass(EXT)\
+TFY_PROPERTY_CHAIN_READONLY ModelType * makeChain;\
+@end
 
 #endif /* TFYChainDefine_h */

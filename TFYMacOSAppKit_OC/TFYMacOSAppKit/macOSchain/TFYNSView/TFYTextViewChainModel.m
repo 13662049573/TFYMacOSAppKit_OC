@@ -43,10 +43,17 @@ TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(automaticTextCompletionEnabled, BOOL)
 TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(allowsCharacterPickerTouchBarItem, BOOL)
 TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(typingAttributes, NSDictionary*)
 TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(defaultParagraphStyle, NSParagraphStyle*)
-TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(delegate, id<NSTextViewDelegate>)
 TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(backgroundColor, NSColor*)
 TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(allowedInputSourceLocales, NSArray<NSString *> *)
 TFY_CATEGORY_CHAIN_TESTVIEW_IMPLEMENTATION(enabledTextCheckingTypes, NSTextCheckingTypes)
+
+- (TFYTextViewChainModel * _Nonnull (^)(id<NSTextViewDelegate>))delegateView {
+    return ^(id<NSTextViewDelegate> delegateToken)
+    {
+        ((NSTextView*)self.view).delegate = delegateToken;
+        return self;
+    };
+}
 
 @end
 TFY_CATEGORY_VIEW_IMPLEMENTATION(NSTextView, TFYTextViewChainModel)

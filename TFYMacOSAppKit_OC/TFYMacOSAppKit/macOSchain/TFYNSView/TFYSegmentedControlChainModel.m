@@ -1,0 +1,25 @@
+//
+//  TFYSegmentedControlChainModel.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2023/2/13.
+//
+
+#import "TFYSegmentedControlChainModel.h"
+
+#define TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(TFYMethod,TFYParaType) TFY_CATEGORY_CHAIN_VIEWCLASS_IMPLEMENTATION(TFYMethod,TFYParaType, TFYSegmentedControlChainModel *,NSSegmentedControl)
+
+@implementation TFYSegmentedControlChainModel
+
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(segmentCount, NSInteger)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(selectedSegment, NSInteger)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(segmentStyle, NSSegmentStyle)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(springLoaded, BOOL)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(trackingMode, NSSegmentSwitchTracking)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(selectedSegmentBezelColor, NSColor*)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(segmentDistribution, NSSegmentDistribution)
+
+@end
+TFY_CATEGORY_VIEW_IMPLEMENTATION(NSSegmentedControl, TFYSegmentedControlChainModel)
+#undef TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION
+
