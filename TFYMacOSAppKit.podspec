@@ -42,6 +42,10 @@ Pod::Spec.new do |spec|
   spec.subspec 'macOSchain' do |ss|
     ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/macOSchain.h"
 
+    ss.subspec 'TFYChainBase' do |s|
+      s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYChainBase/**/*.{h,m}"
+    end
+
     ss.subspec 'TFYCALayer' do |s|
       s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYCALayer/**/*.{h,m}"
       s.dependency "macOSchain/TFYChainBase"
