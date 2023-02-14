@@ -50,14 +50,6 @@ TFY_PROPERTY_CHAIN_READONLY ObjectType (^ addToSuperView) (NSView *view);
 
 TFY_PROPERTY_CHAIN_READONLY ObjectType (^ removeTarget) (id target, SEL action);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ addTargetBlock) (void (^) (id gesture));
-
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ addTargetBlockWithTag) (void (^) (id gesture), NSString *tag);
-
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ removeTargetBlockWithTag) (NSString *tag);
-
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ removeAllTargetBlock)(void);
-
 @end
 
 NS_ASSUME_NONNULL_END

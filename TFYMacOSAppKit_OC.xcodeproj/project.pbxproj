@@ -85,7 +85,6 @@
 		36AE685B299762010013EF3B /* TFYSwipeGestureChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE685A299762010013EF3B /* TFYSwipeGestureChainModel.m */; };
 		36AE685F299763E40013EF3B /* NSView+TFY_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE685E299763E40013EF3B /* NSView+TFY_Tools.m */; };
 		36AE6862299767880013EF3B /* TFYBaseViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE6861299767880013EF3B /* TFYBaseViewChainModel.m */; };
-		36AE6865299770850013EF3B /* NSGestureRecognizer+TFY_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE6864299770850013EF3B /* NSGestureRecognizer+TFY_Tools.m */; };
 		36AE686829978D650013EF3B /* TFYBaseControlChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE686729978D650013EF3B /* TFYBaseControlChainModel.m */; };
 		36AE686F29979C2B0013EF3B /* TFYBaseViewChainModel+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE686E29979C2B0013EF3B /* TFYBaseViewChainModel+Masonry.m */; };
 		36AE68722999BAAB0013EF3B /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE68712999BAAB0013EF3B /* MainWindowController.m */; };
@@ -319,8 +318,6 @@
 		36AE685E299763E40013EF3B /* NSView+TFY_Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+TFY_Tools.m"; sourceTree = "<group>"; };
 		36AE6860299767880013EF3B /* TFYBaseViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYBaseViewChainModel.h; sourceTree = "<group>"; };
 		36AE6861299767880013EF3B /* TFYBaseViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYBaseViewChainModel.m; sourceTree = "<group>"; };
-		36AE6863299770850013EF3B /* NSGestureRecognizer+TFY_Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSGestureRecognizer+TFY_Tools.h"; sourceTree = "<group>"; };
-		36AE6864299770850013EF3B /* NSGestureRecognizer+TFY_Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSGestureRecognizer+TFY_Tools.m"; sourceTree = "<group>"; };
 		36AE686629978D650013EF3B /* TFYBaseControlChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYBaseControlChainModel.h; sourceTree = "<group>"; };
 		36AE686729978D650013EF3B /* TFYBaseControlChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYBaseControlChainModel.m; sourceTree = "<group>"; };
 		36AE686D29979C2B0013EF3B /* TFYBaseViewChainModel+Masonry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TFYBaseViewChainModel+Masonry.h"; sourceTree = "<group>"; };
@@ -620,8 +617,6 @@
 				36AE67C329961FFF0013EF3B /* NSToolbar+Dejal.h */,
 				36AE685D299763E40013EF3B /* NSView+TFY_Tools.h */,
 				36AE685E299763E40013EF3B /* NSView+TFY_Tools.m */,
-				36AE6863299770850013EF3B /* NSGestureRecognizer+TFY_Tools.h */,
-				36AE6864299770850013EF3B /* NSGestureRecognizer+TFY_Tools.m */,
 			);
 			path = macOScategory;
 			sourceTree = "<group>";
@@ -1066,7 +1061,6 @@
 				36AE67EC29961FFF0013EF3B /* NSWindow+Dejal.m in Sources */,
 				36E079522998A20B00266645 /* TFYClipViewChainModel.m in Sources */,
 				36AE681B299737FA0013EF3B /* NSFileManager+TFY_Tools.m in Sources */,
-				36AE6865299770850013EF3B /* NSGestureRecognizer+TFY_Tools.m in Sources */,
 				36AE685B299762010013EF3B /* TFYSwipeGestureChainModel.m in Sources */,
 				36AE6893299A137B0013EF3B /* TFYSegmentedControlChainModel.m in Sources */,
 				36E0795E2998B9DD00266645 /* TFYStackViewChainModel.m in Sources */,

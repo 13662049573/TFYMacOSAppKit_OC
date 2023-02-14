@@ -132,8 +132,6 @@ TFY_PROPERTY_CHAIN_READONLY ObjectType (^ addSubView) (NSView *);
 
 TFY_PROPERTY_CHAIN_READONLY ObjectType (^ addGesture) (NSGestureRecognizer *);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ addGestureBlock) (void (^ gestureBlock) (id));
-
 TFY_PROPERTY_CHAIN_READONLY ObjectType (^ contents) (id);
 
 TFY_PROPERTY_CHAIN_READONLY ObjectType (^ removeGesture) (NSGestureRecognizer *);

@@ -17,9 +17,4 @@ TFY_PROPERTY_CHAIN_READONLY TFYPanGestureChainModel * (^ translation) (CGPoint t
 
 @end
 TFY_CATEGORY_EXINTERFACE(NSPanGestureRecognizer, TFYPanGestureChainModel)
-
-CG_INLINE NSPanGestureRecognizer *_Nonnull NSTapGestureRecognizerCreateWithTarget(void (^ targetBlock) (id ges)){
-    return NSPanGestureRecognizerSet().makeChain.addTargetBlock(targetBlock).gesture;
-}
-
 NS_ASSUME_NONNULL_END

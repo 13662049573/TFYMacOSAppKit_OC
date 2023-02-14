@@ -7,7 +7,6 @@
 
 #import "TFYBaseGestureChainModel.h"
 #import "TFYChainBaseModel+TFY_Tools.h"
-#import "NSGestureRecognizer+TFY_Tools.h"
 
 #define TFY_CATEGORY_CHAIN_GESTURE_IMPLEMENTATION(TFYMethod,TFYParaType) TFY_CATEGORY_CHAIN_GESTURECLASS_IMPLEMENTATION(TFYMethod,TFYParaType, id, NSGestureRecognizer)
 
@@ -67,49 +66,6 @@ TFY_CATEGORY_CHAIN_GESTURE_IMPLEMENTATION(action, SEL)
                 obj.action = action;
             }];
         }
-        return self;
-    };
-}
-
-- (id  _Nonnull (^)(void (^ _Nonnull)(id _Nonnull)))addTargetBlock{
-    return ^ (GestureTargetAction action){
-        if (action) {
-            [self enumerateObjectsUsingBlock:^(id  _Nonnull obj) {
-                [obj tfy_addTargetBlock:action];
-            }];
-        }
-        return self;
-    };
-}
-
-- (id  _Nonnull (^)(void (^ _Nonnull)(id _Nonnull), NSString * _Nonnull))addTargetBlockWithTag{
-    return ^ (GestureTargetAction action, NSString *tag){
-        if (action) {
-            [self enumerateObjectsUsingBlock:^(id  _Nonnull obj) {
-                [obj tfy_addTargetBlock:action tag:tag];
-            }];
-        }
-        return self;
-    };
-}
-
-- (id  _Nonnull (^)(NSString * _Nonnull))removeTargetBlockWithTag{
-    return ^ (NSString *tag){
-        if (tag) {
-            [self enumerateObjectsUsingBlock:^(id  _Nonnull obj) {
-                [obj tfy_removeTargetBlockByTag:tag];
-            }];
-            
-        }
-        return self;
-    };
-}
-
-- (id  _Nonnull (^)(void))removeAllTargetBlock{
-    return ^(){
-        [self enumerateObjectsUsingBlock:^(NSGestureRecognizer * _Nonnull obj) {
-            [obj tfy_removeAllTargetBlock];
-        }];
         return self;
     };
 }

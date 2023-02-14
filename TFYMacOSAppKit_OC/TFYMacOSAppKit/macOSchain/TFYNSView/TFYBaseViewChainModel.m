@@ -225,18 +225,6 @@ TFY_CATEGORY_CHAIN_LAYER_IMPLEMENTATION(shadowPath, CGPathRef);
     };
 }
 
-- (id  _Nonnull (^)(void (^ _Nonnull)(id _Nonnull)))addGestureBlock{
-    return ^( void (^ ges) (id)){
-        if (ges) {
-            [self enumerateObjectsUsingBlock:^(NSView * _Nonnull obj) {
-                [obj addGestureRecognizer:NSTapGestureRecognizerCreateWithTarget(ges)];
-            }];
-        }
-        
-        return self;
-    };
-}
-
 - (id  _Nonnull (^)(NSGestureRecognizer * _Nonnull))removeGesture{
     return ^(NSGestureRecognizer *ges){
         if (!ges) return self;

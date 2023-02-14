@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYMacOSAppKit"
 
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
 
   spec.summary      = "纯代码 macOS 开发基本数据类型封装。最低支持macos 11 控制点语法使用"
 
@@ -54,7 +54,6 @@ Pod::Spec.new do |spec|
     ss.subspec 'TFYNSGesture' do |s|
       s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYNSGesture/**/*.{h,m}"
       s.dependency "TFYMacOSAppKit/macOSchain/TFYChainBase"
-      s.dependency "TFYMacOSAppKit/macOScategory"
     end
 
     ss.subspec 'TFYNSView' do |s|
