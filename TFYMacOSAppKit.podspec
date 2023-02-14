@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYMacOSAppKit"
 
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
 
   spec.summary      = "macOS 开发基本数据类型封装。最低支持macos 11 "
 
@@ -39,7 +39,7 @@ Pod::Spec.new do |spec|
     ss.dependency "TFYMacOSAppKit/macOScategory"
   end
 
-  spec.subspec 'macOSfoundation' do |ss|
+  spec.subspec 'macOSchain' do |ss|
     ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/macOSchain.h"
 
     ss.subspec 'TFYCALayer' do |s|
