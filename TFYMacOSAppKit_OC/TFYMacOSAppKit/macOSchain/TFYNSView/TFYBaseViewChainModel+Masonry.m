@@ -11,7 +11,7 @@
 - (id (^)( void (^constraints)(MASConstraintMaker *)) )methodName    \
 {   \
      return ^id ( void (^constraints)(MASConstraintMaker *) ) {  \
-     [self enumerateObjectsUsingBlock:^(UIView*  _Nonnull obj) {\
+     [self enumerateObjectsUsingBlock:^(NSView*  _Nonnull obj) {\
      if (obj.superview) { \
      [obj masonryMethod:constraints];\
     }\
