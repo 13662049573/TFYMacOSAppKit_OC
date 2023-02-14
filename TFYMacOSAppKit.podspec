@@ -48,19 +48,19 @@ Pod::Spec.new do |spec|
 
     ss.subspec 'TFYCALayer' do |s|
       s.source_files  = "TFYMacOSAppKit/macOSchain/TFYCALayer/**/*.{h,m}"
-      s.dependency "macOSchain/TFYChainBase"
+      s.dependency "TFYMacOSAppKit/macOSchain/TFYChainBase"
     end
 
     ss.subspec 'TFYNSGesture' do |s|
       s.source_files  = "TFYMacOSAppKit/macOSchain/TFYNSGesture/**/*.{h,m}"
-      s.dependency "macOSchain/TFYChainBase"
+      s.dependency "TFYMacOSAppKit/macOSchain/TFYChainBase"
     end
 
     ss.subspec 'TFYNSView' do |s|
       s.source_files  = "TFYMacOSAppKit/macOSchain/TFYNSView/**/*.{h,m}"
-      s.dependency "macOSchain/TFYChainBase"
-      s.dependency "macOSchain/TFYNSGesture"
-      s.dependency "macOSchain/TFYCALayer"
+      s.dependency "TFYMacOSAppKit/macOSchain/TFYChainBase"
+      s.dependency "TFYMacOSAppKit/macOSchain/TFYNSGesture"
+      s.dependency "TFYMacOSAppKit/macOSchain/TFYCALayer"
       s.dependency "TFYMacOSAppKit/macOScontainer"
     end
     
