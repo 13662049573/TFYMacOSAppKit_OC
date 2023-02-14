@@ -25,7 +25,6 @@
 #import "NSDate+Dejal.h"
 #import "NSDictionary+Dejal.h"
 #import "NSFileManager+Dejal.h"
-#import "NSObject+Dejal.h"
 #import "NSString+Dejal.h"
 #import "NSUserDefaults+Dejal.h"
 #import "NSString+Extend.h"
@@ -38,5 +37,6 @@
 #import "NSArray+TFY_Tools.h"
 #import "NSString+TFY_String.h"
 #import "NSFileManager+TFY_Tools.h"
+#import "NSObject+Dejal.h"
 
 #endif /* macOSfoundation_h */

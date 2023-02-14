@@ -26,6 +26,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'macOScategory' do |ss|
     ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScategory/**/*.{h,m}"
+    ss.dependency "TFYMacOSAppKit/macOSfoundation"
   end
 
   spec.subspec 'macOScontainer' do |ss|
@@ -36,7 +37,6 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'macOSfoundation' do |ss|
     ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSfoundation/**/*.{h,m}"
-    ss.dependency "TFYMacOSAppKit/macOScategory"
   end
 
   spec.subspec 'macOSchain' do |ss|

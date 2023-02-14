@@ -8,7 +8,6 @@
 #import "NSTextView+Dejal.h"
 #import "NSAttributedString+Dejal.h"
 
-
 @implementation NSTextView (Dejal)
 
 /**
