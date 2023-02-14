@@ -24,6 +24,8 @@
     [super viewDidLoad];
     [self.view addSubview:self.backView];
     
+   
+    
 }
 
 - (NSView *)backView {

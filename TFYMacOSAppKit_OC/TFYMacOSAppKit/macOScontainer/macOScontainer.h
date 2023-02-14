@@ -43,9 +43,58 @@
     #endif
 #endif
 
+
+/***线程****/
+///异步
+NS_INLINE
+void TFY_GCD_QUEUE_ASYNC(dispatch_block_t _Nonnull block) {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(queue)) == 0) {
+        block();
+    }else{
+        dispatch_async(queue, block);
+    }
+}
+
+///延迟加载
+NS_INLINE
+void TFY_GCD_QUEUE_TIME(NSInteger time,dispatch_block_t _Nonnull block) {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);//并发队列-延迟执行
+    if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(queue)) == 0) {
+        dispatch_time_t when = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC));
+        dispatch_after(when, queue, ^{
+            block();
+        });
+    } else {
+        dispatch_queue_t queuetime = dispatch_get_main_queue();//主队列--延迟执行
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), queuetime, ^{
+            block();
+        });
+    }
+}
+///主线程
+NS_INLINE
+void TFY_GCD_QUEUE_MAIN(dispatch_block_t _Nonnull block) {
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(queue)) == 0) {
+        block();
+    }else{
+        if ([[NSThread currentThread] isMainThread]) {
+            dispatch_async(queue, block);
+        }else{
+            dispatch_sync(queue, block);
+        }
+    }
+}
+
+
 #import "TFYButton.h"
 #import "TFYLabel.h"
 #import "TFYTextField.h"
 #import "TFYUtils.h"
+#import "TFYWKWebView.h"
+
+#import "TFYGCDTimer.h"
+#import "TFYGCDSemaphore.h"
 
 #endif /* macOScontainer_h */
