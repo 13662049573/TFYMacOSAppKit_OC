@@ -61,7 +61,7 @@ Pod::Spec.new do |spec|
       s.dependency "TFYMacOSAppKit/macOSchain/TFYChainBase"
       s.dependency "TFYMacOSAppKit/macOSchain/TFYNSGesture"
       s.dependency "TFYMacOSAppKit/macOSchain/TFYCALayer"
-      s.dependency "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer"
+      s.dependency "TFYMacOSAppKit/macOScontainer"
     end
     
   end
