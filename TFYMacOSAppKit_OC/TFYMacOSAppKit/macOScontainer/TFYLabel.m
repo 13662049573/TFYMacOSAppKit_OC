@@ -40,11 +40,11 @@
     // Drawing code here.
     CGFloat padding = 8.0;
     if (self.enabled == false) {
-        if (!self.text) {
+        if (!self.title) {
             return;
         }
         NSColor *textColor = NSColor.lightGrayColor;
-        [self drawString:self.text textColor:textColor padding:padding];
+        [self drawString:self.title textColor:textColor padding:padding];
         return;
     }
     
@@ -52,11 +52,11 @@
         [self drawAttributedString:self.attributedText padding:padding];
 
     } else {
-        if (!self.text) {
+        if (!self.title) {
             return;
         }
         NSColor *textColor = self.isHighlighted ? self.highlightedTextColor : self.textColor;
-        [self drawString:self.text textColor:textColor padding:padding];
+        [self drawString:self.title textColor:textColor padding:padding];
     }
 }
 

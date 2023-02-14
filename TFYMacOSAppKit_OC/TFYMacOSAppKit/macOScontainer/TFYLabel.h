@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, TFYContentVerticalAlignment) {
 
 @interface TFYLabel : NSView
 
-@property(nullable, nonatomic,copy)   NSString           *text; // default is nil
+@property(nullable, nonatomic,copy)   NSString           *title; // default is nil
 @property(nonatomic, strong) NSFont      *font; // default is nil (system font 17 plain)
 @property(nonatomic, strong) NSColor     *textColor; // default is labelColor
 @property(nonatomic, assign) NSTextAlignment    textAlignment;   // default is NSTextAlignmentLeft

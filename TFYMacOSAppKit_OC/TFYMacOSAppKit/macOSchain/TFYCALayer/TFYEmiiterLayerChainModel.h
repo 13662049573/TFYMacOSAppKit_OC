@@ -19,13 +19,9 @@ TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ emitterPosition) (CGP
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ emitterZPosition) (CGFloat emitterZPosition);
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ emitterSize) (CGSize emitterSize);
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ emitterDepth) (CGFloat emitterDepth);
-
-#ifdef __IPHONE_12_0
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ emitterShape) (CAEmitterLayerEmitterShape emitterShape);
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ emitterMode) (CAEmitterLayerEmitterMode emitterMode);
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ renderMode) (CAEmitterLayerRenderMode renderMode);
-#endif
-
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ preservesDepth) (BOOL preservesDepth);
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ velocity) (float velocity);
 TFY_PROPERTY_CHAIN_READONLY TFYEmiiterLayerChainModel * (^ scale) (float scale);

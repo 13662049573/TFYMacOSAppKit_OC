@@ -55,7 +55,6 @@
 		36AE67F029961FFF0013EF3B /* NSOutlineView+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67BC29961FFF0013EF3B /* NSOutlineView+Dejal.m */; };
 		36AE67F129961FFF0013EF3B /* TFYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67C629961FFF0013EF3B /* TFYButton.m */; };
 		36AE67F229961FFF0013EF3B /* TFYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67CA29961FFF0013EF3B /* TFYLabel.m */; };
-		36AE67F329961FFF0013EF3B /* TFYAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67CB29961FFF0013EF3B /* TFYAttributedLabel.m */; };
 		36AE67FA299726C90013EF3B /* TFYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67F9299726C90013EF3B /* TFYTextField.m */; };
 		36AE680D299737620013EF3B /* NSArray+TFY_Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67FB299737610013EF3B /* NSArray+TFY_Tools.m */; };
 		36AE680E299737620013EF3B /* NSMutableParagraphStyle+TFY_Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE67FF299737610013EF3B /* NSMutableParagraphStyle+TFY_Chain.m */; };
@@ -117,6 +116,9 @@
 		36CA65FD299A3EE70066B945 /* TFYOutlineViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65FC299A3EE70066B945 /* TFYOutlineViewChainModel.m */; };
 		36CA6600299A406B0066B945 /* TFYPredicateEditorChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65FF299A406B0066B945 /* TFYPredicateEditorChainModel.m */; };
 		36CA6603299A428A0066B945 /* NSView+TFY_Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA6602299A428A0066B945 /* NSView+TFY_Chain.m */; };
+		36CA6606299B0A2F0066B945 /* TFYLabelViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA6605299B0A2F0066B945 /* TFYLabelViewChainModel.m */; };
+		36CA6609299B0DE00066B945 /* TFYCustomizeButtonChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA6608299B0DE00066B945 /* TFYCustomizeButtonChainModel.m */; };
+		36CA660C299B11300066B945 /* TFYCustomizeTextFieldChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA660B299B11300066B945 /* TFYCustomizeTextFieldChainModel.m */; };
 		36E079522998A20B00266645 /* TFYClipViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E079512998A20B00266645 /* TFYClipViewChainModel.m */; };
 		36E079552998A4D800266645 /* TFYCollectionViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E079542998A4D800266645 /* TFYCollectionViewChainModel.m */; };
 		36E079582998B02800266645 /* TFYScrubberChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E079572998B02800266645 /* TFYScrubberChainModel.m */; };
@@ -248,11 +250,9 @@
 		36AE67C329961FFF0013EF3B /* NSToolbar+Dejal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSToolbar+Dejal.h"; sourceTree = "<group>"; };
 		36AE67C529961FFF0013EF3B /* TFYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYLabel.h; sourceTree = "<group>"; };
 		36AE67C629961FFF0013EF3B /* TFYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYButton.m; sourceTree = "<group>"; };
-		36AE67C729961FFF0013EF3B /* TFYAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYAttributedLabel.h; sourceTree = "<group>"; };
 		36AE67C829961FFF0013EF3B /* macOScontainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macOScontainer.h; sourceTree = "<group>"; };
 		36AE67C929961FFF0013EF3B /* TFYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYButton.h; sourceTree = "<group>"; };
 		36AE67CA29961FFF0013EF3B /* TFYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYLabel.m; sourceTree = "<group>"; };
-		36AE67CB29961FFF0013EF3B /* TFYAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYAttributedLabel.m; sourceTree = "<group>"; };
 		36AE67F42996200B0013EF3B /* TFYMacOSAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYMacOSAppKit.h; sourceTree = "<group>"; };
 		36AE67F8299726C90013EF3B /* TFYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFYTextField.h; sourceTree = "<group>"; };
 		36AE67F9299726C90013EF3B /* TFYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFYTextField.m; sourceTree = "<group>"; };
@@ -382,6 +382,12 @@
 		36CA65FF299A406B0066B945 /* TFYPredicateEditorChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYPredicateEditorChainModel.m; sourceTree = "<group>"; };
 		36CA6601299A428A0066B945 /* NSView+TFY_Chain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+TFY_Chain.h"; sourceTree = "<group>"; };
 		36CA6602299A428A0066B945 /* NSView+TFY_Chain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+TFY_Chain.m"; sourceTree = "<group>"; };
+		36CA6604299B0A2F0066B945 /* TFYLabelViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYLabelViewChainModel.h; sourceTree = "<group>"; };
+		36CA6605299B0A2F0066B945 /* TFYLabelViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYLabelViewChainModel.m; sourceTree = "<group>"; };
+		36CA6607299B0DE00066B945 /* TFYCustomizeButtonChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCustomizeButtonChainModel.h; sourceTree = "<group>"; };
+		36CA6608299B0DE00066B945 /* TFYCustomizeButtonChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCustomizeButtonChainModel.m; sourceTree = "<group>"; };
+		36CA660A299B11300066B945 /* TFYCustomizeTextFieldChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCustomizeTextFieldChainModel.h; sourceTree = "<group>"; };
+		36CA660B299B11300066B945 /* TFYCustomizeTextFieldChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCustomizeTextFieldChainModel.m; sourceTree = "<group>"; };
 		36E079502998A20B00266645 /* TFYClipViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYClipViewChainModel.h; sourceTree = "<group>"; };
 		36E079512998A20B00266645 /* TFYClipViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYClipViewChainModel.m; sourceTree = "<group>"; };
 		36E079532998A4D800266645 /* TFYCollectionViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCollectionViewChainModel.h; sourceTree = "<group>"; };
@@ -633,8 +639,6 @@
 				36AE67CA29961FFF0013EF3B /* TFYLabel.m */,
 				36AE67C929961FFF0013EF3B /* TFYButton.h */,
 				36AE67C629961FFF0013EF3B /* TFYButton.m */,
-				36AE67C729961FFF0013EF3B /* TFYAttributedLabel.h */,
-				36AE67CB29961FFF0013EF3B /* TFYAttributedLabel.m */,
 			);
 			path = macOScontainer;
 			sourceTree = "<group>";
@@ -775,6 +779,12 @@
 				36CA65FF299A406B0066B945 /* TFYPredicateEditorChainModel.m */,
 				36CA65E9299A322D0066B945 /* TFYPathControlChainModel.h */,
 				36CA65EA299A322D0066B945 /* TFYPathControlChainModel.m */,
+				36CA6604299B0A2F0066B945 /* TFYLabelViewChainModel.h */,
+				36CA6605299B0A2F0066B945 /* TFYLabelViewChainModel.m */,
+				36CA6607299B0DE00066B945 /* TFYCustomizeButtonChainModel.h */,
+				36CA6608299B0DE00066B945 /* TFYCustomizeButtonChainModel.m */,
+				36CA660A299B11300066B945 /* TFYCustomizeTextFieldChainModel.h */,
+				36CA660B299B11300066B945 /* TFYCustomizeTextFieldChainModel.m */,
 				36CA6601299A428A0066B945 /* NSView+TFY_Chain.h */,
 				36CA6602299A428A0066B945 /* NSView+TFY_Chain.m */,
 			);
@@ -954,6 +964,7 @@
 				36AE67DA29961FFF0013EF3B /* NSObject+Dejal.m in Sources */,
 				36CA65E5299A2DBD0066B945 /* TFYLevelIndicatorChainModel.m in Sources */,
 				36AE684B299751DC0013EF3B /* TFYBaseGestureChainModel.m in Sources */,
+				36CA6606299B0A2F0066B945 /* TFYLabelViewChainModel.m in Sources */,
 				36AE67E229961FFF0013EF3B /* NSColor+Dejal.m in Sources */,
 				36AE67CC29961FFF0013EF3B /* NSDictionary+Dejal.m in Sources */,
 				36AE67CF29961FFF0013EF3B /* NSString+Dejal.m in Sources */,
@@ -998,6 +1009,7 @@
 				36AE67E829961FFF0013EF3B /* NSPopover+Hook.m in Sources */,
 				36AE67E929961FFF0013EF3B /* NSMenu+Dejal.m in Sources */,
 				36E079582998B02800266645 /* TFYScrubberChainModel.m in Sources */,
+				36CA6609299B0DE00066B945 /* TFYCustomizeButtonChainModel.m in Sources */,
 				36AE680D299737620013EF3B /* NSArray+TFY_Tools.m in Sources */,
 				36AE67ED29961FFF0013EF3B /* NSImage+Dejal.m in Sources */,
 				36E079612998BDA000266645 /* TFYGridViewChainModel.m in Sources */,
@@ -1051,7 +1063,7 @@
 				36AE6862299767880013EF3B /* TFYBaseViewChainModel.m in Sources */,
 				36E0795B2998B5E800266645 /* TFYSplitViewChainModel.m in Sources */,
 				36AE67E129961FFF0013EF3B /* NSTextView+Dejal.m in Sources */,
-				36AE67F329961FFF0013EF3B /* TFYAttributedLabel.m in Sources */,
+				36CA660C299B11300066B945 /* TFYCustomizeTextFieldChainModel.m in Sources */,
 				36CA65EB299A322D0066B945 /* TFYPathControlChainModel.m in Sources */,
 				36AE688D299A08450013EF3B /* TFYImageViewChainModel.m in Sources */,
 				36AE67DD29961FFF0013EF3B /* NSFileManager+Dejal.m in Sources */,

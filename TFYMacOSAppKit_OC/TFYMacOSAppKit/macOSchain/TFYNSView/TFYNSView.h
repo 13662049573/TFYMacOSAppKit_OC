@@ -27,6 +27,7 @@
 #import "TFYTabViewChainModel.h"
 #import "TFYVisualEffectViewChainModel.h"
 
+#import "TFYBrowserChainModel.h"
 #import "TFYPopUpButtonChainModel.h"
 #import "TFYStatusBarButtonChainModel.h"
 #import "TFYMatrixChainModel.h"
@@ -46,5 +47,9 @@
 #import "TFYTokenFieldChainModel.h"
 #import "TFYComboBoxChainModel.h"
 #import "TFYSearchFieldChainModel.h"
+/// 以下自定义控件
+#import "TFYLabelViewChainModel.h"
+#import "TFYCustomizeButtonChainModel.h"
+#import "TFYCustomizeTextFieldChainModel.h"
 
 #endif /* TFYNSView_h */
