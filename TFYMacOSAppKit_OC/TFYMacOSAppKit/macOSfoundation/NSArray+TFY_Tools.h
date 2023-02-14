@@ -18,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  快捷计算
  */
-- (CGFloat)tfy_maxObject;
+- (id)tfy_maxObject;
 
-- (CGFloat)tfy_minObject;
+- (id)tfy_minObject;
 
-- (CGFloat)tfy_sumObject;
+- (id)tfy_sumObject;
 @end
 
 @interface NSArray<ObjectType> (Plist)

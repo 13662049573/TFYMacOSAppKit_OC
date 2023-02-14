@@ -195,18 +195,18 @@
     return style.defaultTabInterval;
 }
 
-- (CGFloat)tfy_characterSpacing {
+- (id)tfy_characterSpacing {
     return [self tfy_characterSpacingAtIndex:0 effectiveRange:NULL];
 }
-- (CGFloat)tfy_characterSpacingAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSKernAttributeName atIndex:index effectiveRange:range] floatValue];
+- (id)tfy_characterSpacingAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSKernAttributeName atIndex:index effectiveRange:range];
 }
 
-- (NSUnderlineStyle)tfy_lineThroughStyle {
+- (id)tfy_lineThroughStyle {
     return [self tfy_lineThroughStyleAtIndex:0 effectiveRange:NULL];
 }
-- (NSUnderlineStyle)tfy_lineThroughStyleAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSStrikethroughStyleAttributeName atIndex:index effectiveRange:range] integerValue];
+- (id)tfy_lineThroughStyleAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSStrikethroughStyleAttributeName atIndex:index effectiveRange:range];
 }
 
 - (NSColor *)tfy_lineThroughColor {
@@ -216,19 +216,20 @@
     return [self attribute:NSStrikethroughColorAttributeName atIndex:index effectiveRange:range];
 }
 
-- (NSInteger)tfy_characterLigature {
+- (id)tfy_characterLigature {
     return [self tfy_characterLigatureAtIndex:0 effectiveRange:NULL];
 }
-- (NSInteger)tfy_characterLigatureAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+
+- (id)tfy_characterLigatureAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
     id attribute = [self attribute:NSLigatureAttributeName atIndex:index effectiveRange:range];
-    return attribute ? [attribute integerValue] : 1;
+    return attribute;
 }
 
-- (NSUnderlineStyle)tfy_underLineStyle {
+- (id)tfy_underLineStyle {
     return [self tfy_underLineStyleAtIndex:0 effectiveRange:NULL];
 }
-- (NSUnderlineStyle)tfy_underLineStyleAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSUnderlineStyleAttributeName atIndex:index effectiveRange:range] integerValue];
+- (id)tfy_underLineStyleAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSUnderlineStyleAttributeName atIndex:index effectiveRange:range];
 }
 
 - (NSColor *)tfy_underLineColor {
@@ -245,11 +246,11 @@
     return [self attribute:NSStrokeColorAttributeName atIndex:index effectiveRange:range];
 }
 
-- (CGFloat)tfy_strokeWidth {
+- (id)tfy_strokeWidth {
     return [self tfy_strokeWidthAtIndex:0 effectiveRange:NULL];
 }
-- (CGFloat)tfy_strokeWidthAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSStrokeWidthAttributeName atIndex:index effectiveRange:range] floatValue];
+- (id)tfy_strokeWidthAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSStrokeWidthAttributeName atIndex:index effectiveRange:range];
 }
 
 - (NSShadow *)tfy_shadow {
@@ -270,29 +271,29 @@
     return [self attribute:NSLinkAttributeName atIndex:index effectiveRange:range];
 }
 
-- (CGFloat)tfy_baseline {
+- (id)tfy_baseline {
     return [self tfy_baselineAtIndex:0 effectiveRange:NULL];
 }
-- (CGFloat)tfy_baselineAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSBaselineOffsetAttributeName atIndex:index effectiveRange:range] floatValue];
+- (id)tfy_baselineAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSBaselineOffsetAttributeName atIndex:index effectiveRange:range];
 }
 
-- (NSWritingDirection)tfy_writingDirectionAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSWritingDirectionAttributeName atIndex:index effectiveRange:range] integerValue];
+- (id)tfy_writingDirectionAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSWritingDirectionAttributeName atIndex:index effectiveRange:range];
 }
 
-- (CGFloat)tfy_obliqueness {
+- (id)tfy_obliqueness {
     return [self tfy_obliquenessAtIndex:0 effectiveRange:NULL];
 }
-- (CGFloat)tfy_obliquenessAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSObliquenessAttributeName atIndex:index effectiveRange:range] floatValue];
+- (id)tfy_obliquenessAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSObliquenessAttributeName atIndex:index effectiveRange:range];
 }
 
-- (CGFloat)tfy_expansion {
+- (id)tfy_expansion {
     return [self tfy_expansionAtIndex:0 effectiveRange:NULL];
 }
-- (CGFloat)tfy_expansionAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
-    return [[self attribute:NSExpansionAttributeName atIndex:index effectiveRange:range] floatValue];
+- (id)tfy_expansionAtIndex:(NSUInteger)index effectiveRange:(NSRangePointer)range {
+    return [self attribute:NSExpansionAttributeName atIndex:index effectiveRange:range];
 }
 
 @end

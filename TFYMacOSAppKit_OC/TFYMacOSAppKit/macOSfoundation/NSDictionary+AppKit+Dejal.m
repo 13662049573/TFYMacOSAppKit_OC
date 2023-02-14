@@ -36,14 +36,15 @@
 
 - (NSColor *)tfy_color
 {
-    CGFloat red = [self[@"Red"] floatValue];
-    CGFloat green = [self[@"Green"] floatValue];
-    CGFloat blue = [self[@"Blue"] floatValue];
-    CGFloat alpha = 1.0;
-    id temp = self[@"Alpha"];
+    NSDictionary<NSString *,NSString *> *dict = self;
     
+    CGFloat red = [dict[@"Red"] floatValue];
+    CGFloat green = [dict[@"Green"] floatValue];
+    CGFloat blue = [dict[@"Blue"] floatValue];
+    CGFloat alpha = 1.0;
+    CGFloat temp = [dict[@"Alpha"] floatValue];
     if (temp)
-        alpha = [temp floatValue];
+        alpha = temp;
     
     return [NSColor colorWithCalibratedRed:red green:green blue:blue alpha:alpha];
 }

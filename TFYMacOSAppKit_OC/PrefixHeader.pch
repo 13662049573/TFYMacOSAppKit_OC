@@ -1,0 +1,13 @@
+//
+//  PrefixHeader.pch
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2023/2/14.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "TFYMacOSAppKit.h"
+
+#endif /* PrefixHeader_pch */

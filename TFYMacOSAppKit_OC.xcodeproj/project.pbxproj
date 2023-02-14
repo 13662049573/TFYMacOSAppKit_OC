@@ -90,7 +90,6 @@
 		36AE686F29979C2B0013EF3B /* TFYBaseViewChainModel+Masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE686E29979C2B0013EF3B /* TFYBaseViewChainModel+Masonry.m */; };
 		36AE68722999BAAB0013EF3B /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE68712999BAAB0013EF3B /* MainWindowController.m */; };
 		36AE68752999BAD50013EF3B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE68742999BAD50013EF3B /* MainViewController.m */; };
-		36AE68782999BC350013EF3B /* NSViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE68772999BC350013EF3B /* NSViewController+Hook.m */; };
 		36AE687B2999BE890013EF3B /* TFYPopUpButtonChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE687A2999BE890013EF3B /* TFYPopUpButtonChainModel.m */; };
 		36AE687E2999C2760013EF3B /* TFYStatusBarButtonChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE687D2999C2760013EF3B /* TFYStatusBarButtonChainModel.m */; };
 		36AE68812999D08B0013EF3B /* TFYButtonChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE68802999D08B0013EF3B /* TFYButtonChainModel.m */; };
@@ -330,8 +329,6 @@
 		36AE68712999BAAB0013EF3B /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		36AE68732999BAD50013EF3B /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		36AE68742999BAD50013EF3B /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		36AE68762999BC350013EF3B /* NSViewController+Hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController+Hook.h"; sourceTree = "<group>"; };
-		36AE68772999BC350013EF3B /* NSViewController+Hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+Hook.m"; sourceTree = "<group>"; };
 		36AE68792999BE890013EF3B /* TFYPopUpButtonChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYPopUpButtonChainModel.h; sourceTree = "<group>"; };
 		36AE687A2999BE890013EF3B /* TFYPopUpButtonChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYPopUpButtonChainModel.m; sourceTree = "<group>"; };
 		36AE687C2999C2760013EF3B /* TFYStatusBarButtonChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusBarButtonChainModel.h; sourceTree = "<group>"; };
@@ -388,6 +385,7 @@
 		36CA6608299B0DE00066B945 /* TFYCustomizeButtonChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCustomizeButtonChainModel.m; sourceTree = "<group>"; };
 		36CA660A299B11300066B945 /* TFYCustomizeTextFieldChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCustomizeTextFieldChainModel.h; sourceTree = "<group>"; };
 		36CA660B299B11300066B945 /* TFYCustomizeTextFieldChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCustomizeTextFieldChainModel.m; sourceTree = "<group>"; };
+		36CA660F299B23220066B945 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		36E079502998A20B00266645 /* TFYClipViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYClipViewChainModel.h; sourceTree = "<group>"; };
 		36E079512998A20B00266645 /* TFYClipViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYClipViewChainModel.m; sourceTree = "<group>"; };
 		36E079532998A4D800266645 /* TFYCollectionViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCollectionViewChainModel.h; sourceTree = "<group>"; };
@@ -480,8 +478,7 @@
 				36AE68712999BAAB0013EF3B /* MainWindowController.m */,
 				36AE68732999BAD50013EF3B /* MainViewController.h */,
 				36AE68742999BAD50013EF3B /* MainViewController.m */,
-				36AE68762999BC350013EF3B /* NSViewController+Hook.h */,
-				36AE68772999BC350013EF3B /* NSViewController+Hook.m */,
+				36CA660F299B23220066B945 /* PrefixHeader.pch */,
 			);
 			path = TFYMacOSAppKit_OC;
 			sourceTree = "<group>";
@@ -993,7 +990,6 @@
 				36AE6814299737620013EF3B /* NSDictionary+TFY_Tools.m in Sources */,
 				36AE67EB29961FFF0013EF3B /* NSTextField+Dejal.m in Sources */,
 				36E079762998E44D00266645 /* TFYRulerViewChainModel.m in Sources */,
-				36AE68782999BC350013EF3B /* NSViewController+Hook.m in Sources */,
 				363EB09E29989CC0007A4B38 /* TFYBoxChainModel.m in Sources */,
 				36AE675229961FB00013EF3B /* main.m in Sources */,
 				36AE67DB29961FFF0013EF3B /* NSAttributedString+AppKit+Dejal.m in Sources */,
@@ -1230,6 +1226,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QH95759TSS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TFYMacOSAppKit_OC/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -1256,6 +1254,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QH95759TSS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TFYMacOSAppKit_OC/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

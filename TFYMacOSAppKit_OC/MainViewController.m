@@ -6,7 +6,7 @@
 //
 
 #import "MainViewController.h"
-#import "TFYMacOSAppKit.h"
+
 
 @interface MainViewController ()
 @property (nonatomic , strong) NSView *backView;

@@ -45,19 +45,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) float tfy_hyphenationFactor;         // 连字符
 @property (nonatomic, assign, readonly) CGFloat tfy_defaultTabInterval;      // \t制表符间距
 
-@property (nonatomic, assign, readonly) CGFloat tfy_characterSpacing;        // 字符间距
-@property (nonatomic, assign, readonly) NSUnderlineStyle tfy_lineThroughStyle;// 删除线类型
+@property (nonatomic, assign, readonly) id tfy_characterSpacing;        // 字符间距
+@property (nonatomic, assign, readonly) id tfy_lineThroughStyle;// 删除线类型
 @property (nonatomic, strong, readonly, nullable) NSColor *tfy_lineThroughColor;//删除线颜色
-@property (nonatomic, assign, readonly) NSInteger tfy_characterLigature;// 连字符 default 1
-@property (nonatomic, assign, readonly) NSUnderlineStyle tfy_underLineStyle; // 下划线类型
+@property (nonatomic, assign, readonly) id tfy_characterLigature;// 连字符 default 1
+@property (nonatomic, assign, readonly) id tfy_underLineStyle; // 下划线类型
 @property (nonatomic, strong, readonly, nullable) NSColor *tfy_underLineColor;// 下划线颜色
-@property (nonatomic, assign, readonly) CGFloat tfy_strokeWidth;             // 文字边线宽度
+@property (nonatomic, assign, readonly) id tfy_strokeWidth;             // 文字边线宽度
 @property (nonatomic, strong, readonly, nullable) NSColor *tfy_strokeColor;  // 文字边线颜色
 @property (nonatomic, strong, readonly, nullable) NSShadow *tfy_shadow;      // 文字阴影
 @property (nonatomic, strong, readonly, nullable) id tfy_link;               // 链接
-@property (nonatomic, assign, readonly) CGFloat tfy_baseline;                // 文字基线偏移
-@property (nonatomic, assign, readonly) CGFloat tfy_obliqueness;             // 字形倾斜度
-@property (nonatomic, assign, readonly) CGFloat tfy_expansion;            // 文本横向拉伸属性
+@property (nonatomic, assign, readonly) id tfy_baseline;                // 文字基线偏移
+@property (nonatomic, assign, readonly) id tfy_obliqueness;             // 字形倾斜度
+@property (nonatomic, assign, readonly) id tfy_expansion;            // 文本横向拉伸属性
 
 #pragma mark - Get Attribute At Index
 
@@ -153,12 +153,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取索引处的文本字符间距属性
  */
-- (CGFloat)tfy_characterSpacingAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_characterSpacingAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  通过index的样式属性获取文本行
  */
-- (NSUnderlineStyle)tfy_lineThroughStyleAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_lineThroughStyleAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  通过index处的颜色属性获取文本行
@@ -168,12 +168,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取索引处的文本字符连接属性
  */
-- (NSInteger)tfy_characterLigatureAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_characterLigatureAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  获取索引处的文本下划线样式属性
  */
-- (NSUnderlineStyle)tfy_underLineStyleAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_underLineStyleAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  在索引处获取文本下划线颜色属性
@@ -183,7 +183,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取索引处的文本笔画宽度属性
  */
-- (CGFloat)tfy_strokeWidthAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_strokeWidthAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  获取索引处的文本描边颜色属性
@@ -208,22 +208,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取索引处的文本基线属性
  */
-- (CGFloat)tfy_baselineAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_baselineAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  获取索引处的文本书写方向属性
  */
-- (NSWritingDirection)tfy_writingDirectionAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_writingDirectionAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  获取索引处的文本倾斜属性
  */
-- (CGFloat)tfy_obliquenessAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_obliquenessAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 /**
  获取索引处的文本扩展属性
  */
-- (CGFloat)tfy_expansionAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
+- (id)tfy_expansionAtIndex:(NSUInteger)index effectiveRange:(nullable NSRangePointer)range;
 
 @end
 

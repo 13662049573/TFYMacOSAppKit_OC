@@ -22,16 +22,16 @@
     return index < self.count ? self[index]:nil;
 }
 
-- (CGFloat)tfy_maxObject{
-    return [[self valueForKeyPath:@"@max.self"] floatValue];
+- (id)tfy_maxObject{
+    return [self valueForKeyPath:@"@max.self"];
 }
 
-- (CGFloat)tfy_minObject{
-    return [[self valueForKeyPath:@"@min.self"] floatValue];
+- (id)tfy_minObject{
+    return [self valueForKeyPath:@"@min.self"];
 }
 
-- (CGFloat)tfy_sumObject{
-    return [[self valueForKeyPath:@"@sum.self"] floatValue];
+- (id)tfy_sumObject{
+    return [self valueForKeyPath:@"@sum.self"];
 }
 
 @end

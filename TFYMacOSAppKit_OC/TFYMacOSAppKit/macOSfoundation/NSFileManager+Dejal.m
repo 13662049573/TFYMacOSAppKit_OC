@@ -20,7 +20,7 @@
 
 - (NSInteger)tfy_fileSizeAtPath:(NSString *)path
 {
-    NSDictionary *attributes = [self attributesOfItemAtPath:path error:nil];
+    NSDictionary<NSFileAttributeKey, NSString*> *attributes = [self attributesOfItemAtPath:path error:nil];
     
     return [attributes[NSFileSize] integerValue];
 }

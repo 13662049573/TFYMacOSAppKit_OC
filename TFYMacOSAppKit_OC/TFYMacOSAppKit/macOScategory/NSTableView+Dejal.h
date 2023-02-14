@@ -112,7 +112,7 @@
 /**
  创建一个新的文本列，使用字典中指定的属性，键为"Identifier"， "Name"， "Width"和"Editable"。如果“Ascending”键存在，则列是可排序的。
 */
-- (NSTableColumn *)tfy_addTableColumnWithColumnInfo:(NSDictionary *)columnInfo;
+- (NSTableColumn *)tfy_addTableColumnWithColumnInfo:(NSDictionary<NSString*,NSString*> *)columnInfo;
 /**
  在字典数组中创建新的文本列，如上面的-addTableColumnsWithArrayOfColumnInfo:。如果removeAll为YES，则首先删除任何现有列。如果sizeLast为YES，则调整最后一列的大小以适应。
 */

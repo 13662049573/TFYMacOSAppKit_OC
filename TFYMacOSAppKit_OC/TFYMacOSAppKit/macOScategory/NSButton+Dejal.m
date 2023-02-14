@@ -32,7 +32,8 @@ static NSString * const RetainTitle = @"重试";
 }
 
 - (NSInteger)tfy_time {
-    return  [objc_getAssociatedObject(self, _cmd) integerValue];
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    return  number.integerValue;
 }
 
 - (void)setTfy_format:(NSString *)tfy_format {
@@ -56,7 +57,8 @@ static NSString * const RetainTitle = @"重试";
 }
 
 - (NSInteger)userTime {
-    return  [objc_getAssociatedObject(self, _cmd) integerValue];
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    return  number.integerValue;
 }
 
 - (void)setCompleteBlock:(void (^)(void))CompleteBlock {

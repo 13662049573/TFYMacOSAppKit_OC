@@ -284,11 +284,11 @@
  创建一个新的文本列，使用字典中指定的属性，键为"Identifier"， "Name"， "Width"和"Editable"。如果“Ascending”键存在，则列是可排序的。
 */
 
-- (NSTableColumn *)tfy_addTableColumnWithColumnInfo:(NSDictionary *)columnInfo
+- (NSTableColumn *)tfy_addTableColumnWithColumnInfo:(NSDictionary<NSString*,NSString*> *)columnInfo
 {
     NSString *identifier = columnInfo[@"Identifier"];
     NSString *title = columnInfo[@"Name"];
-    NSNumber *ascendingNum = columnInfo[@"Ascending"];
+    NSString *ascendingNum = columnInfo[@"Ascending"];
     CGFloat width = [columnInfo[@"Width"] floatValue];
     NSTextAlignment alignment = [columnInfo[@"Alignment"] integerValue];
     BOOL isEditable = [columnInfo[@"Editable"] boolValue];

@@ -69,7 +69,7 @@
 - (NSInteger)tfy_wordCount;
 
 - (NSDictionary *)tfy_dictionaryWithVersionComponents;
-+ (NSString *)tfy_versionWithDictionary:(NSDictionary *)dict;
++ (NSString *)tfy_versionWithDictionary:(NSDictionary<NSString*,NSString*> *)dict;
 + (NSString *)tfy_versionWithMajor:(NSInteger)major minor:(NSInteger)minor bug:(NSInteger)bug kind:(NSString *)kind stage:(NSInteger)stage;
 
 - (NSString *)tfy_left:(NSInteger)length;

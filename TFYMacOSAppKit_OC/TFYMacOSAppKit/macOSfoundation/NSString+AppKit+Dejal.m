@@ -119,7 +119,7 @@
 
 - (NSPoint)tfy_pointValue
 {
-    NSArray *components = [self componentsSeparatedByString:@", "];
+    NSArray<NSString*> *components = [self componentsSeparatedByString:@", "];
     NSPoint point = NSZeroPoint;
     
     point.x = [components[0] floatValue];
@@ -150,7 +150,7 @@
 
 - (NSColor *)tfy_color
 {
-    NSArray *values = [self componentsSeparatedByString:@" "];
+    NSArray<NSString*> *values = [self componentsSeparatedByString:@" "];
     
     if ([values count] < 3)
         return [NSColor grayColor];

@@ -634,7 +634,7 @@
  给定一个包含键“Major”，“Minor”，“Bug”，“Kind”和“Stage”(其中一些可能缺失)的字典，返回字符串表示，例如:“1.2.3b4”。如果字典包含一个预先组合的“Version”键，它只返回该键。
 */
 
-+ (NSString *)tfy_versionWithDictionary:(NSDictionary *)dict
++ (NSString *)tfy_versionWithDictionary:(NSDictionary<NSString*,NSString*> *)dict
 {
     NSString *version = dict[@"Version"];
     
