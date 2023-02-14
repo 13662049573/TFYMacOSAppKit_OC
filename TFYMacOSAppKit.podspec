@@ -54,6 +54,7 @@ Pod::Spec.new do |spec|
     ss.subspec 'TFYNSGesture' do |s|
       s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYNSGesture/**/*.{h,m}"
       s.dependency "TFYMacOSAppKit/macOSchain/TFYChainBase"
+      s.dependency "TFYMacOSAppKit/macOScategory"
     end
 
     ss.subspec 'TFYNSView' do |s|
