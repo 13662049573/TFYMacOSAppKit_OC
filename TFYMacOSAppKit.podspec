@@ -4,12 +4,12 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYMacOSAppKit"
 
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
 
-  spec.summary      = "macOS 开发基本数据类型封装。最低支持macos 11 "
+  spec.summary      = "纯代码 macOS 开发基本数据类型封装。最低支持macos 11 控制点语法使用"
 
   spec.description  = <<-DESC
-  macOS 开发基本数据类型封装。最低支持macos 11 
+  纯代码 macOS 开发基本数据类型封装。最低支持macos 11 控制点语法使用
                    DESC
 
   spec.homepage     = "https://github.com/13662049573/TFYMacOSAppKit_OC"
@@ -22,42 +22,42 @@ Pod::Spec.new do |spec|
   
   spec.source       = { :git => "https://github.com/13662049573/TFYMacOSAppKit_OC.git", :tag => spec.version }
 
-  spec.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/TFYMacOSAppKit.h"
+  spec.source_files  = "TFYMacOSAppKit/TFYMacOSAppKit.h"
   
   spec.subspec 'macOScategory' do |ss|
-    ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScategory/**/*.{h,m}"
+    ss.source_files  = "TFYMacOSAppKit/macOScategory/**/*.{h,m}"
   end
 
   spec.subspec 'macOScontainer' do |ss|
-    ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/**/*.{h,m}"
+    ss.source_files  = "TFYMacOSAppKit/macOScontainer/**/*.{h,m}"
     ss.dependency "TFYMacOSAppKit/macOScategory"
     ss.dependency "TFYMacOSAppKit/macOSfoundation"
   end
 
   spec.subspec 'macOSfoundation' do |ss|
-    ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSfoundation/**/*.{h,m}"
+    ss.source_files  = "TFYMacOSAppKit/macOSfoundation/**/*.{h,m}"
     ss.dependency "TFYMacOSAppKit/macOScategory"
   end
 
   spec.subspec 'macOSchain' do |ss|
-    ss.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/macOSchain.h"
+    ss.source_files  = "TFYMacOSAppKit/macOSchain/macOSchain.h"
 
     ss.subspec 'TFYChainBase' do |s|
-      s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYChainBase/**/*.{h,m}"
+      s.source_files  = "TFYMacOSAppKit/macOSchain/TFYChainBase/**/*.{h,m}"
     end
 
     ss.subspec 'TFYCALayer' do |s|
-      s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYCALayer/**/*.{h,m}"
+      s.source_files  = "TFYMacOSAppKit/macOSchain/TFYCALayer/**/*.{h,m}"
       s.dependency "macOSchain/TFYChainBase"
     end
 
     ss.subspec 'TFYNSGesture' do |s|
-      s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYNSGesture/**/*.{h,m}"
+      s.source_files  = "TFYMacOSAppKit/macOSchain/TFYNSGesture/**/*.{h,m}"
       s.dependency "macOSchain/TFYChainBase"
     end
 
     ss.subspec 'TFYNSView' do |s|
-      s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOSchain/TFYNSView/**/*.{h,m}"
+      s.source_files  = "TFYMacOSAppKit/macOSchain/TFYNSView/**/*.{h,m}"
       s.dependency "macOSchain/TFYChainBase"
       s.dependency "macOSchain/TFYNSGesture"
       s.dependency "macOSchain/TFYCALayer"
