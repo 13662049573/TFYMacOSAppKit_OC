@@ -31,7 +31,7 @@
     self.textColor = NSColor.labelColor;
     self.textAlignment = NSTextAlignmentLeft;
     self.lineBreakMode = NSLineBreakByWordWrapping;
-    self.contentVerticalAlignment = TFYContentVerticalAlignmentTop;
+    self.contentVerticalAlignment = TFYContentVerticalAlignmentCenter;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {

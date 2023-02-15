@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TFYTextFieldChainModel : TFYBaseControlChainModel<TFYTextFieldChainModel*>
 
 TFY_PROPERTY_CHAIN_READONLY TFYTextFieldChainModel * (^ placeholderString) (NSString*);
+TFY_PROPERTY_CHAIN_READONLY TFYTextFieldChainModel * (^ placeholderStringColor) (NSColor*);
 TFY_PROPERTY_CHAIN_READONLY TFYTextFieldChainModel * (^ placeholderAttributedString) (NSAttributedString*);
 TFY_PROPERTY_CHAIN_READONLY TFYTextFieldChainModel * (^ backgroundColor) (NSColor*);
 TFY_PROPERTY_CHAIN_READONLY TFYTextFieldChainModel * (^ drawsBackground) (BOOL);

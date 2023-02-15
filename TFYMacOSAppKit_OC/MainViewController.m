@@ -8,9 +8,11 @@
 #import "MainViewController.h"
 
 
-@interface MainViewController ()
+@interface MainViewController ()<TFYTextFieldNotifyingDelegate>
 @property (nonatomic , strong) NSView *backView;
 @property(nonatomic , strong)NSButton *buttom;
+@property (nonatomic , strong) TFYLabel *label;
+@property (nonatomic , strong) TFYTextField *textField;
 @end
 
 @implementation MainViewController
@@ -25,8 +27,9 @@
     [super viewDidLoad];
     [self.view addSubview:self.backView];
     
-   
     [self.view addSubview:self.buttom];
+    [self.view addSubview:self.label];
+    [self.view addSubview:self.textField];
 }
 
 - (NSView *)backView {
@@ -56,8 +59,52 @@
     return _buttom;
 }
 
+- (TFYLabel *)label {
+    if (!_label) {
+        _label = TFYLabelSet();
+        _label.makeChain
+        .frame(NSMakeRect(50, 500, self.view.bounds.size.width-100, 40))
+        .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
+        .title(@"点击测试互数据")
+        .textColor(NSColor.redColor)
+        .userInteractionEnabled(YES)
+        .layerBackGroundColor(NSColor.orangeColor)
+        .textAlignment(NSTextAlignmentCenter)
+        .actionBlock(^(__kindof TFYLabel * _Nonnull sender) {
+            NSLog(@"点击文字");
+        });
+    }
+    return _label;
+}
+
+- (TFYTextField *)textField {
+    if (!_textField) {
+        _textField = TFYTextFieldSet();
+        _textField.makeChain
+        .delegateCustomize(self)
+        .frame(NSMakeRect(50, 400, self.view.bounds.size.width-100, 40))
+        .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
+        .placeholderString(@"请输入文字")
+        .wantsLayer(YES)
+        .placeholderStringColor(NSColor.purpleColor)
+        .layerBackGroundColor(NSColor.whiteColor)
+        .borderColor(NSColor.redColor.CGColor)
+        .borderWidth(1)
+        .masksToBounds(YES)
+        .textColor(NSColor.blackColor)
+        .cornerRadius(20)
+        .bordered(NO)
+        .focusRingType(NSFocusRingTypeNone);
+    }
+    return _textField;
+}
+
 - (void)paymentBtnClick:(NSButton *)btn {
     
+}
+
+-(void)textFieldDidChange:(NSTextField *_Nullable)textField {
+    NSLog(@"输入===：%@",textField.stringValue);
 }
 
 @end

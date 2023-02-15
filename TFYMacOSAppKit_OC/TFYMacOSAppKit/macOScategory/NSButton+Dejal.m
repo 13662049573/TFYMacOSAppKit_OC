@@ -113,13 +113,13 @@ static NSString * const RetainTitle = @"重试";
     self.attributedTitle = attrTitle;
 }
 
-- (NSInteger)tfy_textAlignment
+- (kTextAligment)tfy_textAlignment
 {
     NSNumber *number = objc_getAssociatedObject(self, "textAlignment");
     return number.integerValue;
 }
 
-- (void)setTfy_textAlignment:(NSInteger)alignment
+- (void)setTfy_textAlignment:(kTextAligment)alignment
 {
     objc_setAssociatedObject(self, "textAlignment", @(alignment), OBJC_ASSOCIATION_ASSIGN);
     NSMutableAttributedString *attributedString = [self.attributedTitle mutableCopy];

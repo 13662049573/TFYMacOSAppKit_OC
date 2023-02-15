@@ -30,6 +30,17 @@ TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(preferredMaxLayoutWidth, CGFloat)
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(maximumNumberOfLines, NSInteger)
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(lineBreakStrategy, NSLineBreakStrategy)
 
+- (TFYTextFieldChainModel * _Nonnull (^)(NSColor*))placeholderStringColor{
+    return ^(NSColor* color)
+    {
+        [self enumerateObjectsUsingBlock:^(NSTextField * _Nonnull obj) {
+            obj.tfy_placeholderStringColor = color;
+        }];
+        return self;
+    };
+}
+
+
 @end
 TFY_CATEGORY_VIEW_IMPLEMENTATION(NSTextField, TFYTextFieldChainModel)
 #undef TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION

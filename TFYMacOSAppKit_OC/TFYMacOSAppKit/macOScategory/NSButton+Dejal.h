@@ -36,7 +36,7 @@ typedef NS_ENUM(NSUInteger, kTextAligment) {
  */
 - (void)tfy_displayMenu:(NSMenu *)menu withHorizontalOffset:(CGFloat)horizontalOffset verticalOffset:(CGFloat)verticalOffset;
 
-@property (nonatomic, assign) NSInteger tfy_textAlignment;
+@property (nonatomic, assign) kTextAligment tfy_textAlignment;
 
 /**
  *  🐶计时时间    👇

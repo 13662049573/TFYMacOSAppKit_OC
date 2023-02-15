@@ -8,6 +8,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface NSTextField (Dejal)
+
+@property (nonatomic , strong) NSColor *tfy_placeholderStringColor;
+
 /**
  如果字段的字符串值非空，即非nil和非@""则返回YES。
 */

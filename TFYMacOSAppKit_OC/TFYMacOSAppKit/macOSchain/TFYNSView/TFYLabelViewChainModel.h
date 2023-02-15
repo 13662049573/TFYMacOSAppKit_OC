@@ -9,6 +9,7 @@
 #import "TFYLabel.h"
 
 NS_ASSUME_NONNULL_BEGIN
+typedef void(^TFYlabelActionBlock)(__kindof TFYLabel *sender);
 @class TFYLabelViewChainModel;
 @interface TFYLabelViewChainModel : TFYBaseViewChainModel<TFYLabelViewChainModel*>
 
@@ -23,6 +24,7 @@ TFY_PROPERTY_CHAIN_READONLY TFYLabelViewChainModel * (^ highlightedTextColor) (N
 TFY_PROPERTY_CHAIN_READONLY TFYLabelViewChainModel * (^ highlighted) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYLabelViewChainModel * (^ userInteractionEnabled) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYLabelViewChainModel * (^ enabled) (BOOL);
+TFY_PROPERTY_CHAIN_READONLY TFYLabelViewChainModel * (^ actionBlock) (TFYlabelActionBlock);
 
 @end
 TFY_CATEGORY_EXINTERFACE(TFYLabel, TFYLabelViewChainModel)
