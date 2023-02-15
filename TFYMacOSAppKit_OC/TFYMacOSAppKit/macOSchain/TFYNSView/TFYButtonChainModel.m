@@ -66,6 +66,19 @@ TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION(keyEquivalentModifierMask, NSEventModif
     };
 }
 
+- (TFYButtonChainModel * _Nonnull (^)(NSColor*))textColor{
+    return ^(NSColor* color)
+    {
+        [self enumerateObjectsUsingBlock:^(NSButton * _Nonnull obj) {
+            if (obj.title.length > 0) {
+                obj.attributedTitle = [[NSAttributedString alloc] initWithString:obj.title];
+            }
+            obj.tfy_textColor = color;
+        }];
+        return self;
+    };
+}
+
 @end
 TFY_CATEGORY_VIEW_IMPLEMENTATION(NSButton, TFYButtonChainModel)
 #undef TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION

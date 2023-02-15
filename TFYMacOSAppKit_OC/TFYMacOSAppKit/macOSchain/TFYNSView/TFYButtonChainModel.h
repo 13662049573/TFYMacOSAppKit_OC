@@ -31,6 +31,7 @@ TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ imageHugsTitle) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ symbolConfiguration) (NSImageSymbolConfiguration*);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ bezelColor) (NSColor*);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ contentTintColor) (NSColor*);
+TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ textColor) (NSColor*);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ state) (NSControlStateValue);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ allowsMixedState) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ keyEquivalent) (NSString*);
