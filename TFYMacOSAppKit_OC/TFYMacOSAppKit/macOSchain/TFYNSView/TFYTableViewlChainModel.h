@@ -43,6 +43,9 @@ TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ rowActionsVisible) (BOO
 TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ usesStaticContents) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ userInterfaceLayoutDirection) (NSUserInterfaceLayoutDirection);
 TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ usesAutomaticRowHeights) (BOOL);
+TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ addTableColumn) (NSTableColumn*);
+TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ removeTableColumn) (NSTableColumn*);
+TFY_PROPERTY_CHAIN_READONLY TFYTableViewlChainModel * (^ moveColumn_toColumn) (NSInteger,NSInteger);
 
 @end
 TFY_CATEGORY_EXINTERFACE(NSTableView, TFYTableViewlChainModel)

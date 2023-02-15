@@ -44,6 +44,36 @@ TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(draggingDestinationFeedbackStyle, 
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(autosaveName, NSTableViewAutosaveName)
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(userInterfaceLayoutDirection, NSUserInterfaceLayoutDirection)
 
+- (TFYTableViewlChainModel * _Nonnull (^)(NSTableColumn*))addTableColumn {
+    return ^(NSTableColumn*colum)
+    {
+        [self enumerateObjectsUsingBlock:^(NSTableView * _Nonnull obj) {
+            [obj addTableColumn:colum];
+        }];
+        return self;
+    };
+}
+
+- (TFYTableViewlChainModel * _Nonnull (^)(NSTableColumn*))removeTableColumn {
+    return ^(NSTableColumn*colum)
+    {
+        [self enumerateObjectsUsingBlock:^(NSTableView * _Nonnull obj) {
+            [obj removeTableColumn:colum];
+        }];
+        return self;
+    };
+}
+
+- (TFYTableViewlChainModel * _Nonnull (^)(NSInteger,NSInteger))moveColumn_toColumn {
+    return ^(NSInteger oldIndex,NSInteger newIndex)
+    {
+        [self enumerateObjectsUsingBlock:^(NSTableView * _Nonnull obj) {
+            [obj moveColumn:oldIndex toColumn:newIndex];
+        }];
+        return self;
+    };
+}
+
 @end
 TFY_CATEGORY_VIEW_IMPLEMENTATION(NSTableView, TFYTableViewlChainModel)
 #undef TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION
