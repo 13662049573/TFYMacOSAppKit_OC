@@ -6,6 +6,7 @@
 //
 
 #import "TFYBaseControlChainModel.h"
+#import "NSTextField+Dejal.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class TFYTextFieldChainModel;
