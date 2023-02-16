@@ -107,7 +107,7 @@ static NSString * const RetainTitle = @"重试";
     {
         [attrTitle removeAttribute:NSForegroundColorAttributeName range:range];
     }
-    
+    [attrTitle addAttribute:NSFontAttributeName value:self.font range:range];
     [attrTitle fixAttributesInRange:range];
     
     self.attributedTitle = attrTitle;
