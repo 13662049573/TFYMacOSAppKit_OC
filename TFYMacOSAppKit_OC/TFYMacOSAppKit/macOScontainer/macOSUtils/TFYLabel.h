@@ -16,6 +16,9 @@ typedef NS_ENUM(NSInteger, TFYContentVerticalAlignment) {
     TFYContentVerticalAlignmentBottom     = 2,
 };
 
+@class TFYLabel;
+typedef void(^action)(TFYLabel *sender);
+
 @interface TFYLabel : NSView
 
 @property(nullable, nonatomic,copy)   NSString           *title; // default is nil
@@ -40,7 +43,7 @@ typedef NS_ENUM(NSInteger, TFYContentVerticalAlignment) {
 
 @property(nonatomic, copy) void(^mouseDownBlock)(TFYLabel *sender);
 ///返回事件
-- (void)actionBlock:(void(^)(TFYLabel *sender))block;
+- (void)actionBlock:(action)block;
 
 @end
 

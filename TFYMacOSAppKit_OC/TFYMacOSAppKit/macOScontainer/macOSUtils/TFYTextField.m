@@ -49,5 +49,18 @@
     // Drawing code here.
 }
 
+
+- (BOOL)becomeFirstResponder {
+    BOOL success = [super becomeFirstResponder];
+    if (success) {
+        NSTextView *textView = (NSTextView *)[self currentEditor];
+        if ([textView respondsToSelector:@selector(setInsertionPointColor:)]) {
+            NSColor *tintCor = self.textColor;
+            [textView setInsertionPointColor: tintCor];
+        }
+    }
+    return success;
+}
+
 @end
 

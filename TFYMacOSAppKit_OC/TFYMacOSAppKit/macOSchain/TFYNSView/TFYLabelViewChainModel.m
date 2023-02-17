@@ -9,6 +9,7 @@
 
 #define TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(TFYMethod,TFYParaType) TFY_CATEGORY_CHAIN_VIEWCLASS_IMPLEMENTATION(TFYMethod,TFYParaType, TFYLabelViewChainModel *,TFYLabel)
 
+
 @implementation TFYLabelViewChainModel
 
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(title, NSString*)
@@ -22,6 +23,15 @@ TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(highlightedTextColor, NSColor*)
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(highlighted, BOOL)
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(userInteractionEnabled, BOOL)
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(enabled, BOOL)
+
+- (TFYLabelViewChainModel * _Nonnull (^)(void (^ _Nonnull)(__kindof TFYLabel * _Nonnull)))actionBlock {
+    return ^ (action block){
+        [self enumerateObjectsUsingBlock:^(TFYLabel * _Nonnull obj) {
+            [obj actionBlock:block];
+        }];
+        return self;
+    };
+}
 
 @end
 TFY_CATEGORY_VIEW_IMPLEMENTATION(TFYLabel, TFYLabelViewChainModel)

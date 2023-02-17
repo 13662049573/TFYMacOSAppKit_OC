@@ -9,7 +9,7 @@
 #import "NSTextField+Dejal.h"
 #import "NSView+Dejal.h"
 #import "NSWindow+Dejal.h"
-
+#import <objc/message.h>
 
 @implementation NSTextField (Dejal)
 
@@ -117,6 +117,27 @@
     
     return YES;
 }
+
+- (void)setTfy_placeholderStringColor:(NSColor *)tfy_placeholderStringColor {
+    objc_setAssociatedObject(self, @selector(tfy_placeholderStringColor), tfy_placeholderStringColor, OBJC_ASSOCIATION_COPY);
+    [self msSetPlaceholder:self.placeholderString color:tfy_placeholderStringColor];
+}
+
+- (NSColor *)tfy_placeholderStringColor {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)msSetPlaceholder:(NSString *)placeholder color:(NSColor*)color{
+    NSFont *font = self.font;
+    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:font,
+                           NSFontAttributeName,
+                           color,
+                           NSForegroundColorAttributeName,
+                           nil];
+    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:placeholder attributes:attrs];
+    [self setPlaceholderAttributedString:attributedString];
+}
+
 
 @end
 

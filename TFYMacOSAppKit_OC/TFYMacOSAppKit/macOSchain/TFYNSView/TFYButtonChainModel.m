@@ -7,6 +7,7 @@
 
 #import "TFYButtonChainModel.h"
 
+
 #define TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION(TFYMethod,TFYParaType) TFY_CATEGORY_CHAIN_VIEWCLASS_IMPLEMENTATION(TFYMethod,TFYParaType, TFYButtonChainModel *,NSButton)
 
 @implementation TFYButtonChainModel
@@ -74,6 +75,19 @@ TFY_CATEGORY_CHAIN_BUTTON_IMPLEMENTATION(keyEquivalentModifierMask, NSEventModif
                 obj.attributedTitle = [[NSAttributedString alloc] initWithString:obj.title];
             }
             obj.tfy_textColor = color;
+        }];
+        return self;
+    };
+}
+
+- (TFYButtonChainModel * _Nonnull (^)(kTextAligment))textAlignment{
+    return ^(kTextAligment type)
+    {
+        [self enumerateObjectsUsingBlock:^(NSButton * _Nonnull obj) {
+            if (obj.title.length > 0) {
+                obj.attributedTitle = [[NSAttributedString alloc] initWithString:obj.title];
+            }
+            obj.tfy_textAlignment = type;
         }];
         return self;
     };

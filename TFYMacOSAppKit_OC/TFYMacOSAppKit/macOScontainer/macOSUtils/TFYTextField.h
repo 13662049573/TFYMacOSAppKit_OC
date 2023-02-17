@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TFYTextField : NSTextField
 @property (nullable, weak) id<TFYTextFieldNotifyingDelegate> delegate;
+
 @end
 
 

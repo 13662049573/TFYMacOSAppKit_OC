@@ -6,6 +6,7 @@
 //
 
 #import "TFYBaseControlChainModel.h"
+#import "NSButton+Dejal.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class TFYButtonChainModel;
@@ -37,6 +38,7 @@ TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ allowsMixedState) (BOOL);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ keyEquivalent) (NSString*);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ keyEquivalentModifierMask) (NSEventModifierFlags);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ setButtonType) (NSButtonType);
+TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ textAlignment) (kTextAligment);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ setPeriodicDelay_interval) (float,float);
 TFY_PROPERTY_CHAIN_READONLY TFYButtonChainModel * (^ getPeriodicDelay_interval) (float*,float*);
 
