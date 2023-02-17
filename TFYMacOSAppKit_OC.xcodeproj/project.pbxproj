@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		363EB036299F468600ED6837 /* TFYOpenPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB035299F468600ED6837 /* TFYOpenPanel.m */; };
 		363EB09829989570007A4B38 /* TFYMagnificationChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09729989570007A4B38 /* TFYMagnificationChainModel.m */; };
 		363EB09B299897A4007A4B38 /* TFYScrollViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09A299897A4007A4B38 /* TFYScrollViewChainModel.m */; };
 		363EB09E29989CC0007A4B38 /* TFYBoxChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09D29989CC0007A4B38 /* TFYBoxChainModel.m */; };
@@ -159,6 +160,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		363EB034299F468600ED6837 /* TFYOpenPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYOpenPanel.h; sourceTree = "<group>"; };
+		363EB035299F468600ED6837 /* TFYOpenPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYOpenPanel.m; sourceTree = "<group>"; };
 		363EB09629989570007A4B38 /* TFYMagnificationChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYMagnificationChainModel.h; sourceTree = "<group>"; };
 		363EB09729989570007A4B38 /* TFYMagnificationChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYMagnificationChainModel.m; sourceTree = "<group>"; };
 		363EB099299897A4007A4B38 /* TFYScrollViewChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYScrollViewChainModel.h; sourceTree = "<group>"; };
@@ -856,6 +859,8 @@
 				36B4371C299B7F0A00CF0A4D /* TFYUtils.m */,
 				36B4371E299B853500CF0A4D /* TFYWKWebView.h */,
 				36B4371F299B853500CF0A4D /* TFYWKWebView.m */,
+				363EB034299F468600ED6837 /* TFYOpenPanel.h */,
+				363EB035299F468600ED6837 /* TFYOpenPanel.m */,
 			);
 			path = macOSUtils;
 			sourceTree = "<group>";
@@ -1024,6 +1029,7 @@
 				36CA65DC299A27260066B945 /* TFYTableViewlChainModel.m in Sources */,
 				36AE67D929961FFF0013EF3B /* NSDictionary+AppKit+Dejal.m in Sources */,
 				36AE689F299A18D50013EF3B /* TFYComboButtonChainModel.m in Sources */,
+				363EB036299F468600ED6837 /* TFYOpenPanel.m in Sources */,
 				36AE680E299737620013EF3B /* NSMutableParagraphStyle+TFY_Chain.m in Sources */,
 				36AE682A299743ED0013EF3B /* TFYBaseLayerChainModel.m in Sources */,
 				36B4372B299B89E500CF0A4D /* TFYGCDSemaphore.m in Sources */,
