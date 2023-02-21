@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		362CBCDA29A45BD900085921 /* TFYSecureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCD929A45BD900085921 /* TFYSecureTextField.m */; };
 		362CBCDD29A45C9400085921 /* TFYSecureTextFieldChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCDC29A45C9400085921 /* TFYSecureTextFieldChainModel.m */; };
+		362CBCE329A463C100085921 /* TFYTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCE229A463C100085921 /* TFYTextFieldCell.m */; };
 		363EB036299F468600ED6837 /* TFYOpenPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB035299F468600ED6837 /* TFYOpenPanel.m */; };
 		363EB09829989570007A4B38 /* TFYMagnificationChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09729989570007A4B38 /* TFYMagnificationChainModel.m */; };
 		363EB09B299897A4007A4B38 /* TFYScrollViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09A299897A4007A4B38 /* TFYScrollViewChainModel.m */; };
@@ -166,6 +167,8 @@
 		362CBCD929A45BD900085921 /* TFYSecureTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYSecureTextField.m; sourceTree = "<group>"; };
 		362CBCDB29A45C9400085921 /* TFYSecureTextFieldChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYSecureTextFieldChainModel.h; sourceTree = "<group>"; };
 		362CBCDC29A45C9400085921 /* TFYSecureTextFieldChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYSecureTextFieldChainModel.m; sourceTree = "<group>"; };
+		362CBCE129A463C100085921 /* TFYTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYTextFieldCell.h; sourceTree = "<group>"; };
+		362CBCE229A463C100085921 /* TFYTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYTextFieldCell.m; sourceTree = "<group>"; };
 		363EB034299F468600ED6837 /* TFYOpenPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYOpenPanel.h; sourceTree = "<group>"; };
 		363EB035299F468600ED6837 /* TFYOpenPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYOpenPanel.m; sourceTree = "<group>"; };
 		363EB09629989570007A4B38 /* TFYMagnificationChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYMagnificationChainModel.h; sourceTree = "<group>"; };
@@ -871,6 +874,8 @@
 				363EB035299F468600ED6837 /* TFYOpenPanel.m */,
 				362CBCD829A45BD900085921 /* TFYSecureTextField.h */,
 				362CBCD929A45BD900085921 /* TFYSecureTextField.m */,
+				362CBCE129A463C100085921 /* TFYTextFieldCell.h */,
+				362CBCE229A463C100085921 /* TFYTextFieldCell.m */,
 			);
 			path = macOSUtils;
 			sourceTree = "<group>";
@@ -1004,6 +1009,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36AE67DC29961FFF0013EF3B /* NSMutableAttributedString+Config.m in Sources */,
+				362CBCE329A463C100085921 /* TFYTextFieldCell.m in Sources */,
 				36CA65FA299A3D9C0066B945 /* TFYSearchFieldChainModel.m in Sources */,
 				36B43725299B893300CF0A4D /* TFYGCDGroup.m in Sources */,
 				36AE6899299A162B0013EF3B /* TFYSwitchChainModel.m in Sources */,
