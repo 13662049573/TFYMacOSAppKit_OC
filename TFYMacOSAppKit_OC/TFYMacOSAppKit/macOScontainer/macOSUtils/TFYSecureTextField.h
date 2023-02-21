@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol TFYSecureTextFieldNotifyingDelegate <NSTextFieldDelegate>
 @optional
 
--(void)textFieldDidChange:(NSSecureTextField *_Nullable)textField;
+-(void)securetextFieldDidChange:(NSSecureTextField *_Nullable)textField;
 
 @end
 

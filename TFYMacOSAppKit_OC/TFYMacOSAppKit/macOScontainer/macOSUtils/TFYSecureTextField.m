@@ -39,7 +39,7 @@
 }
 
 -(void)textFieldDidChange:(NSNotification *)notification{
-    [self.delegate textFieldDidChange:self];
+    [self.delegate securetextFieldDidChange:self];
 }
 
 - (BOOL)becomeFirstResponder {
