@@ -134,7 +134,7 @@
                            color,
                            NSForegroundColorAttributeName,
                            nil];
-    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:placeholder attributes:attrs];
+    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:placeholder?:@"" attributes:attrs];
     [self setPlaceholderAttributedString:attributedString];
 }
 
