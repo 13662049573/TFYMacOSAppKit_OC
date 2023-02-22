@@ -31,6 +31,8 @@
     [self.view addSubview:self.buttom];
     [self.view addSubview:self.label];
     [self.view addSubview:self.textField];
+    
+    [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
 }
 
 - (NSView *)backView {
