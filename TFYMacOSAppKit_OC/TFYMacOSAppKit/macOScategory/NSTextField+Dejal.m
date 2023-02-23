@@ -134,10 +134,16 @@
                            color,
                            NSForegroundColorAttributeName,
                            nil];
-    NSAttributedString* attributedString = [[NSAttributedString alloc] initWithString:placeholder?:@"" attributes:attrs];
-    [self setPlaceholderAttributedString:attributedString];
+    NSString *titleStr = placeholder?:@"";
+    if (titleStr.length > 0) {
+        NSMutableAttributedString* attributedString = [[NSMutableAttributedString alloc] initWithString:titleStr attributes:attrs];
+        
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        style.alignment = self.alignment;
+        [attributedString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0,titleStr.length)];
+        [self setPlaceholderAttributedString:attributedString];
+    }
 }
-
 
 @end
 

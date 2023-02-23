@@ -34,6 +34,18 @@
     return self;
 }
 
+- (void)setAlignment:(NSTextAlignment)alignment {
+    [super setAlignment:alignment];
+    NSString *placeholderString = self.placeholderString?:@"";
+    if (placeholderString.length > 0) {
+        NSMutableAttributedString *attributedString = [placeholderString mutableCopy];
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        style.alignment = alignment;
+        [attributedString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, placeholderString.length)];
+        self.placeholderAttributedString = attributedString;
+    }
+}
+
 -(void)registerForNotifications{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
 }

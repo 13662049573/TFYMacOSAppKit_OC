@@ -43,12 +43,17 @@
     [self.delegate textFieldDidChange:self];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
+- (void)setAlignment:(NSTextAlignment)alignment {
+    [super setAlignment:alignment];
+    NSString *placeholderString = self.placeholderString?:@"";
+    if (placeholderString.length > 0) {
+        NSMutableAttributedString *attributedString = [placeholderString mutableCopy];
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        style.alignment = alignment;
+        [attributedString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, placeholderString.length)];
+        self.placeholderAttributedString = attributedString;
+    }
 }
-
 
 - (BOOL)becomeFirstResponder {
     BOOL success = [super becomeFirstResponder];
