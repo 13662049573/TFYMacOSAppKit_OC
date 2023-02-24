@@ -40,6 +40,7 @@ TFY_PROPERTY_STRONG_READONLY TFYTokenFieldChainModel *(^ addTokenField)(NSIntege
 TFY_PROPERTY_STRONG_READONLY TFYComboBoxChainModel *(^ addComboBox)(NSInteger);
 TFY_PROPERTY_STRONG_READONLY TFYSearchFieldChainModel *(^ addSearchField)(NSInteger);
 TFY_PROPERTY_STRONG_READONLY TFYCustomizeTextFieldChainModel *(^ addCustomizeTextField)(NSInteger);
+TFY_PROPERTY_STRONG_READONLY TFYSecureTextFieldChainModel *(^ addSecureTextField)(NSInteger);
 TFY_PROPERTY_STRONG_READONLY TFYLabelViewChainModel *(^ addLabelView)(NSInteger);
 TFY_PROPERTY_STRONG_READONLY TFYComboButtonChainModel *(^ addComboButton)(NSInteger) API_AVAILABLE(macos(13.0));
 TFY_PROPERTY_STRONG_READONLY TFYTableViewlChainModel *(^ addTableView)(NSInteger);
@@ -59,7 +60,7 @@ TFY_PROPERTY_STRONG_READONLY TFYScrollLayerChainModel *(^ addScrollLayer)(void);
 TFY_PROPERTY_STRONG_READONLY TFYShaperLayerChainModel *(^ addShaperLayer)(void);
 TFY_PROPERTY_STRONG_READONLY TFYTextLayerChainModel *(^ addTextLayer)(void);
 TFY_PROPERTY_STRONG_READONLY TFYTiledLayerChainModel *(^ addTiledLayer)(void);
-
+//
 @end
 
 NS_ASSUME_NONNULL_END

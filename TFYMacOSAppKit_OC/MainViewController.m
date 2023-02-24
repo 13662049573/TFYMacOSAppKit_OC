@@ -13,6 +13,7 @@
 @property(nonatomic , strong)NSButton *buttom;
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
+@property(nonatomic , strong)TFYTextFieldCell *cell;
 @end
 
 @implementation MainViewController
@@ -30,6 +31,8 @@
     [self.view addSubview:self.buttom];
     [self.view addSubview:self.label];
     [self.view addSubview:self.textField];
+    
+    [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
 }
 
 - (NSView *)backView {
@@ -77,6 +80,15 @@
     return _label;
 }
 
+- (TFYTextFieldCell *)cell {
+    if (!_cell) {
+        _cell = TFYTextFieldCell.new;
+//        _cell.tfy_isCentering = YES; 开始文字居中
+        _cell.placeholderString = @"测试数据";
+    }
+    return _cell;
+}
+
 - (TFYTextField *)textField {
     if (!_textField) {
         _textField = TFYTextFieldSet();
@@ -94,7 +106,8 @@
         .textColor(NSColor.blackColor)
         .cornerRadius(20)
         .bordered(NO)
-        .focusRingType(NSFocusRingTypeNone);
+        .cell(self.cell);
+//        .focusRingType(NSFocusRingTypeNone);
     }
     return _textField;
 }

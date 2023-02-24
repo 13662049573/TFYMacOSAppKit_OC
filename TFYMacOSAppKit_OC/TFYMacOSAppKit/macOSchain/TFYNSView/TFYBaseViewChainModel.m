@@ -328,6 +328,7 @@ TFY_CATEGORY_CHAIN_LAYER_IMPLEMENTATION(shadowPath, CGPathRef);
 {
     return ^__kindof TFYBaseViewChainModel *(CGFloat borderWidth, NSColor *borderColor) {
         [self enumerateObjectsUsingBlock:^(NSView * _Nonnull obj) {
+            [obj.layer setMasksToBounds:YES];
             [obj.layer setBorderWidth:borderWidth];
             [obj.layer setBorderColor:borderColor.CGColor];
         }];
@@ -370,6 +371,7 @@ TFY_CATEGORY_CHAIN_LAYER_IMPLEMENTATION(shadowPath, CGPathRef);
 - (id  _Nonnull (^)(NSColor * _Nonnull))layerBackGroundColor{
     return ^ (NSColor *color){
         [self enumerateObjectsUsingBlock:^(NSView * _Nonnull obj) {
+            obj.wantsLayer = YES;
             obj.layer.backgroundColor = color.CGColor;
         }];
         return self;

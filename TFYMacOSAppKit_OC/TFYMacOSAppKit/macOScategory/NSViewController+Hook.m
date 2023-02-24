@@ -23,6 +23,7 @@
 - (void)hook_loadView {
     NSWindow *window = NSApplication.sharedApplication.mainWindow;
     self.view = [[NSView alloc]initWithFrame:window.frame];
+    self.view.wantsLayer = true;
 }
 
 @end

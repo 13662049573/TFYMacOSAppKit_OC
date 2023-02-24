@@ -1,14 +1,13 @@
 //
-//  TFYTextField.m
-//  MZKMedicalMacOs
+//  TFYSecureTextField.m
+//  TFYMacOSAppKit_OC
 //
-//  Created by 田风有 on 2023/2/11.
-//  Copyright © 2023 MZK. All rights reserved.
+//  Created by 田风有 on 2023/2/21.
 //
 
-#import "TFYTextField.h"
+#import "TFYSecureTextField.h"
 
-@implementation TFYTextField
+@implementation TFYSecureTextField
 @synthesize delegate;
 
 -(id)init{
@@ -35,14 +34,6 @@
     return self;
 }
 
--(void)registerForNotifications{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
-}
-
--(void)textFieldDidChange:(NSNotification *)notification{
-    [self.delegate textFieldDidChange:self];
-}
-
 - (void)setAlignment:(NSTextAlignment)alignment {
     [super setAlignment:alignment];
     NSString *placeholderString = self.placeholderString?:@"";
@@ -53,6 +44,14 @@
         [attributedString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, placeholderString.length)];
         self.placeholderAttributedString = attributedString;
     }
+}
+
+-(void)registerForNotifications{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
+}
+
+-(void)textFieldDidChange:(NSNotification *)notification{
+    [self.delegate securetextFieldDidChange:self];
 }
 
 - (BOOL)becomeFirstResponder {
@@ -67,5 +66,10 @@
     return success;
 }
 
-@end
+- (void)drawRect:(NSRect)dirtyRect {
+    [super drawRect:dirtyRect];
+    
+    // Drawing code here.
+}
 
+@end

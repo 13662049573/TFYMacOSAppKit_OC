@@ -7,9 +7,33 @@
 
 #import "NSView+TFY_Tools.h"
 #import <objc/runtime.h>
+#import "NSObject+Dejal.h"
 
 @implementation NSView (TFY_Tools)
 
++ (void)load{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self tfy_exchangeInstanceMethod:self.class method1Sel:@selector(init) method2Sel:@selector(init_hook)];
+        [self tfy_exchangeInstanceMethod:self.class method1Sel:@selector(initWithCoder:) method2Sel:@selector(initWithCoder_hook:)];
+    });
+}
+
+- (id)init_hook{
+    self = [self init_hook];
+    if (self) {
+        self.wantsLayer = true;
+    }
+    return self;
+}
+
+- (id)initWithCoder_hook:(NSCoder *)decoder{
+    self = [self initWithCoder_hook:decoder];
+    if (self) {
+        self.wantsLayer = true;
+    }
+    return self;
+}
 
 - (CGPoint)origin {
     return self.frame.origin;

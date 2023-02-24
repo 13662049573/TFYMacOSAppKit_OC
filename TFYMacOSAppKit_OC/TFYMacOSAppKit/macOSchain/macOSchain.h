@@ -10,4 +10,7 @@
 
 #import "NSView+TFY_Chain.h"
 
+#define WIDTH_MACOS NSApplication.sharedApplication.mainWindow.frame.size.width
+#define HEIGHT_MACOS NSApplication.sharedApplication.mainWindow.frame.size.height
+
 #endif /* macOSchain_h */

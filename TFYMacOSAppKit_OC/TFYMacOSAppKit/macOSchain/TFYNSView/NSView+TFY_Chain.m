@@ -55,6 +55,7 @@ TFY_CATEGORY_ADDVIEW(addTokenField, TFYTokenFieldChainModel, NSTokenField);
 TFY_CATEGORY_ADDVIEW(addComboBox, TFYComboBoxChainModel, NSComboBox);
 TFY_CATEGORY_ADDVIEW(addSearchField, TFYSearchFieldChainModel, NSSearchField);
 TFY_CATEGORY_ADDVIEW(addCustomizeTextField, TFYCustomizeTextFieldChainModel, TFYTextField);
+TFY_CATEGORY_ADDVIEW(addSecureTextField, TFYSecureTextFieldChainModel, TFYSecureTextField);
 TFY_CATEGORY_ADDVIEW(addLabelView, TFYLabelViewChainModel, TFYLabel);
 TFY_CATEGORY_ADDVIEW(addComboButton, TFYComboButtonChainModel, NSComboButton);
 TFY_CATEGORY_ADDVIEW(addTableView, TFYTableViewlChainModel, NSTableView);

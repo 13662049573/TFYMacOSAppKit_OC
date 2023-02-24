@@ -47,6 +47,7 @@
 #import "TFYTokenFieldChainModel.h"
 #import "TFYComboBoxChainModel.h"
 #import "TFYSearchFieldChainModel.h"
+#import "TFYSecureTextFieldChainModel.h"
 /// 以下自定义控件
 #import "TFYLabelViewChainModel.h"
 #import "TFYCustomizeButtonChainModel.h"
