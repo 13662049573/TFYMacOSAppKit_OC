@@ -339,7 +339,7 @@ NSString * const kCornerRadius = @"CornerRadius";
         default:
             break;
     }
-    [self needsDisplay];
+    [self setNeedsDisplay:YES];
 }
 
 - (void)stateBlock:(void(^)(TFYButton *sender, TFYControlState state))block{
