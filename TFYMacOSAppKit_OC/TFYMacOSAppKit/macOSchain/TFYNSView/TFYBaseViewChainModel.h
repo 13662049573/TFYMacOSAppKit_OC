@@ -50,25 +50,25 @@ TFY_PROPERTY_CHAIN_READONLY ObjectType (^ preparedContentRect) (NSRect);
 
 TFY_PROPERTY_CHAIN_READONLY ObjectType (^ frame) (NSRect);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ origin) (NSPoint);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_origin) (NSPoint);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ x) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_x) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ y) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_y) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ size) (CGSize);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_size) (CGSize);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ width) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_width) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ height) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_height) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ top) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_top) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ left) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_left) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ bottom) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_bottom) (CGFloat);
 
-TFY_PROPERTY_CHAIN_READONLY ObjectType (^ right) (CGFloat);
+TFY_PROPERTY_CHAIN_READONLY ObjectType (^ macos_right) (CGFloat);
 
 TFY_PROPERTY_CHAIN_READONLY CGFloat (^ visibleAlpha) (void);
 

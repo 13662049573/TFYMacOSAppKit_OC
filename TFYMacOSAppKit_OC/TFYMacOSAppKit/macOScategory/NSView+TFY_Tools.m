@@ -35,103 +35,103 @@
     return self;
 }
 
-- (CGPoint)origin {
+- (CGPoint)macos_origin {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin {
+- (void)setMacos_origin:(CGPoint)macos_origin {
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.origin = macos_origin;
     self.frame = frame;
 }
 
-- (CGFloat)x {
+- (CGFloat)macos_x {
     return self.frame.origin.x;
 }
 
-- (void)setX:(CGFloat)x {
+- (void)setMacos_x:(CGFloat)macos_x {
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = macos_x;
     self.frame = frame;
 }
 
-- (CGFloat)y {
+- (CGFloat)macos_y {
     return self.frame.origin.y;
 }
 
-- (void)setY:(CGFloat)y {
+- (void)setMacos_y:(CGFloat)macos_y {
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = macos_y;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize)macos_size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+- (void)setMacos_size:(CGSize)macos_size {
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = macos_size;
     self.frame = frame;
 }
 
-- (CGFloat)width {
+- (CGFloat)macos_width {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width {
+- (void)setMacos_width:(CGFloat)macos_width {
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = macos_width;
     self.frame = frame;
 }
 
-- (CGFloat)height {
+- (CGFloat)macos_height {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height {
+- (void)setMacos_height:(CGFloat)macos_height {
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = macos_height;
     self.frame = frame;
 }
 
-- (CGFloat)top {
+- (CGFloat)macos_top {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)top {
+- (void)setMacos_top:(CGFloat)macos_top {
     CGRect frame = self.frame;
-    frame.origin.y = top;
+    frame.origin.y = macos_top;
     self.frame = frame;
 }
 
-- (CGFloat)bottom {
+- (CGFloat)macos_bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom {
+- (void)setMacos_bottom:(CGFloat)macos_bottom {
     CGRect frame = self.frame;
-    frame.origin.y = bottom - self.frame.size.height;
+    frame.origin.y = macos_bottom - self.frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)left {
+- (CGFloat)macos_left {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)left {
+- (void)setMacos_left:(CGFloat)macos_left {
     CGRect frame = self.frame;
-    frame.origin.x = left;
+    frame.origin.x = macos_left;
     self.frame = frame;
 }
 
-- (CGFloat)right {
+- (CGFloat)macos_right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right {
+- (void)setMacos_right:(CGFloat)macos_right {
     CGRect frame = self.frame;
-    frame.origin.x = right - self.frame.size.width;
+    frame.origin.x = macos_right - self.frame.size.width;
     self.frame = frame;
 }
 

@@ -11,16 +11,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSView (TFY_Tools)
 
-@property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGFloat x;
-@property (nonatomic, assign) CGFloat y;
-@property (nonatomic, assign) CGSize size;
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
-@property (nonatomic) CGFloat top;
-@property (nonatomic) CGFloat bottom;
-@property (nonatomic) CGFloat left;
-@property (nonatomic) CGFloat right;
+@property (nonatomic, assign) CGPoint macos_origin;
+@property (nonatomic, assign) CGFloat macos_x;
+@property (nonatomic, assign) CGFloat macos_y;
+@property (nonatomic, assign) CGSize macos_size;
+@property (nonatomic, assign) CGFloat macos_width;
+@property (nonatomic, assign) CGFloat macos_height;
+@property (nonatomic) CGFloat macos_top;
+@property (nonatomic) CGFloat macos_bottom;
+@property (nonatomic) CGFloat macos_left;
+@property (nonatomic) CGFloat macos_right;
 
 - (void)tfy_removeAllSubViews;
 
