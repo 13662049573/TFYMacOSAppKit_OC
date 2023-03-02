@@ -58,12 +58,12 @@
 
 - (void)setIsTextAlignmentVerticalCenter:(BOOL)isTextAlignmentVerticalCenter{
     _isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
-    ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+    ((TFYSecureTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
 }
 
 - (void)setXcursor:(CGFloat)Xcursor {
     _Xcursor = Xcursor;
-    ((TFYTextFieldCell *)self.cell).Xcursor = Xcursor;
+    ((TFYSecureTextFieldCell *)self.cell).Xcursor = Xcursor;
 }
 
 -(void)textFieldDidChange:(NSNotification *)notification{
