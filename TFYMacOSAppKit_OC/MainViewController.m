@@ -119,7 +119,7 @@
         .wantsLayer(YES)
         .placeholderStringColor(NSColor.purpleColor)
         .layerBackGroundColor(NSColor.orangeColor)
-        .borderColor(NSColor.redColor.CGColor)
+        .borderColor(NSColor.blueColor.CGColor)
         .borderWidth(1)
         .masksToBounds(YES)
         .textColor(NSColor.blackColor)
