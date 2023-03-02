@@ -62,6 +62,11 @@
     ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
 }
 
+- (void)setXcursor:(CGFloat)Xcursor {
+    _Xcursor = Xcursor;
+    ((TFYTextFieldCell *)self.cell).Xcursor = Xcursor;
+}
+
 -(void)textFieldDidChange:(NSNotification *)notification{
     [self.delegate textFieldDidChange:self];
 }

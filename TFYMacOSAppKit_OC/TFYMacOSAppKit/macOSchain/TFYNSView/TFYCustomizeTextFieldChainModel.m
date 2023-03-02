@@ -12,6 +12,7 @@
 @implementation TFYCustomizeTextFieldChainModel
 
 TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(isTextAlignmentVerticalCenter, BOOL)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(Xcursor, CGFloat)
 
 - (TFYCustomizeTextFieldChainModel * _Nonnull (^)(id<TFYTextFieldNotifyingDelegate>))delegateCustomize {
     return ^(id<TFYTextFieldNotifyingDelegate> delegateOutline)

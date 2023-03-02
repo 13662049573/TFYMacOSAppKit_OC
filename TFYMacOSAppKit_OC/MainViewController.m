@@ -84,6 +84,7 @@
         _textField = TFYTextFieldSet();
         _textField.makeChain
         .isTextAlignmentVerticalCenter(YES)
+        .Xcursor(10)
         .delegateCustomize(self)
         .frame(NSMakeRect(50, 400, self.view.bounds.size.width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])

@@ -26,7 +26,7 @@
         return frame;
     }
     NSInteger offset = floor((NSHeight(frame)/2 - (self.font.ascender + self.font.descender)));
-    return NSInsetRect(frame, 0.0, offset);
+    return NSInsetRect(frame, self.Xcursor, offset);
 }
 
 - (void)editWithFrame:(NSRect)aRect inView:(NSView *)controlView editor:(NSText *)editor delegate:(id)delegate event:(NSEvent *)event{

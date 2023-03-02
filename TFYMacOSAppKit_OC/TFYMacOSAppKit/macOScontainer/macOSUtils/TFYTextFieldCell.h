@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TFYTextFieldCell : NSTextFieldCell
 @property (nonatomic, assign) BOOL isTextAlignmentVerticalCenter;
+@property(nonatomic , assign)CGFloat Xcursor;
 @end
 
 NS_ASSUME_NONNULL_END

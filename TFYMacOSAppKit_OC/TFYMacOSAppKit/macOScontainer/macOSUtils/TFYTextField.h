@@ -23,6 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
  文字是否居中 默认 NO
  */
 @property (nonatomic, assign) BOOL isTextAlignmentVerticalCenter;
+/**
+ 修改光标离X轴的距离 默认 0 isTextAlignmentVerticalCenter 为 YES 的时候 使用
+ */
+@property(nonatomic , assign)CGFloat Xcursor;
+
 @end
 
 
