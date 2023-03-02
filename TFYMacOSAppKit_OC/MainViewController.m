@@ -8,11 +8,12 @@
 #import "MainViewController.h"
 
 
-@interface MainViewController ()<TFYTextFieldNotifyingDelegate>
+@interface MainViewController ()<TFYTextFieldNotifyingDelegate,TFYSecureTextFieldNotifyingDelegate>
 @property (nonatomic , strong) NSView *backView;
 @property(nonatomic , strong)NSButton *buttom;
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
+@property(nonatomic , strong) TFYSecureTextField *securetextField;
 @end
 
 @implementation MainViewController
@@ -30,6 +31,7 @@
     [self.view addSubview:self.buttom];
     [self.view addSubview:self.label];
     [self.view addSubview:self.textField];
+    [self.view addSubview:self.securetextField];
     
     [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
 }
@@ -103,12 +105,42 @@
     return _textField;
 }
 
+- (TFYSecureTextField *)securetextField {
+    if (!_securetextField) {
+        _securetextField = TFYSecureTextFieldSet();
+        _securetextField.makeChain
+        .delegateCustomize(self)
+        .isTextAlignmentVerticalCenter(YES)
+        .Xcursor(10)
+        .frame(NSMakeRect(50, 300, self.view.bounds.size.width-100, 40))
+        .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
+        .alignment(NSTextAlignmentRight)
+        .placeholderString(@"请输入密码")
+        .wantsLayer(YES)
+        .placeholderStringColor(NSColor.purpleColor)
+        .layerBackGroundColor(NSColor.orangeColor)
+        .borderColor(NSColor.redColor.CGColor)
+        .borderWidth(1)
+        .masksToBounds(YES)
+        .textColor(NSColor.blackColor)
+        .cornerRadius(20)
+        .bordered(NO)
+        .focusRingType(NSFocusRingTypeNone);
+    }
+    return _securetextField;
+}
+
+
 - (void)paymentBtnClick:(NSButton *)btn {
     
 }
 
 -(void)textFieldDidChange:(NSTextField *_Nullable)textField {
     NSLog(@"输入===：%@",textField.stringValue);
+}
+
+-(void)securetextFieldDidChange:(NSSecureTextField *_Nullable)textField {
+    NSLog(@"密码输入===：%@",textField.stringValue);
 }
 
 @end

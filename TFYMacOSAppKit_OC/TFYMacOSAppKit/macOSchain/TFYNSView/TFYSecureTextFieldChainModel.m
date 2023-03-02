@@ -11,6 +11,9 @@
 
 @implementation TFYSecureTextFieldChainModel
 
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(isTextAlignmentVerticalCenter, BOOL)
+TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(Xcursor, CGFloat)
+
 - (TFYSecureTextFieldChainModel * _Nonnull (^)(id<TFYSecureTextFieldNotifyingDelegate>))delegateCustomize {
     return ^(id<TFYSecureTextFieldNotifyingDelegate> delegateOutline)
     {

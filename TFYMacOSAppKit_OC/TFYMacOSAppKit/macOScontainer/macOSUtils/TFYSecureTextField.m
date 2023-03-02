@@ -6,6 +6,7 @@
 //
 
 #import "TFYSecureTextField.h"
+#import "TFYSecureTextFieldCell.h"
 
 @implementation TFYSecureTextField
 @synthesize delegate;
@@ -46,8 +47,23 @@
     }
 }
 
--(void)registerForNotifications{
+-(void)registerForNotifications {
+    self.cell = [[TFYSecureTextFieldCell alloc]initTextCell:@""];
+    self.cell.lineBreakMode = NSLineBreakByWordWrapping;
+    self.cell.truncatesLastVisibleLine = true;
+    self.editable = true;  ///是否可编辑
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
+}
+
+- (void)setIsTextAlignmentVerticalCenter:(BOOL)isTextAlignmentVerticalCenter{
+    _isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
+    ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+}
+
+- (void)setXcursor:(CGFloat)Xcursor {
+    _Xcursor = Xcursor;
+    ((TFYTextFieldCell *)self.cell).Xcursor = Xcursor;
 }
 
 -(void)textFieldDidChange:(NSNotification *)notification{
@@ -66,10 +82,5 @@
     return success;
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
 
 @end

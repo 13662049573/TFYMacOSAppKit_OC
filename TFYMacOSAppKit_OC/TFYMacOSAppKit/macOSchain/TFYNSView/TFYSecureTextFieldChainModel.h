@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TFYSecureTextFieldChainModel : TFYTextFieldChainModel
 
 TFY_PROPERTY_CHAIN_READONLY TFYSecureTextFieldChainModel * (^ delegateCustomize) (id <TFYSecureTextFieldNotifyingDelegate>);
+TFY_PROPERTY_CHAIN_READONLY TFYSecureTextFieldChainModel * (^ isTextAlignmentVerticalCenter) (BOOL);
+TFY_PROPERTY_CHAIN_READONLY TFYSecureTextFieldChainModel * (^ Xcursor) (CGFloat);
 
 @end
 TFY_CATEGORY_EXINTERFACE(TFYSecureTextField, TFYSecureTextFieldChainModel)
