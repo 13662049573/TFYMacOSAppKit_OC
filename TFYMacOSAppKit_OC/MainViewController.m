@@ -49,7 +49,7 @@
 
 - (NSButton *)buttom {
     if (!_buttom) {
-        _buttom = [[NSButton alloc] initWithFrame:NSMakeRect(50, 600, self.view.bounds.size.width-100, 40)];
+        _buttom = [[NSButton alloc] initWithFrame:NSMakeRect(50, 600, WIDTH_MACOS-100, 40)];
         _buttom.makeChain
             .title(@"获取验证码")
             .wantsLayer(YES)
@@ -71,7 +71,7 @@
             NSLog(@"点击文字");
         })
         .isTextAlignmentVerticalCenter(YES)
-        .frame(NSMakeRect(50, 500, self.view.bounds.size.width-100, 40))
+        .frame(NSMakeRect(50, 500, WIDTH_MACOS-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .stringValue(@"点击测试互数据")
         .textColor(NSColor.whiteColor)
@@ -88,7 +88,7 @@
         .isTextAlignmentVerticalCenter(YES)
         .Xcursor(10)
         .delegateCustomize(self)
-        .frame(NSMakeRect(50, 400, self.view.bounds.size.width-100, 40))
+        .frame(NSMakeRect(50, 400, WIDTH_MACOS-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .placeholderString(@"请输入文字")
         .wantsLayer(YES)
@@ -112,7 +112,7 @@
         .delegateCustomize(self)
         .isTextAlignmentVerticalCenter(YES)
         .Xcursor(10)
-        .frame(NSMakeRect(50, 300, self.view.bounds.size.width-100, 40))
+        .frame(NSMakeRect(50, 300, WIDTH_MACOS-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .alignment(NSTextAlignmentRight)
         .placeholderString(@"请输入密码")

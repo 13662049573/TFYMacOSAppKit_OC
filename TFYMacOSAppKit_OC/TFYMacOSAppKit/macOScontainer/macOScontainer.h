@@ -95,7 +95,6 @@ void TFY_GCD_QUEUE_MAIN(dispatch_block_t _Nonnull block) {
 #import "TFYWKWebView.h"
 #import "TFYOpenPanel.h"
 #import "TFYSecureTextField.h"
-#import "TFYTextFieldCell.h"
 
 #import "TFYGCDTimer.h"
 #import "TFYGCDSemaphore.h"
