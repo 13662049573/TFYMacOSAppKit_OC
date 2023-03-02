@@ -19,7 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TFYTextField : NSTextField
 @property (nullable, weak) id<TFYTextFieldNotifyingDelegate> delegate;
-
+/**
+ 文字是否居中 默认 NO
+ */
+@property (nonatomic, assign) BOOL isTextAlignmentVerticalCenter;
 @end
 
 

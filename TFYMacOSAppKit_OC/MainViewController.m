@@ -13,7 +13,6 @@
 @property(nonatomic , strong)NSButton *buttom;
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
-@property(nonatomic , strong)TFYTextFieldCell *cell;
 @end
 
 @implementation MainViewController
@@ -66,33 +65,25 @@
     if (!_label) {
         _label = TFYLabelSet();
         _label.makeChain
-        .frame(NSMakeRect(50, 500, self.view.bounds.size.width-100, 40))
-        .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
-        .title(@"点击测试互数据")
-        .textColor(NSColor.redColor)
-        .userInteractionEnabled(YES)
-        .layerBackGroundColor(NSColor.orangeColor)
-        .textAlignment(NSTextAlignmentCenter)
         .actionBlock(^(__kindof TFYLabel * _Nonnull sender) {
             NSLog(@"点击文字");
-        });
+        })
+        .isTextAlignmentVerticalCenter(YES)
+        .frame(NSMakeRect(50, 500, self.view.bounds.size.width-100, 40))
+        .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
+        .stringValue(@"点击测试互数据")
+        .textColor(NSColor.whiteColor)
+        .layerBackGroundColor(NSColor.orangeColor)
+        .alignment(NSTextAlignmentCenter);
     }
     return _label;
-}
-
-- (TFYTextFieldCell *)cell {
-    if (!_cell) {
-        _cell = TFYTextFieldCell.new;
-//        _cell.tfy_isCentering = YES; 开始文字居中
-        _cell.placeholderString = @"测试数据";
-    }
-    return _cell;
 }
 
 - (TFYTextField *)textField {
     if (!_textField) {
         _textField = TFYTextFieldSet();
         _textField.makeChain
+        .isTextAlignmentVerticalCenter(YES)
         .delegateCustomize(self)
         .frame(NSMakeRect(50, 400, self.view.bounds.size.width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
@@ -106,8 +97,7 @@
         .textColor(NSColor.blackColor)
         .cornerRadius(20)
         .bordered(NO)
-        .cell(self.cell);
-//        .focusRingType(NSFocusRingTypeNone);
+        .focusRingType(NSFocusRingTypeNone);
     }
     return _textField;
 }

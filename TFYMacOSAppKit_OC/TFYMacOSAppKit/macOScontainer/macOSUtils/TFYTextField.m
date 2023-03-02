@@ -7,6 +7,7 @@
 //
 
 #import "TFYTextField.h"
+#import "TFYTextFieldCell.h"
 
 @implementation TFYTextField
 @synthesize delegate;
@@ -35,14 +36,6 @@
     return self;
 }
 
--(void)registerForNotifications{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
-}
-
--(void)textFieldDidChange:(NSNotification *)notification{
-    [self.delegate textFieldDidChange:self];
-}
-
 - (void)setAlignment:(NSTextAlignment)alignment {
     [super setAlignment:alignment];
     NSString *placeholderString = self.placeholderString?:@"";
@@ -53,6 +46,24 @@
         [attributedString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, placeholderString.length)];
         self.placeholderAttributedString = attributedString;
     }
+}
+
+-(void)registerForNotifications{
+    self.cell = [[TFYTextFieldCell alloc]initTextCell:@""];
+    self.cell.lineBreakMode = NSLineBreakByWordWrapping;
+    self.cell.truncatesLastVisibleLine = true;
+    self.editable = true;  ///是否可编辑
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
+}
+
+- (void)setIsTextAlignmentVerticalCenter:(BOOL)isTextAlignmentVerticalCenter{
+    _isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
+    ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+}
+
+-(void)textFieldDidChange:(NSNotification *)notification{
+    [self.delegate textFieldDidChange:self];
 }
 
 - (BOOL)becomeFirstResponder {

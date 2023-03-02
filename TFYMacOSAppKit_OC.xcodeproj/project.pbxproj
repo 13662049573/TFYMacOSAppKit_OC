@@ -112,6 +112,7 @@
 		36B43728299B897300CF0A4D /* TFYGCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B43727299B897300CF0A4D /* TFYGCDQueue.m */; };
 		36B4372B299B89E500CF0A4D /* TFYGCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B4372A299B89E500CF0A4D /* TFYGCDSemaphore.m */; };
 		36B4372E299B8A1900CF0A4D /* TFYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B4372D299B8A1900CF0A4D /* TFYGCDTimer.m */; };
+		36C6670B29B035B700DFA49E /* NSControl+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C6670A29B035B700DFA49E /* NSControl+Dejal.m */; };
 		36CA65DC299A27260066B945 /* TFYTableViewlChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65DB299A27260066B945 /* TFYTableViewlChainModel.m */; };
 		36CA65DF299A2AE70066B945 /* TFYStepperChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65DE299A2AE70066B945 /* TFYStepperChainModel.m */; };
 		36CA65E2299A2BC00066B945 /* TFYDatePickerChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65E1299A2BC00066B945 /* TFYDatePickerChainModel.m */; };
@@ -382,6 +383,8 @@
 		36B4372A299B89E500CF0A4D /* TFYGCDSemaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYGCDSemaphore.m; sourceTree = "<group>"; };
 		36B4372C299B8A1900CF0A4D /* TFYGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYGCDTimer.h; sourceTree = "<group>"; };
 		36B4372D299B8A1900CF0A4D /* TFYGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYGCDTimer.m; sourceTree = "<group>"; };
+		36C6670929B035B700DFA49E /* NSControl+Dejal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSControl+Dejal.h"; sourceTree = "<group>"; };
+		36C6670A29B035B700DFA49E /* NSControl+Dejal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSControl+Dejal.m"; sourceTree = "<group>"; };
 		36CA65DA299A27260066B945 /* TFYTableViewlChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYTableViewlChainModel.h; sourceTree = "<group>"; };
 		36CA65DB299A27260066B945 /* TFYTableViewlChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYTableViewlChainModel.m; sourceTree = "<group>"; };
 		36CA65DD299A2AE70066B945 /* TFYStepperChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStepperChainModel.h; sourceTree = "<group>"; };
@@ -647,6 +650,8 @@
 				36AE67BC29961FFF0013EF3B /* NSOutlineView+Dejal.m */,
 				36AE685D299763E40013EF3B /* NSView+TFY_Tools.h */,
 				36AE685E299763E40013EF3B /* NSView+TFY_Tools.m */,
+				36C6670929B035B700DFA49E /* NSControl+Dejal.h */,
+				36C6670A29B035B700DFA49E /* NSControl+Dejal.m */,
 			);
 			path = macOScategory;
 			sourceTree = "<group>";
@@ -1074,6 +1079,7 @@
 				36AE67E929961FFF0013EF3B /* NSMenu+Dejal.m in Sources */,
 				36E079582998B02800266645 /* TFYScrubberChainModel.m in Sources */,
 				36CA6609299B0DE00066B945 /* TFYCustomizeButtonChainModel.m in Sources */,
+				36C6670B29B035B700DFA49E /* NSControl+Dejal.m in Sources */,
 				36AE680D299737620013EF3B /* NSArray+TFY_Tools.m in Sources */,
 				36AE67ED29961FFF0013EF3B /* NSImage+Dejal.m in Sources */,
 				36E079612998BDA000266645 /* TFYGridViewChainModel.m in Sources */,

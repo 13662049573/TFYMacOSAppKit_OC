@@ -10,15 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TFYTextFieldCell : NSTextFieldCell
-
-@end
-
-@interface TFYTextFieldCell (cell)
-/**
- 文字是否居中 默认 NO
- */
-@property (nonatomic , assign) BOOL tfy_isCentering;
-
+@property (nonatomic, assign) BOOL isTextAlignmentVerticalCenter;
 @end
 
 NS_ASSUME_NONNULL_END

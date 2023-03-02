@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TFYCustomizeTextFieldChainModel : TFYTextFieldChainModel
 
 TFY_PROPERTY_CHAIN_READONLY TFYCustomizeTextFieldChainModel * (^ delegateCustomize) (id <TFYTextFieldNotifyingDelegate>);
+TFY_PROPERTY_CHAIN_READONLY TFYCustomizeTextFieldChainModel * (^ isTextAlignmentVerticalCenter) (BOOL);
 
 @end
 TFY_CATEGORY_EXINTERFACE(TFYTextField, TFYCustomizeTextFieldChainModel)

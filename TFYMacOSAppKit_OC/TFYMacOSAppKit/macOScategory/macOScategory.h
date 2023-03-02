@@ -28,6 +28,6 @@
 #import "NSWindow+Dejal.h"
 #import "NSColor+Dejal.h"
 #import "NSView+TFY_Tools.h"
-
+#import "NSControl+Dejal.h"
 
 #endif /* macOScategory_h */

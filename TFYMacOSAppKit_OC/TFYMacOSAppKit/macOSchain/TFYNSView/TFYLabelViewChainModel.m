@@ -12,18 +12,6 @@
 
 @implementation TFYLabelViewChainModel
 
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(title, NSString*)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(font, NSFont*)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(textColor, NSColor*)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(textAlignment, NSTextAlignment)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(contentVerticalAlignment, TFYContentVerticalAlignment)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(lineBreakMode, NSLineBreakMode)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(attributedText, NSAttributedString*)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(highlightedTextColor, NSColor*)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(highlighted, BOOL)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(userInteractionEnabled, BOOL)
-TFY_CATEGORY_CHAIN_UNIFICATION_IMPLEMENTATION(enabled, BOOL)
-
 - (TFYLabelViewChainModel * _Nonnull (^)(void (^ _Nonnull)(__kindof TFYLabel * _Nonnull)))actionBlock {
     return ^ (action block){
         [self enumerateObjectsUsingBlock:^(TFYLabel * _Nonnull obj) {
