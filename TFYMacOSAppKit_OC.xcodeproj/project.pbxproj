@@ -112,6 +112,13 @@
 		36B43728299B897300CF0A4D /* TFYGCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B43727299B897300CF0A4D /* TFYGCDQueue.m */; };
 		36B4372B299B89E500CF0A4D /* TFYGCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B4372A299B89E500CF0A4D /* TFYGCDSemaphore.m */; };
 		36B4372E299B8A1900CF0A4D /* TFYGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B4372D299B8A1900CF0A4D /* TFYGCDTimer.m */; };
+		36C2C40829BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C40729BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.m */; };
+		36C2C40B29BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C40A29BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.m */; };
+		36C2C40E29BAB66A000AE3B8 /* TFYStatusItemWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C40D29BAB66A000AE3B8 /* TFYStatusItemWindow.m */; };
+		36C2C41129BAB6AF000AE3B8 /* TFYStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C41029BAB6AF000AE3B8 /* TFYStatusItem.m */; };
+		36C2C41429BAB929000AE3B8 /* TFYStatusItemDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C41329BAB929000AE3B8 /* TFYStatusItemDropView.m */; };
+		36C2C41729BAB98A000AE3B8 /* TFYStatusItemWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C41629BAB98A000AE3B8 /* TFYStatusItemWindowController.m */; };
+		36C2C41A29BABFF5000AE3B8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C2C41929BABFF5000AE3B8 /* HomeViewController.m */; };
 		36C6670B29B035B700DFA49E /* NSControl+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C6670A29B035B700DFA49E /* NSControl+Dejal.m */; };
 		36C6670E29B04E8500DFA49E /* TFYSecureTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C6670D29B04E8500DFA49E /* TFYSecureTextFieldCell.m */; };
 		36CA65DC299A27260066B945 /* TFYTableViewlChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA65DB299A27260066B945 /* TFYTableViewlChainModel.m */; };
@@ -384,6 +391,20 @@
 		36B4372A299B89E500CF0A4D /* TFYGCDSemaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYGCDSemaphore.m; sourceTree = "<group>"; };
 		36B4372C299B8A1900CF0A4D /* TFYGCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYGCDTimer.h; sourceTree = "<group>"; };
 		36B4372D299B8A1900CF0A4D /* TFYGCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYGCDTimer.m; sourceTree = "<group>"; };
+		36C2C40629BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusItemWindowConfiguration.h; sourceTree = "<group>"; };
+		36C2C40729BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYStatusItemWindowConfiguration.m; sourceTree = "<group>"; };
+		36C2C40929BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusItemWindowBackgroundView.h; sourceTree = "<group>"; };
+		36C2C40A29BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYStatusItemWindowBackgroundView.m; sourceTree = "<group>"; };
+		36C2C40C29BAB66A000AE3B8 /* TFYStatusItemWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusItemWindow.h; sourceTree = "<group>"; };
+		36C2C40D29BAB66A000AE3B8 /* TFYStatusItemWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYStatusItemWindow.m; sourceTree = "<group>"; };
+		36C2C40F29BAB6AF000AE3B8 /* TFYStatusItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusItem.h; sourceTree = "<group>"; };
+		36C2C41029BAB6AF000AE3B8 /* TFYStatusItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYStatusItem.m; sourceTree = "<group>"; };
+		36C2C41229BAB929000AE3B8 /* TFYStatusItemDropView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusItemDropView.h; sourceTree = "<group>"; };
+		36C2C41329BAB929000AE3B8 /* TFYStatusItemDropView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYStatusItemDropView.m; sourceTree = "<group>"; };
+		36C2C41529BAB98A000AE3B8 /* TFYStatusItemWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYStatusItemWindowController.h; sourceTree = "<group>"; };
+		36C2C41629BAB98A000AE3B8 /* TFYStatusItemWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYStatusItemWindowController.m; sourceTree = "<group>"; };
+		36C2C41829BABFF5000AE3B8 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		36C2C41929BABFF5000AE3B8 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		36C6670929B035B700DFA49E /* NSControl+Dejal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSControl+Dejal.h"; sourceTree = "<group>"; };
 		36C6670A29B035B700DFA49E /* NSControl+Dejal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSControl+Dejal.m"; sourceTree = "<group>"; };
 		36C6670C29B04E8500DFA49E /* TFYSecureTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYSecureTextFieldCell.h; sourceTree = "<group>"; };
@@ -511,6 +532,8 @@
 				36AE68712999BAAB0013EF3B /* MainWindowController.m */,
 				36AE68732999BAD50013EF3B /* MainViewController.h */,
 				36AE68742999BAD50013EF3B /* MainViewController.m */,
+				36C2C41829BABFF5000AE3B8 /* HomeViewController.h */,
+				36C2C41929BABFF5000AE3B8 /* HomeViewController.m */,
 				36CA660F299B23220066B945 /* PrefixHeader.pch */,
 			);
 			path = TFYMacOSAppKit_OC;
@@ -663,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				36AE67C829961FFF0013EF3B /* macOScontainer.h */,
+				36C2C40529BAB4A5000AE3B8 /* macOSStatusItem */,
 				36B43721299B88FF00CF0A4D /* macOSGcd */,
 				36B43722299B88FF00CF0A4D /* macOSUtils */,
 			);
@@ -890,6 +914,25 @@
 			path = macOSUtils;
 			sourceTree = "<group>";
 		};
+		36C2C40529BAB4A5000AE3B8 /* macOSStatusItem */ = {
+			isa = PBXGroup;
+			children = (
+				36C2C40629BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.h */,
+				36C2C40729BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.m */,
+				36C2C40929BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.h */,
+				36C2C40A29BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.m */,
+				36C2C40C29BAB66A000AE3B8 /* TFYStatusItemWindow.h */,
+				36C2C40D29BAB66A000AE3B8 /* TFYStatusItemWindow.m */,
+				36C2C40F29BAB6AF000AE3B8 /* TFYStatusItem.h */,
+				36C2C41029BAB6AF000AE3B8 /* TFYStatusItem.m */,
+				36C2C41229BAB929000AE3B8 /* TFYStatusItemDropView.h */,
+				36C2C41329BAB929000AE3B8 /* TFYStatusItemDropView.m */,
+				36C2C41529BAB98A000AE3B8 /* TFYStatusItemWindowController.h */,
+				36C2C41629BAB98A000AE3B8 /* TFYStatusItemWindowController.m */,
+			);
+			path = macOSStatusItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1035,8 +1078,10 @@
 				36CA65E5299A2DBD0066B945 /* TFYLevelIndicatorChainModel.m in Sources */,
 				36AE684B299751DC0013EF3B /* TFYBaseGestureChainModel.m in Sources */,
 				36CA6606299B0A2F0066B945 /* TFYLabelViewChainModel.m in Sources */,
+				36C2C40829BAB4D0000AE3B8 /* TFYStatusItemWindowConfiguration.m in Sources */,
 				36AE67E229961FFF0013EF3B /* NSColor+Dejal.m in Sources */,
 				36AE67CC29961FFF0013EF3B /* NSDictionary+Dejal.m in Sources */,
+				36C2C41729BAB98A000AE3B8 /* TFYStatusItemWindowController.m in Sources */,
 				362CBCDA29A45BD900085921 /* TFYSecureTextField.m in Sources */,
 				36B4371D299B7F0A00CF0A4D /* TFYUtils.m in Sources */,
 				36AE67CF29961FFF0013EF3B /* NSString+Dejal.m in Sources */,
@@ -1054,6 +1099,7 @@
 				36AE67EE29961FFF0013EF3B /* NSTableView+Dejal.m in Sources */,
 				36AE67DE29961FFF0013EF3B /* NSArray+Dejal.m in Sources */,
 				36CA65DC299A27260066B945 /* TFYTableViewlChainModel.m in Sources */,
+				36C2C40E29BAB66A000AE3B8 /* TFYStatusItemWindow.m in Sources */,
 				36AE67D929961FFF0013EF3B /* NSDictionary+AppKit+Dejal.m in Sources */,
 				36AE689F299A18D50013EF3B /* TFYComboButtonChainModel.m in Sources */,
 				363EB036299F468600ED6837 /* TFYOpenPanel.m in Sources */,
@@ -1064,6 +1110,7 @@
 				36AE6811299737620013EF3B /* NSData+TFY_Data.m in Sources */,
 				36AE680F299737620013EF3B /* NSNumber+TFY_Tools.m in Sources */,
 				36AE68812999D08B0013EF3B /* TFYButtonChainModel.m in Sources */,
+				36C2C40B29BAB5F0000AE3B8 /* TFYStatusItemWindowBackgroundView.m in Sources */,
 				36AE6814299737620013EF3B /* NSDictionary+TFY_Tools.m in Sources */,
 				362CBCDD29A45C9400085921 /* TFYSecureTextFieldChainModel.m in Sources */,
 				36AE67EB29961FFF0013EF3B /* NSTextField+Dejal.m in Sources */,
@@ -1073,6 +1120,8 @@
 				36AE67DB29961FFF0013EF3B /* NSAttributedString+AppKit+Dejal.m in Sources */,
 				36AE68842999FDBF0013EF3B /* TFYMatrixChainModel.m in Sources */,
 				36AE67E429961FFF0013EF3B /* NSToolbar+Dejal.m in Sources */,
+				36C2C41429BAB929000AE3B8 /* TFYStatusItemDropView.m in Sources */,
+				36C2C41129BAB6AF000AE3B8 /* TFYStatusItem.m in Sources */,
 				36AE67D629961FFF0013EF3B /* TFYAttributedImageInfo.m in Sources */,
 				36AE682D299748480013EF3B /* TFYEmiiterLayerChainModel.m in Sources */,
 				36AE67D329961FFF0013EF3B /* NSAttributedString+Dejal.m in Sources */,
@@ -1095,6 +1144,7 @@
 				36CA65FD299A3EE70066B945 /* TFYOutlineViewChainModel.m in Sources */,
 				36AE689C299A16BA0013EF3B /* TFYTextFieldChainModel.m in Sources */,
 				36AE67E629961FFF0013EF3B /* NSViewController+Hook.m in Sources */,
+				36C2C41A29BABFF5000AE3B8 /* HomeViewController.m in Sources */,
 				36AE6815299737620013EF3B /* NSMutableAttributedString+TFY_Tools.m in Sources */,
 				36AE67F129961FFF0013EF3B /* TFYButton.m in Sources */,
 				36AE685229975F320013EF3B /* TFYPanGestureChainModel.m in Sources */,

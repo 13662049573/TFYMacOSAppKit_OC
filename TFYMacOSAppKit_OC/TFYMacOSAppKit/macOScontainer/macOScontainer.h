@@ -98,5 +98,6 @@ void TFY_GCD_QUEUE_MAIN(dispatch_block_t _Nonnull block) {
 
 #import "TFYGCDTimer.h"
 #import "TFYGCDSemaphore.h"
+#import "TFYStatusItem.h"
 
 #endif /* macOScontainer_h */

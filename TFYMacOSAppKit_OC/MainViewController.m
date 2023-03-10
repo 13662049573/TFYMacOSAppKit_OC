@@ -14,7 +14,6 @@
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
 @property(nonatomic , strong) TFYSecureTextField *securetextField;
-@property(nonatomic , assign)CGFloat width_w;
 @end
 
 @implementation MainViewController
@@ -27,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.width_w = self.view.macos_width;
     
     [self.view addSubview:self.backView];
     
@@ -35,7 +33,7 @@
     [self.view addSubview:self.label];
     [self.view addSubview:self.textField];
     [self.view addSubview:self.securetextField];
-    WIDTH_MACOS
+    
     [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
 }
 
@@ -52,7 +50,7 @@
 
 - (NSButton *)buttom {
     if (!_buttom) {
-        _buttom = [[NSButton alloc] initWithFrame:NSMakeRect(50, 600, self.width_w-100, 40)];
+        _buttom = [[NSButton alloc] initWithFrame:NSMakeRect(50, 600, self.view.macos_width-100, 40)];
         _buttom.makeChain
             .title(@"获取验证码")
             .wantsLayer(YES)
@@ -74,7 +72,7 @@
             NSLog(@"点击文字");
         })
         .isTextAlignmentVerticalCenter(YES)
-        .frame(NSMakeRect(50, 500, self.width_w-100, 40))
+        .frame(NSMakeRect(50, 500, self.view.macos_width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .stringValue(@"点击测试互数据")
         .textColor(NSColor.whiteColor)
@@ -91,7 +89,7 @@
         .isTextAlignmentVerticalCenter(YES)
         .Xcursor(10)
         .delegateCustomize(self)
-        .frame(NSMakeRect(50, 400, self.width_w-100, 40))
+        .frame(NSMakeRect(50, 400, self.view.macos_width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .placeholderString(@"请输入文字")
         .wantsLayer(YES)
@@ -115,7 +113,7 @@
         .delegateCustomize(self)
         .isTextAlignmentVerticalCenter(YES)
         .Xcursor(10)
-        .frame(NSMakeRect(50, 300, self.width_w-100, 40))
+        .frame(NSMakeRect(50, 300, self.view.macos_width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .alignment(NSTextAlignmentRight)
         .placeholderString(@"请输入密码")
