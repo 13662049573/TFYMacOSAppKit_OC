@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYMacOSAppKit"
 
-  spec.version      = "1.1.6"
+  spec.version      = "1.1.7"
 
   spec.summary      = "纯代码 macOS 开发基本数据类型封装。最低支持macos 11 控制点语法使用"
 
@@ -40,6 +40,10 @@ Pod::Spec.new do |spec|
       s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSUtils/**/*.{h,m}"
       s.dependency "TFYMacOSAppKit/macOScategory"
       s.dependency "TFYMacOSAppKit/macOSfoundation"
+    end
+
+    ss.subspec 'macOSStatusItem' do |s|
+      s.source_files  = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/**/*.{h,m}"
     end
 
   end
