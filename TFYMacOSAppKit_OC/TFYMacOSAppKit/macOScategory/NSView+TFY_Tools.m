@@ -14,9 +14,18 @@
 + (void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        [self tfy_exchangeInstanceMethod:self.class method1Sel:@selector(initWithFrame:) method2Sel:@selector(initWithFrame_hook:)];
         [self tfy_exchangeInstanceMethod:self.class method1Sel:@selector(init) method2Sel:@selector(init_hook)];
         [self tfy_exchangeInstanceMethod:self.class method1Sel:@selector(initWithCoder:) method2Sel:@selector(initWithCoder_hook:)];
     });
+}
+
+- (id)initWithFrame_hook:(NSRect)frameRect {
+    self = [self initWithFrame_hook:frameRect];
+    if (self) {
+        self.wantsLayer = true;
+    }
+    return self;
 }
 
 - (id)init_hook{
@@ -187,6 +196,8 @@
     return data;
 }
 
-
+- (BOOL)isFlipped {
+    return YES;
+}
 
 @end
