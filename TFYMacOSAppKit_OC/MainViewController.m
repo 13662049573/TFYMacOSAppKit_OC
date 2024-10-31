@@ -6,7 +6,7 @@
 //
 
 #import "MainViewController.h"
-
+#import "TFYCustomBtn.h"
 
 @interface MainViewController ()<TFYTextFieldNotifyingDelegate,TFYSecureTextFieldNotifyingDelegate>
 @property (nonatomic , strong) NSView *backView;
@@ -14,6 +14,7 @@
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
 @property(nonatomic , strong) TFYSecureTextField *securetextField;
+@property(nonatomic , strong) TFYCustomBtn *btn;
 @end
 
 @implementation MainViewController
@@ -27,15 +28,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:self.backView];
-    
     [self.view addSubview:self.buttom];
-    [self.view addSubview:self.label];
-    [self.view addSubview:self.textField];
-    [self.view addSubview:self.securetextField];
-    
-    [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
 }
+
+- (TFYCustomBtn *)btn {
+    if (!_btn) {
+        _btn = [[TFYCustomBtn alloc] initWithFrame:CGRectMake(20, 200, 400, 50)];
+        _btn.isHandCursor = YES;
+        _btn.defaultTitle = @"未选中";
+        _btn.selectedTitle = @"已选中";
+        _btn.defaultTitleColor = [NSColor whiteColor];
+        _btn.selectedTitleColor = [NSColor blackColor];
+        _btn.defaultFont = [NSFont systemFontOfSize:20];
+        _btn.selectedFont = [NSFont systemFontOfSize:10];
+        _btn.defaultBackgroundColor = [NSColor greenColor];
+        _btn.selectedBackgroundColor = [NSColor blueColor];
+        _btn.defaultBackgroundImage = [NSImage imageNamed:@""];
+        _btn.selectedBackgroundImage = [NSImage imageNamed:@""];
+        _btn.rectCorners = TFYRectCornerTopLeft|TFYRectCornerBottomLeft;
+        _btn.radius = 15;
+        _btn.textAlignment = TFYTextAlignmentLeft;
+        [_btn setTarget:self];
+        [_btn setAction:@selector(paymentBtnClick:)];
+    }
+    return _btn;
+}
+
 
 - (NSView *)backView {
    if (!_backView) {
@@ -56,7 +74,7 @@
             .wantsLayer(YES)
             .layerBackGroundColor(NSColor.orangeColor)
             .cornerRadius(8)
-            .textColor(NSColor.whiteColor)
+            .textColor(NSColor.redColor)
             .bezelStyle(NSBezelStyleTexturedSquare)
             .font([NSFont systemFontOfSize:12 weight:NSFontWeightHeavy])
             .addTarget(self, @selector(paymentBtnClick:));
@@ -133,7 +151,11 @@
 
 
 - (void)paymentBtnClick:(NSButton *)btn {
-    
+    [btn tfy_startTimer:^(NSString * _Nonnull time, NSInteger type) {
+        btn.makeChain
+            .title(time)
+            .textColor(NSColor.redColor);
+    }];
 }
 
 -(void)textFieldDidChange:(NSTextField *_Nullable)textField {

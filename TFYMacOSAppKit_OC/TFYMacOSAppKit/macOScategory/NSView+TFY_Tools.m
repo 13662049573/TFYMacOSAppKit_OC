@@ -8,6 +8,17 @@
 #import "NSView+TFY_Tools.h"
 #import <objc/runtime.h>
 #import "NSObject+Dejal.h"
+#import <time.h>
+
+@interface NSView ()
+@property(nonatomic,strong)dispatch_source_t timer;
+@property(nonatomic,assign)NSInteger userTime;
+@property(nonatomic,assign)NSInteger stopTime;
+@end
+
+static NSInteger const TimeInterval = 60; // 默认时间
+static NSString * const ButtonTitleFormat = @"剩余%ld秒";
+static NSString * const RetainTitle = @"重新获取";
 
 @implementation NSView (TFY_Tools)
 
@@ -198,6 +209,95 @@
 
 - (BOOL)isFlipped {
     return YES;
+}
+
+- (void)setTfy_time:(NSInteger)tfy_time{
+    objc_setAssociatedObject(self, @selector(tfy_time), @(tfy_time), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSInteger)tfy_time {
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    return  number.integerValue;
+}
+
+- (void)setTfy_format:(NSString *)tfy_format {
+    objc_setAssociatedObject(self, @selector(tfy_format), tfy_format, OBJC_ASSOCIATION_COPY);
+}
+
+- (NSString *)tfy_format {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setTimer:(dispatch_source_t)timer {
+    objc_setAssociatedObject(self, @selector(timer), timer, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (dispatch_source_t)timer {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setUserTime:(NSInteger)userTime {
+    objc_setAssociatedObject(self, @selector(userTime), @(userTime), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSInteger)userTime {
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    return  number.integerValue;
+}
+
+- (void)setStopTime:(NSInteger)stopTime {
+    objc_setAssociatedObject(self, @selector(stopTime), @(stopTime), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSInteger)stopTime {
+    NSNumber *number = objc_getAssociatedObject(self, @selector(stopTime));
+    return  number.integerValue;
+}
+
+- (void)tfy_startTimer:(void (^)(NSString *time,NSInteger type))block {
+    if (self.stopTime == 0) {
+        if (!self.tfy_time) {
+            self.tfy_time = TimeInterval;
+        }
+        if (!self.tfy_format) {
+            self.tfy_format = ButtonTitleFormat;
+        }
+        dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, globalQueue);
+        dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+        dispatch_source_set_event_handler(self.timer, ^{
+            if (self.tfy_time <= 1) {
+                dispatch_source_cancel(self.timer);
+            }else
+            {
+                self.tfy_time --;
+                dispatch_async(mainQueue, ^{
+                    self.stopTime = 1;
+                    block([NSString stringWithFormat:self.tfy_format,self.tfy_time],0);
+                });
+            }
+        });
+        dispatch_source_set_cancel_handler(self.timer, ^{
+            dispatch_async(mainQueue, ^{
+                self.stopTime = 0;
+                block(RetainTitle,1);
+                if (self.userTime) {
+                    self.tfy_time = self.userTime;
+                } else
+                {
+                    self.tfy_time = TimeInterval;
+                }
+            });
+        });
+        dispatch_resume(self.timer);
+    }
+}
+
+- (void)tfy_endTimer {
+    if (self.timer) {
+        dispatch_source_cancel(self.timer);
+    }
 }
 
 @end
