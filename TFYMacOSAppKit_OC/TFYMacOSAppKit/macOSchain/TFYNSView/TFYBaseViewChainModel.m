@@ -318,6 +318,7 @@ TFY_CATEGORY_CHAIN_LAYER_IMPLEMENTATION(shadowPath, CGPathRef);
 {
     return ^__kindof TFYBaseViewChainModel *(CGFloat cornerRadius) {
         [self enumerateObjectsUsingBlock:^(NSView * _Nonnull obj) {
+            [obj.layer setMasksToBounds:YES];
             [obj.layer setCornerRadius:cornerRadius];
         }];
         return self;

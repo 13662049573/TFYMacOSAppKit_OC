@@ -20,13 +20,13 @@
     HomeViewController *showVc = HomeViewController.new;
     showVc.preferredContentSize = CGSizeMake(500, 300);
     
-//    [[TFYStatusItem sharedInstance] presentStatusItemWithImage:[NSImage imageNamed:@"mood_day_6"] contentViewController:showVc];
+    [[TFYStatusItem sharedInstance] presentStatusItemWithImage:[NSImage imageNamed:@"mood_cognition"] contentViewController:showVc];
     
-    NSView *backView = [[NSView alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-    backView.wantsLayer = YES;
-    backView.layer.backgroundColor = NSColor.blueColor.CGColor;
-
-    [[TFYStatusItem sharedInstance] presentStatusItemWithView:backView contentViewController:showVc];
+//    NSView *backView = [[NSView alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+//    backView.wantsLayer = YES;
+//    backView.layer.backgroundColor = NSColor.blueColor.CGColor;
+//
+//    [[TFYStatusItem sharedInstance] presentStatusItemWithView:backView contentViewController:showVc];
     
 }
 
