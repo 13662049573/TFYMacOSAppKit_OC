@@ -197,6 +197,7 @@ static NSString * const RetainTitle = @"重试";
             dispatch_async(mainQueue, ^{
                 self.enabled = NO;
                 self.title = [NSString stringWithFormat:self.tfy_format,self.tfy_time];
+                self.tfy_textColor = NSColor.blackColor;
             });
         }
     });

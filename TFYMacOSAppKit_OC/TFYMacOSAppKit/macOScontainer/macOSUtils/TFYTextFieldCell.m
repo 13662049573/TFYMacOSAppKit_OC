@@ -9,7 +9,6 @@
 
 @implementation TFYTextFieldCell
 
-
 - (NSRect)adjustedFrameToVerticallyCenterText:(NSRect)frame{
     if (self.isTextAlignmentVerticalCenter == false) {
         return frame;
