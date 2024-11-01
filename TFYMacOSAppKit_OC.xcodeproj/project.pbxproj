@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3619837F2CD3B30C008BEF15 /* TFYCustomBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 3619837E2CD3B30C008BEF15 /* TFYCustomBtn.m */; };
 		362CBCDA29A45BD900085921 /* TFYSecureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCD929A45BD900085921 /* TFYSecureTextField.m */; };
 		362CBCDD29A45C9400085921 /* TFYSecureTextFieldChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCDC29A45C9400085921 /* TFYSecureTextFieldChainModel.m */; };
 		362CBCE329A463C100085921 /* TFYTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCE229A463C100085921 /* TFYTextFieldCell.m */; };
@@ -172,6 +173,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3619837D2CD3B30C008BEF15 /* TFYCustomBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCustomBtn.h; sourceTree = "<group>"; };
+		3619837E2CD3B30C008BEF15 /* TFYCustomBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCustomBtn.m; sourceTree = "<group>"; };
 		362CBCD829A45BD900085921 /* TFYSecureTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYSecureTextField.h; sourceTree = "<group>"; };
 		362CBCD929A45BD900085921 /* TFYSecureTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYSecureTextField.m; sourceTree = "<group>"; };
 		362CBCDB29A45C9400085921 /* TFYSecureTextFieldChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYSecureTextFieldChainModel.h; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 				36C2C41829BABFF5000AE3B8 /* HomeViewController.h */,
 				36C2C41929BABFF5000AE3B8 /* HomeViewController.m */,
 				36CA660F299B23220066B945 /* PrefixHeader.pch */,
+				3619837D2CD3B30C008BEF15 /* TFYCustomBtn.h */,
+				3619837E2CD3B30C008BEF15 /* TFYCustomBtn.m */,
 			);
 			path = TFYMacOSAppKit_OC;
 			sourceTree = "<group>";
@@ -1062,6 +1067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36AE67DC29961FFF0013EF3B /* NSMutableAttributedString+Config.m in Sources */,
+				3619837F2CD3B30C008BEF15 /* TFYCustomBtn.m in Sources */,
 				362CBCE329A463C100085921 /* TFYTextFieldCell.m in Sources */,
 				36CA65FA299A3D9C0066B945 /* TFYSearchFieldChainModel.m in Sources */,
 				36B43725299B893300CF0A4D /* TFYGCDGroup.m in Sources */,
@@ -1356,7 +1362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QH95759TSS;
+				DEVELOPMENT_TEAM = QXKDSVRNVW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TFYMacOSAppKit_OC/PrefixHeader.pch;
@@ -1384,7 +1390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QH95759TSS;
+				DEVELOPMENT_TEAM = QXKDSVRNVW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TFYMacOSAppKit_OC/PrefixHeader.pch;

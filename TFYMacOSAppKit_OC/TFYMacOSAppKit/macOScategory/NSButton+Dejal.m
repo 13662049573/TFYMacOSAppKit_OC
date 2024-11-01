@@ -10,65 +10,7 @@
 #import <objc/message.h>
 #import <time.h>
 
-@interface NSButton ()
-/**
- *  🐶nn    👇
- */
-@property(nonatomic,strong)dispatch_source_t timer;
-/**
- *  🐶记录外边的时间    👇
- */
-@property(nonatomic,assign)NSInteger userTime;
-@end
-
-static NSInteger const TimeInterval = 60; // 默认时间
-static NSString * const ButtonTitleFormat = @"剩余%ld秒";
-static NSString * const RetainTitle = @"重试";
-
 @implementation NSButton (Dejal)
-
-- (void)setTfy_time:(NSInteger)tfy_time{
-    objc_setAssociatedObject(self, @selector(tfy_time), @(tfy_time), OBJC_ASSOCIATION_ASSIGN);
-}
-
-- (NSInteger)tfy_time {
-    NSNumber *number = objc_getAssociatedObject(self, _cmd);
-    return  number.integerValue;
-}
-
-- (void)setTfy_format:(NSString *)tfy_format {
-    objc_setAssociatedObject(self, @selector(tfy_format), tfy_format, OBJC_ASSOCIATION_COPY);
-}
-
-- (NSString *)tfy_format {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTimer:(dispatch_source_t)timer {
-    objc_setAssociatedObject(self, @selector(timer), timer, OBJC_ASSOCIATION_RETAIN);
-}
-
-- (dispatch_source_t)timer {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setUserTime:(NSInteger)userTime {
-    objc_setAssociatedObject(self, @selector(userTime), @(userTime), OBJC_ASSOCIATION_ASSIGN);
-}
-
-- (NSInteger)userTime {
-    NSNumber *number = objc_getAssociatedObject(self, _cmd);
-    return  number.integerValue;
-}
-
-- (void)setCompleteBlock:(void (^)(void))CompleteBlock {
-    objc_setAssociatedObject(self, @selector(CompleteBlock), CompleteBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
--(void (^)(void))CompleteBlock {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
 
 /**
  返回接收者文本的颜色。
@@ -176,55 +118,6 @@ static NSString * const RetainTitle = @"重试";
     
     [menu popUpMenuPositioningItem:nil atLocation:location inView:self.superview];
 }
-
-- (void)tfy_startTimer {
-    if (!self.tfy_time) {
-        self.tfy_time = TimeInterval;
-    }
-    if (!self.tfy_format) {
-        self.tfy_format = ButtonTitleFormat;
-    }
-    dispatch_queue_t globalQueue = dispatch_get_global_queue(0, 0);
-    dispatch_queue_t mainQueue = dispatch_get_main_queue();
-    self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, globalQueue);
-    dispatch_source_set_timer(self.timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
-    dispatch_source_set_event_handler(self.timer, ^{
-        if (self.tfy_time <= 1) {
-            dispatch_source_cancel(self.timer);
-        }else
-        {
-            self.tfy_time --;
-            dispatch_async(mainQueue, ^{
-                self.enabled = NO;
-                self.title = [NSString stringWithFormat:self.tfy_format,self.tfy_time];
-                self.tfy_textColor = NSColor.blackColor;
-            });
-        }
-    });
-    dispatch_source_set_cancel_handler(self.timer, ^{
-        dispatch_async(mainQueue, ^{
-            self.enabled = YES;
-            self.title = RetainTitle;
-            if (self.CompleteBlock) {
-                self.CompleteBlock();
-            }
-            if (self.userTime) {
-                self.tfy_time = self.userTime;
-            }else
-            {
-                self.tfy_time = TimeInterval;
-            }
-        });
-    });
-    dispatch_resume(self.timer);
-}
-
-- (void)tfy_endTimer{
-    if (self.timer) {
-        dispatch_source_cancel(self.timer);
-    }
-}
-
 
 @end
 

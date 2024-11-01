@@ -38,27 +38,6 @@ typedef NS_ENUM(NSUInteger, kTextAligment) {
 
 @property (nonatomic, assign) kTextAligment tfy_textAlignment;
 
-/**
- *  🐶计时时间    👇
- */
-@property(nonatomic,assign,readwrite)NSInteger tfy_time;
-/**
- *  🐶format   👇
- */
-@property(nonatomic,copy)NSString *tfy_format;
-/**
- * 开启计时器
- */
-- (void)tfy_startTimer;
-/**
- * 干掉计时器
- */
-- (void)tfy_endTimer;
-/**
- * 倒计时完成后的回调
- */
-@property(nonatomic,copy)void(^CompleteBlock)(void);
-
 @end
 
 

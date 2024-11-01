@@ -30,6 +30,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSData *)tfy_snapshotPDF;
 
+/**
+ *  🐶计时时间    👇
+ */
+@property(nonatomic,assign,readwrite)NSInteger tfy_time;
+/**
+ *  🐶format   👇
+ */
+@property(nonatomic,copy)NSString *tfy_format;
+
+/**
+ * 开启计时器 type = 0 实时数据 1 结束数据
+ */
+- (void)tfy_startTimer:(void (^)(NSString *time,NSInteger type))block;
+/**
+ * 干掉计时器
+ */
+- (void)tfy_endTimer;
+
 @end
 
 NS_ASSUME_NONNULL_END
