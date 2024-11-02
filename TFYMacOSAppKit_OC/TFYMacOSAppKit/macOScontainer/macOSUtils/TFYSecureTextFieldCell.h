@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TFYSecureTextFieldCell : NSSecureTextFieldCell
 @property (nonatomic, assign) BOOL isTextAlignmentVerticalCenter;
 @property(nonatomic , assign)CGFloat Xcursor;
+@property (nonatomic) IBInspectable CGFloat oringeY;
 @end
 
 NS_ASSUME_NONNULL_END

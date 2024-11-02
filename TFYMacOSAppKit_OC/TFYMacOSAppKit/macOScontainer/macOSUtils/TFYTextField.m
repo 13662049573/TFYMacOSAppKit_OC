@@ -67,6 +67,11 @@
     ((TFYTextFieldCell *)self.cell).Xcursor = Xcursor;
 }
 
+- (void)setOringeY:(CGFloat)oringeY {
+    _oringeY = oringeY;
+    ((TFYTextFieldCell *)self.cell).oringeY = oringeY;
+}
+
 -(void)textFieldDidChange:(NSNotification *)notification{
     [self.delegate textFieldDidChange:self];
 }

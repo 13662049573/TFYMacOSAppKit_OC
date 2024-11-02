@@ -36,7 +36,6 @@
     self.editable = false;
     self.drawsBackground = true;
     self.backgroundColor = NSColor.clearColor;
-
     self.font = [NSFont systemFontOfSize:15];
     self.textColor = NSColor.blackColor;
     self.maximumNumberOfLines = 1;

@@ -9,13 +9,13 @@
 
 @implementation TFYTextFieldCell
 
-
 - (NSRect)adjustedFrameToVerticallyCenterText:(NSRect)frame{
     if (self.isTextAlignmentVerticalCenter == false) {
         return frame;
     }
-    NSInteger offset = floor((NSHeight(frame)/2 - (self.font.ascender + self.font.descender)));
-    return NSInsetRect(frame, self.Xcursor, offset);
+    CGRect titleRect =  [self titleRectForBounds:frame];
+    titleRect.origin.y += self.oringeY;
+    return NSInsetRect(titleRect, self.Xcursor, 0);
 }
 
 - (void)editWithFrame:(NSRect)aRect inView:(NSView *)controlView editor:(NSText *)editor delegate:(id)delegate event:(NSEvent *)event{
@@ -28,6 +28,20 @@
 
 - (void)drawInteriorWithFrame:(NSRect)frame inView:(NSView *)view{
     [super drawInteriorWithFrame: [self adjustedFrameToVerticallyCenterText:frame] inView:view];
+}
+
+- (NSRect)titleRectForBounds:(NSRect)rect
+{
+    NSRect titleRect = [super titleRectForBounds:rect];
+    CGFloat minimHeight = self.cellSize.height;
+    titleRect.origin.y += (titleRect.size.height - minimHeight)/2;
+    titleRect.size.height = minimHeight;
+    return titleRect;
+}
+ 
+- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+    [super drawWithFrame:cellFrame inView:controlView];
 }
 
 @end

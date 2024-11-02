@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
  修改光标离X轴的距离 默认 0 isTextAlignmentVerticalCenter 为 YES 的时候 使用
  */
 @property(nonatomic , assign)CGFloat Xcursor;
+/**
+  调整Y偏移
+ */
+@property (nonatomic) IBInspectable CGFloat oringeY;
 @end
 
 NS_ASSUME_NONNULL_END
