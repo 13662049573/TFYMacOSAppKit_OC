@@ -14,6 +14,7 @@
 		363EB09829989570007A4B38 /* TFYMagnificationChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09729989570007A4B38 /* TFYMagnificationChainModel.m */; };
 		363EB09B299897A4007A4B38 /* TFYScrollViewChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09A299897A4007A4B38 /* TFYScrollViewChainModel.m */; };
 		363EB09E29989CC0007A4B38 /* TFYBoxChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 363EB09D29989CC0007A4B38 /* TFYBoxChainModel.m */; };
+		3640CCA42CD5B01B009762A5 /* CAGradientLayer+Dejal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3640CCA32CD5B01B009762A5 /* CAGradientLayer+Dejal.m */; };
 		36AE674829961FAF0013EF3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE674729961FAF0013EF3B /* AppDelegate.m */; };
 		36AE674D29961FB00013EF3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36AE674C29961FB00013EF3B /* Assets.xcassets */; };
 		36AE675229961FB00013EF3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36AE675129961FB00013EF3B /* main.m */; };
@@ -186,6 +187,8 @@
 		363EB09A299897A4007A4B38 /* TFYScrollViewChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYScrollViewChainModel.m; sourceTree = "<group>"; };
 		363EB09C29989CC0007A4B38 /* TFYBoxChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYBoxChainModel.h; sourceTree = "<group>"; };
 		363EB09D29989CC0007A4B38 /* TFYBoxChainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYBoxChainModel.m; sourceTree = "<group>"; };
+		3640CCA22CD5B01B009762A5 /* CAGradientLayer+Dejal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+Dejal.h"; sourceTree = "<group>"; };
+		3640CCA32CD5B01B009762A5 /* CAGradientLayer+Dejal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+Dejal.m"; sourceTree = "<group>"; };
 		36AE674329961FAF0013EF3B /* TFYMacOSAppKit_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFYMacOSAppKit_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AE674629961FAF0013EF3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36AE674729961FAF0013EF3B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -678,6 +681,8 @@
 				36AE685E299763E40013EF3B /* NSView+TFY_Tools.m */,
 				36C6670929B035B700DFA49E /* NSControl+Dejal.h */,
 				36C6670A29B035B700DFA49E /* NSControl+Dejal.m */,
+				3640CCA22CD5B01B009762A5 /* CAGradientLayer+Dejal.h */,
+				3640CCA32CD5B01B009762A5 /* CAGradientLayer+Dejal.m */,
 			);
 			path = macOScategory;
 			sourceTree = "<group>";
@@ -1125,6 +1130,7 @@
 				36AE67D629961FFF0013EF3B /* TFYAttributedImageInfo.m in Sources */,
 				36AE682D299748480013EF3B /* TFYEmiiterLayerChainModel.m in Sources */,
 				36AE67D329961FFF0013EF3B /* NSAttributedString+Dejal.m in Sources */,
+				3640CCA42CD5B01B009762A5 /* CAGradientLayer+Dejal.m in Sources */,
 				36CA6603299A428A0066B945 /* NSView+TFY_Chain.m in Sources */,
 				36AE683629974EC90013EF3B /* TFYReplicatorLayerChainModel.m in Sources */,
 				36C6670E29B04E8500DFA49E /* TFYSecureTextFieldCell.m in Sources */,

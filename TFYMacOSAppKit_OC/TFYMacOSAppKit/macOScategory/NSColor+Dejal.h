@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface NSColor (Dejal)
 
 @property(class, nonatomic, strong, readonly) NSColor *tfy_lightBlue;
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSColor *)tfy_hexValue:(NSInteger)rgbValue alpha:(CGFloat)alpha;
 
 + (NSColor *)tfy_colorWithHexString:(NSString *)hexString;
+
 @end
 
 NS_ASSUME_NONNULL_END
