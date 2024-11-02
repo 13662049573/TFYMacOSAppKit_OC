@@ -11,6 +11,7 @@
 @interface MainViewController ()<TFYTextFieldNotifyingDelegate,TFYSecureTextFieldNotifyingDelegate>
 @property (nonatomic , strong) NSView *backView;
 @property(nonatomic , strong)NSButton *buttom;
+@property(nonatomic , strong)NSPopUpButton *popbuttom;
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
 @property(nonatomic , strong) TFYSecureTextField *securetextField;
@@ -27,8 +28,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self.view addSubview:self.buttom];
+    [self.view addSubview:self.label];
+    [self.view addSubview:self.textField];
+    [self.view addSubview:self.securetextField];
+    
+    [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
+
+    [self.view addSubview:self.popbuttom];
+
+}
+
+- (NSPopUpButton *)popbuttom {
+    if (!_popbuttom) {
+        _popbuttom = NSPopUpButtonSet();
+        _popbuttom.makeChain
+            .pullsDown(NO)
+            .autoenablesItems(YES)
+            .preferredEdge(NSRectEdgeMinY)
+            .addItemsWithTitles(@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"10", @"11", @"12", @"13"])
+            .selectItemAtIndex(0)
+            .addTarget(self, @selector(popUpButtonAction:))
+            .frame(CGRectMake(80, 100, 200, 40));
+    }
+    return _popbuttom;
 }
 
 - (TFYCustomBtn *)btn {
@@ -65,6 +89,16 @@
    }
    return _backView;
 }
+
+- (void)popUpButtonAction:(id)sender {
+    NSPopUpButton *popUpButton = (NSPopUpButton *)sender;
+    NSInteger selectedIndex = [popUpButton indexOfSelectedItem];
+    NSString *selectedTitle = [popUpButton titleOfSelectedItem];
+    
+    // 处理选中项
+    NSLog(@"选中的菜单项索引: %ld, 标题: %@", (long)selectedIndex, selectedTitle);
+}
+
 
 - (NSButton *)buttom {
     if (!_buttom) {
@@ -105,7 +139,7 @@
         _textField = TFYTextFieldSet();
         _textField.makeChain
         .isTextAlignmentVerticalCenter(YES)
-        .Xcursor(10)
+        .Xcursor(80)
         .delegateCustomize(self)
         .frame(NSMakeRect(50, 400, self.view.macos_width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
