@@ -6,7 +6,6 @@
 //
 
 #import "MainViewController.h"
-#import "TFYCustomBtn.h"
 
 @interface MainViewController ()<TFYTextFieldNotifyingDelegate,TFYSecureTextFieldNotifyingDelegate>
 @property (nonatomic , strong) NSView *backView;
@@ -15,7 +14,6 @@
 @property (nonatomic , strong) TFYLabel *label;
 @property (nonatomic , strong) TFYTextField *textField;
 @property(nonatomic , strong) TFYSecureTextField *securetextField;
-@property(nonatomic , strong) TFYCustomBtn *btn;
 @end
 
 @implementation MainViewController
@@ -37,7 +35,6 @@
     [self.label tfy_changeColorWithTextColor:NSColor.redColor changeText:@"数据"];
 
     [self.view addSubview:self.popbuttom];
-
 }
 
 - (NSPopUpButton *)popbuttom {
@@ -54,30 +51,6 @@
     }
     return _popbuttom;
 }
-
-- (TFYCustomBtn *)btn {
-    if (!_btn) {
-        _btn = [[TFYCustomBtn alloc] initWithFrame:CGRectMake(20, 200, 400, 50)];
-        _btn.isHandCursor = YES;
-        _btn.defaultTitle = @"未选中";
-        _btn.selectedTitle = @"已选中";
-        _btn.defaultTitleColor = [NSColor whiteColor];
-        _btn.selectedTitleColor = [NSColor blackColor];
-        _btn.defaultFont = [NSFont systemFontOfSize:20];
-        _btn.selectedFont = [NSFont systemFontOfSize:10];
-        _btn.defaultBackgroundColor = [NSColor greenColor];
-        _btn.selectedBackgroundColor = [NSColor blueColor];
-        _btn.defaultBackgroundImage = [NSImage imageNamed:@""];
-        _btn.selectedBackgroundImage = [NSImage imageNamed:@""];
-        _btn.rectCorners = TFYRectCornerTopLeft|TFYRectCornerBottomLeft;
-        _btn.radius = 15;
-        _btn.textAlignment = TFYTextAlignmentLeft;
-        [_btn setTarget:self];
-        [_btn setAction:@selector(paymentBtnClick:)];
-    }
-    return _btn;
-}
-
 
 - (NSView *)backView {
    if (!_backView) {
@@ -144,7 +117,6 @@
         .frame(NSMakeRect(50, 400, self.view.macos_width-100, 40))
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .placeholderString(@"请输入文字")
-        .wantsLayer(YES)
         .placeholderStringColor(NSColor.purpleColor)
         .layerBackGroundColor(NSColor.whiteColor)
         .borderColor(NSColor.redColor.CGColor)
@@ -169,7 +141,6 @@
         .font([NSFont systemFontOfSize:14 weight:NSFontWeightMedium])
         .alignment(NSTextAlignmentRight)
         .placeholderString(@"请输入密码")
-        .wantsLayer(YES)
         .placeholderStringColor(NSColor.purpleColor)
         .layerBackGroundColor(NSColor.orangeColor)
         .borderColor(NSColor.blueColor.CGColor)
