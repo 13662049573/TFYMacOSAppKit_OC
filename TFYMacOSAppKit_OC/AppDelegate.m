@@ -20,7 +20,11 @@
     HomeViewController *showVc = HomeViewController.new;
     showVc.preferredContentSize = CGSizeMake(500, 300);
     
-    [[TFYStatusItem sharedInstance] presentStatusItemWithImage:[NSImage imageNamed:@"mood_cognition"] contentViewController:showVc];
+    [[TFYStatusItem sharedInstance] presentStatusItemWithImage:[NSImage imageNamed:@"mood_cognition"] contentViewController:showVc dropHandler:^(TFYStatusItem * _Nonnull sharedItem, NSString * _Nonnull pasteboardType, NSArray * _Nonnull droppedObjects) {
+        
+        NSLog(@"%@%@%@",sharedItem,pasteboardType,droppedObjects);
+        
+    }];
     
 //    NSView *backView = [[NSView alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
 //    backView.wantsLayer = YES;

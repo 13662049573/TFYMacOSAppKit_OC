@@ -3,4 +3,148 @@
    uuid = "EF43E351-822C-4A0A-88A9-55087352163C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7CAB16F-AFAB-4955-9464-8978D593A886"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItem.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "-configureDropView"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68804C61-AFE8-423F-BC5A-DE4F75D74DAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItem.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "-presentStatusItemWithImage:contentViewController:dropHandler:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F17C39D-C38F-4F7E-B88D-4EC58699F094"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-draggingEntered:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFC0A5D7-F384-4406-A322-289857CA572E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-dropTypeInPasteboardTypes:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AFC0A5D7-F384-4406-A322-289857CA572E - de9a370c92af581c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TFYStatusItemDropView dropTypeInPasteboardTypes:]"
+                  moduleName = "TFYMacOSAppKit_OC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianfengyou/Desktop/%E8%87%AA%E5%B7%B1%E5%BA%93/TFYMacOSAppKit_OC/TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47">
+               </Location>
+               <Location
+                  uuid = "AFC0A5D7-F384-4406-A322-289857CA572E - de9a370c92af581c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TFYStatusItemDropView dropTypeInPasteboardTypes:]"
+                  moduleName = "TFYMacOSAppKit_OC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianfengyou/Desktop/%E8%87%AA%E5%B7%B1%E5%BA%93/TFYMacOSAppKit_OC/TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4FD38F51-69C9-45FC-A753-535049B99A75"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-setDropTypes:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEF7850E-AEEE-4F80-8412-E3EFB9DE976F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "-prepareForDragOperation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "435AC53C-CBB7-4E02-8532-3651D3B064DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFYMacOSAppKit_OC/TFYMacOSAppKit/macOScontainer/macOSStatusItem/TFYStatusItemDropView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-performDragOperation:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma mark*******************************************判断获取网络数据****************************************
+
 extern NSString *kReachabilityChangedNotification;
 
 typedef NS_ENUM(NSUInteger, NetworkStatus) {
