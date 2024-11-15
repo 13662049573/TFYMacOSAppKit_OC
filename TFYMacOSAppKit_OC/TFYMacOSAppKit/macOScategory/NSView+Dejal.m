@@ -12,12 +12,6 @@
 
 @implementation NSView (DejalSubviews)
 
-/**
- 返回当前外观是否为暗模式。在NSColor+Dejal类别中还提供了一个类似的类方法，用于当视图不可用时。
-
- 如果暗，@返回YES，否则返回NO。
- */
-
 - (BOOL)tfy_isDark;
 {
     if (@available(macOS 10.14, *)) {
@@ -127,7 +121,6 @@
                 [subview setAutoresizingMask:mask];
             }
         }
-        
         // 到这个父视图的父视图，重复这个过程;注意，循环算法必须在下面的恢复方法中完全复制。理想情况下，这两个方法都应该使用另一个方法来获得下一个子视图，但我不能在这个阶段重构它，所以要注意这个问题:
         oldSuperview = superview;
         position = NSMaxY([superview frame]);

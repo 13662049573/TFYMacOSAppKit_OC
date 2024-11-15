@@ -7,6 +7,13 @@
 //
 #import <Cocoa/Cocoa.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
+@interface LinkInfo : NSObject
+@property (nonatomic, copy) NSString *key;
+@property (nonatomic, copy) NSString *value;
+@end
+
 @interface NSTextField (Dejal)
 
 @property (nonatomic , strong) NSColor *tfy_placeholderStringColor;
@@ -33,5 +40,9 @@
 */
 - (BOOL)tfy_resizeWindowVerticallyToFit;
 
+- (void)didTapLabelAttributedText:(NSArray<LinkInfo *> *)linkInfos
+                           action:(void (^)(NSString *key, NSString *value))action
+       lineFragmentPadding:(CGFloat)lineFragmentPadding;
 @end
 
+NS_ASSUME_NONNULL_END

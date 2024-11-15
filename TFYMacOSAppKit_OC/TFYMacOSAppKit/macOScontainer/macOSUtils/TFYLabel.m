@@ -31,15 +31,8 @@
 }
 
 - (void)setupUI{
-    self.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-    self.bordered = false;  ///是否显示边框
-    self.editable = false;
-    self.drawsBackground = true;
-    self.backgroundColor = NSColor.clearColor;
-    self.font = [NSFont systemFontOfSize:15];
-    self.textColor = NSColor.blackColor;
-    self.maximumNumberOfLines = 1;
-    self.usesSingleLineMode = true;
+    self.editable = NO;
+    self.isTextAlignmentVerticalCenter = NO;
 }
 
 - (void)mouseDown:(NSEvent *)event{
