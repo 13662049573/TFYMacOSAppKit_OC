@@ -11,6 +11,9 @@
 #import "NSWindow+Dejal.h"
 #import <objc/message.h>
 
+@implementation LinkInfo
+@end
+
 @implementation NSTextField (Dejal)
 
 /**
@@ -143,6 +146,71 @@
         [attributedString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0,titleStr.length)];
         [self setPlaceholderAttributedString:attributedString];
     }
+}
+
+- (void)didTapLabelAttributedText:(NSArray<LinkInfo *> *)linkInfos
+                         action:(void (^)(NSString *key, NSString * _Nullable value))action
+            lineFragmentPadding:(CGFloat)lineFragmentPadding {
+    if (![self isKindOfClass:[NSTextField class]]) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert setMessageText:@"当前视图类型不支持该操作"];
+        [alert setInformativeText:@"请使用NSTextField类型的视图"];
+        [alert addButtonWithTitle:@"确定"];
+        [alert runModal];
+        return;
+    }
+
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithAttributedString:self.attributedStringValue];
+    if (!attributedText || attributedText.string.length == 0) {
+        return;
+    }
+    // 创建文本布局相关对象
+    NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
+    NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:self.bounds.size];
+    NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:attributedText];
+
+    // 设置文本容器的属性
+    textContainer.lineBreakMode = NSLineBreakByWordWrapping;
+    textContainer.maximumNumberOfLines = self.cell.wraps == YES ? 0 : 1;
+    textContainer.lineFragmentPadding = lineFragmentPadding;
+    
+    [layoutManager addTextContainer:textContainer];
+    [textStorage addLayoutManager:layoutManager];
+
+    // 获取点击位置
+    NSEvent *currentEvent = [NSApp currentEvent];
+    NSPoint locationInWindow = [currentEvent locationInWindow];
+    NSPoint point = [self convertPoint:locationInWindow fromView:nil];
+
+    // 获取点击位置的字符索引
+    NSUInteger glyphIndex = [layoutManager glyphIndexForPoint:point inTextContainer:textContainer];
+    NSUInteger charIndex = [layoutManager characterIndexForGlyphAtIndex:glyphIndex];
+    
+    if (charIndex < attributedText.length) {
+        [linkInfos enumerateObjectsUsingBlock:^(LinkInfo * _Nonnull linkInfo, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *key = linkInfo.key;
+            NSRange targetRange = [attributedText.string rangeOfString:key];
+            if (targetRange.location != NSNotFound && NSLocationInRange(charIndex, targetRange)) {
+                // 添加高亮背景色
+                [attributedText addAttribute:NSBackgroundColorAttributeName
+                                    value:[NSColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0]  // 浅灰色背景
+                                    range:targetRange];
+                // 更新文本显示
+                self.attributedStringValue = attributedText;
+                // 延迟移除高亮效果
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    // 移除高亮效果
+                    [attributedText removeAttribute:NSBackgroundColorAttributeName range:targetRange];
+                    self.attributedStringValue = attributedText;
+                    // 触发回调
+                    action(key, linkInfo.value);
+                });
+                *stop = YES;
+            }
+        }];
+    }
+    // 清理资源
+    [textStorage removeLayoutManager:layoutManager];
 }
 
 @end

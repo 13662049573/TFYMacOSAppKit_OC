@@ -58,7 +58,11 @@
 
 - (void)setIsTextAlignmentVerticalCenter:(BOOL)isTextAlignmentVerticalCenter{
     _isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
-    ((TFYSecureTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+    if (isTextAlignmentVerticalCenter == NO) {
+        ((TFYSecureTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
+    } else {
+        ((TFYSecureTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+    }
 }
 
 - (void)setXcursor:(CGFloat)Xcursor {

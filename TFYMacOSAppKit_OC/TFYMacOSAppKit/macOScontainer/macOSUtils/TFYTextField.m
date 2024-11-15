@@ -49,17 +49,33 @@
 }
 
 -(void)registerForNotifications{
+    self.maximumNumberOfLines = 0;
+    self.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    self.bordered = NO;  ///是否显示边框
+    self.drawsBackground = YES;
+    self.backgroundColor = NSColor.clearColor;
+    self.font = [NSFont systemFontOfSize:14];
+    self.textColor = NSColor.blackColor;
+    self.wantsLayer = YES;
+    self.focusRingType = NSFocusRingTypeNone;
+    self.lineBreakMode = NSLineBreakByWordWrapping;
     self.cell = [[TFYTextFieldCell alloc]initTextCell:@""];
     self.cell.lineBreakMode = NSLineBreakByWordWrapping;
-    self.cell.truncatesLastVisibleLine = true;
     self.editable = true;  ///是否可编辑
+    self.preferredMaxLayoutWidth = 200;
+    self.cell.wraps = YES;
+    self.cell.truncatesLastVisibleLine = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidChange:) name:NSControlTextDidChangeNotification object:self];
 }
 
 - (void)setIsTextAlignmentVerticalCenter:(BOOL)isTextAlignmentVerticalCenter{
     _isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
-    ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+    if (isTextAlignmentVerticalCenter == NO) {
+        ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = isTextAlignmentVerticalCenter;
+    } else {
+        ((TFYTextFieldCell *)self.cell).isTextAlignmentVerticalCenter = true;
+    }
 }
 
 - (void)setXcursor:(CGFloat)Xcursor {
