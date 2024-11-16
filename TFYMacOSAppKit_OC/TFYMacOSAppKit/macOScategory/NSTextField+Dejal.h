@@ -41,8 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)tfy_resizeWindowVerticallyToFit;
 
 - (void)didTapLabelAttributedText:(NSArray<LinkInfo *> *)linkInfos
-                           action:(void (^)(NSString *key, NSString *value))action
-       lineFragmentPadding:(CGFloat)lineFragmentPadding;
+                         action:(void (^)(NSString *key, NSString * _Nullable value))action
+            lineFragmentPadding:(CGFloat)lineFragmentPadding;
 @end
 
 NS_ASSUME_NONNULL_END
