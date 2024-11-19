@@ -1,3 +1,12 @@
+
+//
+//  TFYProgressIndicator.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2024/11/19.
+//
+
+
 #import "TFYAnimationEnhancer.h"
 #import <QuartzCore/QuartzCore.h>
 

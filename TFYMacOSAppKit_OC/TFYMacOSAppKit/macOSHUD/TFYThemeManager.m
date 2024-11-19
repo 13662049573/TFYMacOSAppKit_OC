@@ -1,3 +1,11 @@
+//
+//  TFYProgressIndicator.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2024/11/19.
+//
+
+
 #import "TFYThemeManager.h"
 #import "TFYProgressMacOSHUD.h"
 #import <CoreImage/CoreImage.h>

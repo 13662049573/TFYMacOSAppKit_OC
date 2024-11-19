@@ -1,10 +1,19 @@
 
-
-
+//
+//  TFYProgressIndicator.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2024/11/19.
+//
 
 
 
 #import "TFYProgressView.h"
+#import <QuartzCore/QuartzCore.h>
+#import <QuartzCore/CAMediaTimingFunction.h>
+
+
+@import QuartzCore.CAMediaTimingFunction;
 
 @interface TFYProgressView ()
 
