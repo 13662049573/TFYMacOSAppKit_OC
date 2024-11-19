@@ -1,4 +1,3 @@
-
 //
 //  TFYProgressIndicator.m
 //  TFYMacOSAppKit_OC
@@ -10,10 +9,7 @@
 
 #import "TFYProgressView.h"
 #import <QuartzCore/QuartzCore.h>
-#import <QuartzCore/CAMediaTimingFunction.h>
-
-
-@import QuartzCore.CAMediaTimingFunction;
+#import <QuartzCore/CAAnimation.h>
 
 @interface TFYProgressView ()
 
