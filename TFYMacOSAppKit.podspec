@@ -4,12 +4,12 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYMacOSAppKit"
 
-  spec.version      = "1.2.4"
+  spec.version      = "1.2.5"
 
-  spec.summary      = "纯代码 macOS 开发基本数据类型封装。最低支持macos 11 控制点语法使用"
+  spec.summary      = "纯代码 macOS 开发基本数据类型封装。最低支持macos 12 控制点语法使用"
 
   spec.description  = <<-DESC
-  纯代码 macOS 开发基本数据类型封装。最低支持macos 11 控制点语法使用
+  纯代码 macOS 开发基本数据类型封装。最低支持macos 12 控制点语法使用
                    DESC
 
   spec.homepage     = "https://github.com/13662049573/TFYMacOSAppKit_OC"
@@ -18,7 +18,7 @@ Pod::Spec.new do |spec|
   
   spec.author       = { "田风有" => "420144542@qq.com" }
   
-  spec.osx.deployment_target = "11.0"
+  spec.osx.deployment_target = "12.0"
   
   spec.source       = { :git => "https://github.com/13662049573/TFYMacOSAppKit_OC.git", :tag => spec.version }
 

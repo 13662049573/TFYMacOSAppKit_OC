@@ -23,11 +23,11 @@
     [panel setPrompt:prompt];
     [panel setMessage: ttMessage];
     [panel setCanChooseDirectories : bChooseDirc];
-    [panel setCanCreateDirectories : bCreateDirc];
     [panel setCanChooseFiles : bChooseFiles];
     [panel setAllowsMultipleSelection : bSelection];
     [panel setAllowedFileTypes : fileTypes];
     [panel setDirectoryURL:dirURL];
+   
     [panel beginSheetModalForWindow:[NSApp mainWindow] completionHandler:^(NSModalResponse result) {
         if (result == NSModalResponseOK) {
             handler(panel,panel.URLs);
