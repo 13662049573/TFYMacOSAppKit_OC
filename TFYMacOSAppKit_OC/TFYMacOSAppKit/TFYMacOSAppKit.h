@@ -12,6 +12,6 @@
 #import "macOScontainer.h"
 #import "macOSfoundation.h"
 #import "macOSchain.h"
+#import "TFYProgressMacOSHUD.h"
 
 #endif /* TFYMacOSAppKit_h */
-

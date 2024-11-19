@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A7E35F2CEAFE950069739E /* TFYProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E35B2CEAFE950069739E /* TFYProgressView.m */; };
+		18A7E3602CEAFE950069739E /* TFYAnimationMacOSUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E34D2CEAFE950069739E /* TFYAnimationMacOSUtility.m */; };
+		18A7E3612CEAFE950069739E /* TFYThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E35D2CEAFE950069739E /* TFYThemeManager.m */; };
+		18A7E3632CEAFE950069739E /* TFYLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E3552CEAFE950069739E /* TFYLayoutManager.m */; };
+		18A7E3642CEAFE950069739E /* TFYPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E3572CEAFE950069739E /* TFYPerformanceMonitor.m */; };
+		18A7E3652CEAFE950069739E /* TFYAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E3492CEAFE950069739E /* TFYAnimationController.m */; };
+		18A7E3662CEAFE950069739E /* TFYAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E34F2CEAFE950069739E /* TFYAnimationView.m */; };
+		18A7E3672CEAFE950069739E /* TFYProgressMacOSHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E3592CEAFE950069739E /* TFYProgressMacOSHUD.m */; };
+		18A7E3682CEAFE950069739E /* TFYAnimationEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E34B2CEAFE950069739E /* TFYAnimationEnhancer.m */; };
+		18A7E3692CEAFE950069739E /* TFYGestureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E3532CEAFE950069739E /* TFYGestureHandler.m */; };
 		362CBCDA29A45BD900085921 /* TFYSecureTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCD929A45BD900085921 /* TFYSecureTextField.m */; };
 		362CBCDD29A45C9400085921 /* TFYSecureTextFieldChainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCDC29A45C9400085921 /* TFYSecureTextFieldChainModel.m */; };
 		362CBCE329A463C100085921 /* TFYTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBCE229A463C100085921 /* TFYTextFieldCell.m */; };
@@ -175,6 +185,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18A7E3482CEAFE950069739E /* TFYAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYAnimationController.h; sourceTree = "<group>"; };
+		18A7E3492CEAFE950069739E /* TFYAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYAnimationController.m; sourceTree = "<group>"; };
+		18A7E34A2CEAFE950069739E /* TFYAnimationEnhancer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYAnimationEnhancer.h; sourceTree = "<group>"; };
+		18A7E34B2CEAFE950069739E /* TFYAnimationEnhancer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYAnimationEnhancer.m; sourceTree = "<group>"; };
+		18A7E34C2CEAFE950069739E /* TFYAnimationMacOSUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYAnimationMacOSUtility.h; sourceTree = "<group>"; };
+		18A7E34D2CEAFE950069739E /* TFYAnimationMacOSUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYAnimationMacOSUtility.m; sourceTree = "<group>"; };
+		18A7E34E2CEAFE950069739E /* TFYAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYAnimationView.h; sourceTree = "<group>"; };
+		18A7E34F2CEAFE950069739E /* TFYAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYAnimationView.m; sourceTree = "<group>"; };
+		18A7E3522CEAFE950069739E /* TFYGestureHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYGestureHandler.h; sourceTree = "<group>"; };
+		18A7E3532CEAFE950069739E /* TFYGestureHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYGestureHandler.m; sourceTree = "<group>"; };
+		18A7E3542CEAFE950069739E /* TFYLayoutManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYLayoutManager.h; sourceTree = "<group>"; };
+		18A7E3552CEAFE950069739E /* TFYLayoutManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYLayoutManager.m; sourceTree = "<group>"; };
+		18A7E3562CEAFE950069739E /* TFYPerformanceMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYPerformanceMonitor.h; sourceTree = "<group>"; };
+		18A7E3572CEAFE950069739E /* TFYPerformanceMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYPerformanceMonitor.m; sourceTree = "<group>"; };
+		18A7E3582CEAFE950069739E /* TFYProgressMacOSHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYProgressMacOSHUD.h; sourceTree = "<group>"; };
+		18A7E3592CEAFE950069739E /* TFYProgressMacOSHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYProgressMacOSHUD.m; sourceTree = "<group>"; };
+		18A7E35A2CEAFE950069739E /* TFYProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYProgressView.h; sourceTree = "<group>"; };
+		18A7E35B2CEAFE950069739E /* TFYProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYProgressView.m; sourceTree = "<group>"; };
+		18A7E35C2CEAFE950069739E /* TFYThemeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYThemeManager.h; sourceTree = "<group>"; };
+		18A7E35D2CEAFE950069739E /* TFYThemeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYThemeManager.m; sourceTree = "<group>"; };
 		362CBCD829A45BD900085921 /* TFYSecureTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYSecureTextField.h; sourceTree = "<group>"; };
 		362CBCD929A45BD900085921 /* TFYSecureTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYSecureTextField.m; sourceTree = "<group>"; };
 		362CBCDB29A45C9400085921 /* TFYSecureTextFieldChainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYSecureTextFieldChainModel.h; sourceTree = "<group>"; };
@@ -508,6 +538,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A7E35E2CEAFE950069739E /* macOSHUD */ = {
+			isa = PBXGroup;
+			children = (
+				18A7E3482CEAFE950069739E /* TFYAnimationController.h */,
+				18A7E3492CEAFE950069739E /* TFYAnimationController.m */,
+				18A7E34A2CEAFE950069739E /* TFYAnimationEnhancer.h */,
+				18A7E34B2CEAFE950069739E /* TFYAnimationEnhancer.m */,
+				18A7E34C2CEAFE950069739E /* TFYAnimationMacOSUtility.h */,
+				18A7E34D2CEAFE950069739E /* TFYAnimationMacOSUtility.m */,
+				18A7E34E2CEAFE950069739E /* TFYAnimationView.h */,
+				18A7E34F2CEAFE950069739E /* TFYAnimationView.m */,
+				18A7E3522CEAFE950069739E /* TFYGestureHandler.h */,
+				18A7E3532CEAFE950069739E /* TFYGestureHandler.m */,
+				18A7E3542CEAFE950069739E /* TFYLayoutManager.h */,
+				18A7E3552CEAFE950069739E /* TFYLayoutManager.m */,
+				18A7E3562CEAFE950069739E /* TFYPerformanceMonitor.h */,
+				18A7E3572CEAFE950069739E /* TFYPerformanceMonitor.m */,
+				18A7E3582CEAFE950069739E /* TFYProgressMacOSHUD.h */,
+				18A7E3592CEAFE950069739E /* TFYProgressMacOSHUD.m */,
+				18A7E35A2CEAFE950069739E /* TFYProgressView.h */,
+				18A7E35B2CEAFE950069739E /* TFYProgressView.m */,
+				18A7E35C2CEAFE950069739E /* TFYThemeManager.h */,
+				18A7E35D2CEAFE950069739E /* TFYThemeManager.m */,
+			);
+			path = macOSHUD;
+			sourceTree = "<group>";
+		};
 		36AE673A29961FAF0013EF3B = {
 			isa = PBXGroup;
 			children = (
@@ -569,6 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				36AE67F42996200B0013EF3B /* TFYMacOSAppKit.h */,
+				18A7E35E2CEAFE950069739E /* macOSHUD */,
 				36AE681C29973F590013EF3B /* macOSchain */,
 				36AE679E29961FFE0013EF3B /* macOScategory */,
 				36AE67C429961FFF0013EF3B /* macOScontainer */,
@@ -1162,6 +1220,16 @@
 				36EC0C552CD65DF0003EBAD5 /* TFYmacOSSqlite.m in Sources */,
 				36AE67E629961FFF0013EF3B /* NSViewController+Hook.m in Sources */,
 				36C2C41A29BABFF5000AE3B8 /* HomeViewController.m in Sources */,
+				18A7E35F2CEAFE950069739E /* TFYProgressView.m in Sources */,
+				18A7E3602CEAFE950069739E /* TFYAnimationMacOSUtility.m in Sources */,
+				18A7E3612CEAFE950069739E /* TFYThemeManager.m in Sources */,
+				18A7E3632CEAFE950069739E /* TFYLayoutManager.m in Sources */,
+				18A7E3642CEAFE950069739E /* TFYPerformanceMonitor.m in Sources */,
+				18A7E3652CEAFE950069739E /* TFYAnimationController.m in Sources */,
+				18A7E3662CEAFE950069739E /* TFYAnimationView.m in Sources */,
+				18A7E3672CEAFE950069739E /* TFYProgressMacOSHUD.m in Sources */,
+				18A7E3682CEAFE950069739E /* TFYAnimationEnhancer.m in Sources */,
+				18A7E3692CEAFE950069739E /* TFYGestureHandler.m in Sources */,
 				36AE6815299737620013EF3B /* NSMutableAttributedString+TFY_Tools.m in Sources */,
 				36AE67F129961FFF0013EF3B /* TFYButton.m in Sources */,
 				36AE685229975F320013EF3B /* TFYPanGestureChainModel.m in Sources */,
