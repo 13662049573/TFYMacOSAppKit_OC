@@ -10,6 +10,7 @@
 #import "TFYProgressView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <QuartzCore/CAAnimation.h>
+#import <QuartzCore/CAShapeLayer.h>
 
 @interface TFYProgressView ()
 
