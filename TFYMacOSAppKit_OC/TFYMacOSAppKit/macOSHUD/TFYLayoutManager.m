@@ -9,7 +9,6 @@
 @property (nonatomic, strong) NSMutableArray *activeConstraints;
 @property (nonatomic, assign) BOOL isUpdatingLayout;
 @property (nonatomic, assign) BOOL isSettingConstraints;
-
 @end
 
 @implementation TFYLayoutManager
@@ -19,7 +18,6 @@
     if (self) {
         _layouts = [NSMutableDictionary dictionary];
         _activeConstraints = [NSMutableArray array];
-        [self setupDefaultLayouts];
     }
     return self;
 }
@@ -43,30 +41,7 @@
     [self.layouts removeObjectForKey:@(mode)];
 }
 
-- (void)setupDefaultLayouts {
-    // 移除基于frame的布局方式，改用约束
-    [self registerLayout:^(TFYProgressMacOSHUD *hud) {
-        // 所有模式都使用约束布局
-        [self setupHUDConstraints:hud];
-    } forMode:TFYHUDModeIndeterminate];
-    
-    // 其他模式也使用相同的基础约束
-    [self registerLayout:^(TFYProgressMacOSHUD *hud) {
-        [self setupHUDConstraints:hud];
-    } forMode:TFYHUDModeDeterminate];
-    
-    [self registerLayout:^(TFYProgressMacOSHUD *hud) {
-        [self setupHUDConstraints:hud];
-    } forMode:TFYHUDModeText];
-    
-    [self registerLayout:^(TFYProgressMacOSHUD *hud) {
-        [self setupHUDConstraints:hud];
-    } forMode:TFYHUDModeCustomView];
-}
-
 - (void)setupHUDConstraints:(TFYProgressMacOSHUD *)hud {
-    if (!hud || !hud.containerView || !hud.superview) return;
-    
     // 移除所有现有约束
     [self invalidateLayout];
     
@@ -77,34 +52,59 @@
     NSMutableArray *allConstraints = [NSMutableArray array];
     NSView *container = hud.containerView;
     
-    // 1. HUD 主视图约束 - 填充父视图
+    // 如果状态标签存在，添加与customImageView的约束
+    if (hud.statusLabel) {
+        [allConstraints addObjectsFromArray:@[
+            [hud.statusLabel.topAnchor constraintEqualToAnchor:hud.customImageView.bottomAnchor constant:12]
+        ]];
+    }
+
+    // 设置customImageView的约束
     [allConstraints addObjectsFromArray:@[
-        [hud.leadingAnchor constraintEqualToAnchor:hud.superview.leadingAnchor],
-        [hud.trailingAnchor constraintEqualToAnchor:hud.superview.trailingAnchor],
-        [hud.topAnchor constraintEqualToAnchor:hud.superview.topAnchor],
-        [hud.bottomAnchor constraintEqualToAnchor:hud.superview.bottomAnchor]
+        [hud.customImageView.centerXAnchor constraintEqualToAnchor:container.centerXAnchor],
+        [hud.customImageView.topAnchor constraintEqualToAnchor:container.topAnchor constant:20],
+        [hud.customImageView.widthAnchor constraintEqualToConstant:32],
+        [hud.customImageView.heightAnchor constraintEqualToConstant:32]
     ]];
-    
-    // 2. 容器视图约束
-    // 居中约束
+   
+    // 设置customImageView的约束
     [allConstraints addObjectsFromArray:@[
+        [hud.progressView.centerXAnchor constraintEqualToAnchor:container.centerXAnchor],
+        [hud.progressView.topAnchor constraintEqualToAnchor:container.topAnchor constant:20],
+        [hud.progressView.widthAnchor constraintEqualToConstant:40],
+        [hud.progressView.heightAnchor constraintEqualToConstant:40]
+    ]];
+
+    [allConstraints addObjectsFromArray:@[
+        // 容器视图居中
         [container.centerXAnchor constraintEqualToAnchor:hud.centerXAnchor],
-        [container.centerYAnchor constraintEqualToAnchor:hud.centerYAnchor]
+        [container.centerYAnchor constraintEqualToAnchor:hud.centerYAnchor],
+        
+        // 容器视图最小尺寸
+        [container.widthAnchor constraintGreaterThanOrEqualToConstant:120],
+        [container.heightAnchor constraintGreaterThanOrEqualToConstant:120],
+        
+        // 容器视图内边距
+        [container.leadingAnchor constraintGreaterThanOrEqualToAnchor:hud.leadingAnchor constant:40],
+        [container.trailingAnchor constraintLessThanOrEqualToAnchor:hud.trailingAnchor constant:-40]
     ]];
+   
     
-    // 大小约束
+    // 设置活动指示器约束
     [allConstraints addObjectsFromArray:@[
-        [container.widthAnchor constraintGreaterThanOrEqualToConstant:100],
-        [container.widthAnchor constraintLessThanOrEqualToConstant:250],
-        [container.heightAnchor constraintGreaterThanOrEqualToConstant:100]
+        [hud.activityIndicator.centerXAnchor constraintEqualToAnchor:container.centerXAnchor],
+        [hud.activityIndicator.topAnchor constraintEqualToAnchor:container.topAnchor constant:20],
+        [hud.activityIndicator.widthAnchor constraintEqualToConstant:32],
+        [hud.activityIndicator.heightAnchor constraintEqualToConstant:32]
     ]];
     
-    // 边距约束
+    // 设置状态标签约束
     [allConstraints addObjectsFromArray:@[
-        [container.leadingAnchor constraintGreaterThanOrEqualToAnchor:hud.leadingAnchor constant:20],
-        [container.trailingAnchor constraintLessThanOrEqualToAnchor:hud.trailingAnchor constant:-20]
+        [hud.statusLabel.topAnchor constraintEqualToAnchor:hud.activityIndicator.bottomAnchor constant:12],
+        [hud.statusLabel.leadingAnchor constraintEqualToAnchor:container.leadingAnchor constant:16],
+        [hud.statusLabel.trailingAnchor constraintEqualToAnchor:container.trailingAnchor constant:-16],
+        [hud.statusLabel.bottomAnchor constraintEqualToAnchor:container.bottomAnchor constant:-16]
     ]];
-    
     // 激活约束
     [NSLayoutConstraint activateConstraints:allConstraints];
     [self.activeConstraints addObjectsFromArray:allConstraints];
@@ -112,13 +112,10 @@
 
 - (void)setupConstraintsForHUD:(TFYProgressMacOSHUD *)hud {
     if (!hud || !hud.superview) return;
-    
     // 禁用自动布局转换
     hud.translatesAutoresizingMaskIntoConstraints = NO;
-    
     // 移除现有约束
     [self removeExistingConstraints:hud];
-    
     // 创建新的约束，确保HUD填满父视图
     NSArray *constraints = @[
         [hud.leadingAnchor constraintEqualToAnchor:hud.superview.leadingAnchor],
@@ -126,24 +123,7 @@
         [hud.topAnchor constraintEqualToAnchor:hud.superview.topAnchor],
         [hud.bottomAnchor constraintEqualToAnchor:hud.superview.bottomAnchor]
     ];
-    
     // 激活约束
-    [NSLayoutConstraint activateConstraints:constraints];
-    [self.activeConstraints addObjectsFromArray:constraints];
-}
-
-- (void)setupConstraintsForContainer:(NSView *)containerView {
-    if (!containerView || !self.currentHUD) return;
-    
-    containerView.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self removeExistingConstraints:containerView];
-    
-    NSArray *constraints = @[
-        [containerView.centerXAnchor constraintEqualToAnchor:self.currentHUD.centerXAnchor],
-        [containerView.centerYAnchor constraintEqualToAnchor:self.currentHUD.centerYAnchor]
-    ];
-    
     [NSLayoutConstraint activateConstraints:constraints];
     [self.activeConstraints addObjectsFromArray:constraints];
 }
@@ -189,33 +169,10 @@
         subview.translatesAutoresizingMaskIntoConstraints = NO;
     }
     
-    // 根据模式设置约束
-    switch (hud.mode) {
-        case TFYHUDModeLoading:
-            // 无状态文本时居中显示
-            [constraints addObject:[hud.activityIndicator.centerYAnchor constraintEqualToAnchor:container.centerYAnchor]];
-            break;
-        case TFYHUDModeDeterminate:
-            [self setupDeterminateConstraints:hud constraints:constraints];
-            break;
-            
-        case TFYHUDModeCustomView:
-            [self setupCustomViewConstraints:hud constraints:constraints];
-            break;
-        default:
-            [self setupDefaultConstraints:hud constraints:constraints];
-            break;
-    }
-    
+    [self setupDefaultConstraints:hud constraints:constraints];
     // 激活约束
     [NSLayoutConstraint activateConstraints:constraints];
     [self.activeConstraints addObjectsFromArray:constraints];
-}
-
-- (void)updateLayoutForOrientation:(NSInteger)orientation {
-    [self invalidateLayout];
-    [self setupConstraintsForContainer:self.currentContainer];
-    [self setupSubviewsConstraints:self.currentHUD];
 }
 
 - (void)invalidateLayout {
@@ -226,174 +183,6 @@
 - (void)removeExistingConstraints:(NSView *)view {
     for (NSLayoutConstraint *constraint in view.constraints) {
         constraint.active = NO;
-    }
-}
-
-- (void)setupDeterminateConstraints:(TFYProgressMacOSHUD *)hud constraints:(NSMutableArray *)constraints {
-    NSView *container = hud.containerView;
-    
-    // 进度条模式
-    if (!hud.progressView.hidden) {
-        // 进度条基本约束
-        [constraints addObjectsFromArray:@[
-            [hud.progressView.widthAnchor constraintEqualToConstant:200],
-            [hud.progressView.heightAnchor constraintEqualToConstant:20],
-            [hud.progressView.centerXAnchor constraintEqualToAnchor:container.centerXAnchor]
-        ]];
-        
-        if (!hud.statusLabel.hidden) {
-            // 有状态文本时的布局
-            [constraints addObjectsFromArray:@[
-                [hud.progressView.topAnchor constraintEqualToAnchor:container.topAnchor constant:20],
-                [hud.statusLabel.topAnchor constraintEqualToAnchor:hud.progressView.bottomAnchor constant:12],
-                [hud.statusLabel.leadingAnchor constraintEqualToAnchor:container.leadingAnchor constant:16],
-                [hud.statusLabel.trailingAnchor constraintEqualToAnchor:container.trailingAnchor constant:-16],
-                [hud.statusLabel.bottomAnchor constraintEqualToAnchor:container.bottomAnchor constant:-16]
-            ]];
-        } else {
-            // 无状态文本时居中显示
-            [constraints addObject:[hud.progressView.centerYAnchor constraintEqualToAnchor:container.centerYAnchor]];
-        }
-    } else {
-        [self setupAdvancedCenterConstraints:hud];
-    }
-}
-
-- (void)setupAdvancedCenterConstraints:(TFYProgressMacOSHUD *)hud {
-    // 确保视图已添加到父视图
-    if (hud.mode != TFYHUDModeIndeterminate) return;
-    
-    // 禁用自动转换frame为约束
-    hud.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    NSMutableArray *constraints = [NSMutableArray array];
-    
-    // 1. 基础居中约束
-    [constraints addObjectsFromArray:@[
-        // 水平居中
-        [hud.centerXAnchor constraintEqualToAnchor:hud.activityIndicator.centerXAnchor],
-        // 垂直居中
-        [hud.centerYAnchor constraintEqualToAnchor:hud.activityIndicator.centerYAnchor]
-    ]];
-    
-    // 2. 大小约束
-    [constraints addObjectsFromArray:@[
-        // 最小宽度
-        [hud.widthAnchor constraintGreaterThanOrEqualToConstant:40],
-        // 最大宽度（相对于父视图）
-        [hud.widthAnchor constraintLessThanOrEqualToAnchor:hud.activityIndicator.widthAnchor multiplier:0.8],
-        // 最小高度
-        [hud.heightAnchor constraintGreaterThanOrEqualToConstant:40],
-        // 最大高度（相对于父视图）
-        [hud.heightAnchor constraintLessThanOrEqualToAnchor:hud.activityIndicator.heightAnchor multiplier:0.8]
-    ]];
-    
-    // 3. 边距约束（确保不会太靠近边缘）
-    CGFloat minimumMargin = 20.0;
-    [constraints addObjectsFromArray:@[
-        // 左边距最小值
-        [hud.leadingAnchor constraintGreaterThanOrEqualToAnchor:hud.activityIndicator.leadingAnchor
-                                                       constant:minimumMargin],
-        // 右边距最小值
-        [hud.trailingAnchor constraintLessThanOrEqualToAnchor:hud.activityIndicator.trailingAnchor
-                                                     constant:-minimumMargin],
-        // 顶部边距最小值
-        [hud.topAnchor constraintGreaterThanOrEqualToAnchor:hud.activityIndicator.topAnchor
-                                                   constant:minimumMargin],
-        // 底部边距最小值
-        [hud.bottomAnchor constraintLessThanOrEqualToAnchor:hud.activityIndicator.bottomAnchor
-                                                   constant:-minimumMargin]
-    ]];
-}
-
-
-- (void)setupCustomViewConstraints:(TFYProgressMacOSHUD *)hud constraints:(NSMutableArray *)constraints {
-    NSView *container = hud.containerView;
-    
-    // 自定义视图模式（成功/失败图标等）
-    if (!hud.customImageView.hidden) {
-        // 图片视图基本约束
-        [constraints addObjectsFromArray:@[
-            [NSLayoutConstraint constraintWithItem:hud.customImageView
-                                      attribute:NSLayoutAttributeWidth
-                                      relatedBy:NSLayoutRelationEqual
-                                         toItem:nil
-                                      attribute:NSLayoutAttributeNotAnAttribute
-                                     multiplier:1.0
-                                       constant:48],
-            [NSLayoutConstraint constraintWithItem:hud.customImageView
-                                      attribute:NSLayoutAttributeHeight
-                                      relatedBy:NSLayoutRelationEqual
-                                         toItem:nil
-                                      attribute:NSLayoutAttributeNotAnAttribute
-                                     multiplier:1.0
-                                       constant:48],
-            [NSLayoutConstraint constraintWithItem:hud.customImageView
-                                      attribute:NSLayoutAttributeCenterX
-                                      relatedBy:NSLayoutRelationEqual
-                                         toItem:container
-                                      attribute:NSLayoutAttributeCenterX
-                                     multiplier:1.0
-                                       constant:0]
-        ]];
-        
-        if (!hud.statusLabel.hidden) {
-            // 有状态文本时的布局
-            [constraints addObjectsFromArray:@[
-                // 图片视图顶部约束
-                [NSLayoutConstraint constraintWithItem:hud.customImageView
-                                          attribute:NSLayoutAttributeTop
-                                          relatedBy:NSLayoutRelationEqual
-                                             toItem:container
-                                          attribute:NSLayoutAttributeTop
-                                         multiplier:1.0
-                                           constant:20],
-                // 状态标签约束
-                [NSLayoutConstraint constraintWithItem:hud.statusLabel
-                                          attribute:NSLayoutAttributeTop
-                                          relatedBy:NSLayoutRelationEqual
-                                             toItem:hud.customImageView
-                                          attribute:NSLayoutAttributeBottom
-                                         multiplier:1.0
-                                           constant:12],
-                [NSLayoutConstraint constraintWithItem:hud.statusLabel
-                                          attribute:NSLayoutAttributeLeading
-                                          relatedBy:NSLayoutRelationEqual
-                                             toItem:container
-                                          attribute:NSLayoutAttributeLeading
-                                         multiplier:1.0
-                                           constant:16],
-                [NSLayoutConstraint constraintWithItem:hud.statusLabel
-                                          attribute:NSLayoutAttributeTrailing
-                                          relatedBy:NSLayoutRelationEqual
-                                             toItem:container
-                                          attribute:NSLayoutAttributeTrailing
-                                         multiplier:1.0
-                                           constant:-16],
-                [NSLayoutConstraint constraintWithItem:hud.statusLabel
-                                          attribute:NSLayoutAttributeBottom
-                                          relatedBy:NSLayoutRelationEqual
-                                             toItem:container
-                                          attribute:NSLayoutAttributeBottom
-                                         multiplier:1.0
-                                           constant:-16]
-            ]];
-        } else {
-            // 无状态文本时，图片视图垂直居中
-            [constraints addObject:[NSLayoutConstraint constraintWithItem:hud.customImageView
-                                                          attribute:NSLayoutAttributeCenterY
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:container
-                                                          attribute:NSLayoutAttributeCenterY
-                                                         multiplier:1.0
-                                                           constant:0]];
-        }
-        
-        // 容器最小尺寸约束
-        [constraints addObjectsFromArray:@[
-            [container.widthAnchor constraintGreaterThanOrEqualToConstant:120],
-            [container.heightAnchor constraintGreaterThanOrEqualToConstant:100]
-        ]];
     }
 }
 

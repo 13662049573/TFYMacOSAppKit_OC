@@ -90,7 +90,6 @@
     pulseAnimation.autoreverses = YES;
     pulseAnimation.repeatCount = HUGE_VALF;
     pulseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    
     [view.layer addAnimation:pulseAnimation forKey:@"pulseAnimation"];
 }
 
