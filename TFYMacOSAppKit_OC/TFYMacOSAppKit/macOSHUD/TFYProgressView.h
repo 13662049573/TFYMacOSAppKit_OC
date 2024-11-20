@@ -1,14 +1,19 @@
+
+//
+//  TFYProgressIndicator.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2024/11/19.
+//
+
 #import <Cocoa/Cocoa.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 // 进度条样式
 typedef NS_ENUM(NSInteger, TFYProgressViewStyle) {
-    TFYProgressViewStyleDefault,      // 默认样式
-    TFYProgressViewStyleCircular,     // 圆形样式
+    TFYProgressViewStyleRing,     // 圆形样式
     TFYProgressViewStyleHorizontal,   // 水平样式
-    TFYProgressViewStylePie,          // 饼状样式
-    TFYProgressViewStyleRing          // 环形样式
 };
 
 @interface TFYProgressView : NSView

@@ -1,3 +1,12 @@
+
+//
+//  TFYProgressIndicator.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2024/11/19.
+//
+
+
 #import "TFYAnimationEnhancer.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -90,7 +99,6 @@
     pulseAnimation.autoreverses = YES;
     pulseAnimation.repeatCount = HUGE_VALF;
     pulseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    
     [view.layer addAnimation:pulseAnimation forKey:@"pulseAnimation"];
 }
 

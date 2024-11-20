@@ -64,7 +64,7 @@
             .pullsDown(NO)
             .autoenablesItems(YES)
             .preferredEdge(NSRectEdgeMinY)
-            .addItemsWithTitles(@[@"显示纯文本提示", @"显示错误提示", @"显示信息提示", @"显示多行文本提示", @"模拟文件上传场景", @"显示加载中", @"显示进度条", @"模拟网络请求场景",@"模拟登录场景",@"连续提示示例"])
+            .addItemsWithTitles(@[@"显示纯文本提示", @"显示错误提示", @"显示信息提示", @"显示多行文本提示", @"模拟文件上传场景", @"显示加载中", @"显示进度条", @"模拟网络请求场景",@"模拟登录场景",@"连续提示示例",@"添加图片"])
             .selectItemAtIndex(0)
             .addTarget(self, @selector(popUpButtonAction:))
             .frame(CGRectMake(50,450, 700, 40));
@@ -121,6 +121,9 @@
             break;
         case 9:
             [self showSequentialMessages];
+            break;
+        case 10:
+            [self showimageMessage];
             break;
         default:
             break;
@@ -350,5 +353,8 @@
     });
 }
 
+- (void)showimageMessage {
+    [TFYProgressMacOSHUD showImage:[NSImage imageNamed:@"mood_min_1"] status:@"极速发生本菲卡是本菲卡设备开发必胜客被罚款部分卡包卡包"];
+}
 
 @end

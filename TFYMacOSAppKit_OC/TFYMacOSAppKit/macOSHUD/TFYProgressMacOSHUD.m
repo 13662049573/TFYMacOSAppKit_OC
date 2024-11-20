@@ -9,19 +9,17 @@
 #import "TFYProgressMacOSHUD.h"
 #import "TFYLayoutManager.h"
 #import "TFYThemeManager.h"
-#import "TFYPerformanceMonitor.h"
-#import "TFYAnimationController.h"
 
 @interface TFYProgressMacOSHUD ()
 
 @property (nonatomic, strong, readwrite) NSView *containerView;
 @property (nonatomic, strong, readwrite) NSTextField *statusLabel;
-@property (nonatomic, strong, readwrite) NSProgressIndicator *activityIndicator;
-@property (nonatomic, strong, readwrite) NSProgressIndicator *progressView;
+@property (nonatomic, strong, readwrite) TFYProgressIndicator *activityIndicator;
+@property (nonatomic, strong, readwrite) TFYProgressView *progressView;
 @property (nonatomic, strong, readwrite) NSImageView *customImageView;
 @property (nonatomic, strong) TFYLayoutManager *layoutManager;
 @property (nonatomic, strong) TFYThemeManager *themeManager;
-@property (nonatomic, strong) TFYAnimationController *animationController;
+@property (nonatomic, strong) TFYAnimationEnhancer *animation;
 @property (nonatomic, strong) NSTimer *hideTimer;
 
 @end
@@ -37,15 +35,9 @@
         if (mainWindow) {
             NSView *contentView = mainWindow.contentView;
             contentView.wantsLayer = YES;
-            
             // 创建HUD
             sharedHUD = [[TFYProgressMacOSHUD alloc] initWithFrame:contentView.bounds];
             sharedHUD.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-            
-            // 设置HUD背景为透明
-            sharedHUD.wantsLayer = YES;
-            sharedHUD.layer.backgroundColor = [NSColor clearColor].CGColor;
-            
             // 添加到父视图
             [contentView addSubview:sharedHUD];
             
@@ -57,7 +49,6 @@
                 [sharedHUD.topAnchor constraintEqualToAnchor:contentView.topAnchor],
                 [sharedHUD.bottomAnchor constraintEqualToAnchor:contentView.bottomAnchor]
             ]];
-            
             sharedHUD.hidden = YES;
         }
     });
@@ -72,38 +63,15 @@
     return self;
 }
 
-
 - (void)commonInit {
     // 初始化管理器
     self.layoutManager = [[TFYLayoutManager alloc] init];
     self.themeManager = [[TFYThemeManager alloc] init];
-    self.animationController = [[TFYAnimationController alloc] init];
-    
-    // 创建半透明背景视图（蒙版）
-    NSView *backgroundView = [[NSView alloc] init];
-    backgroundView.wantsLayer = YES;
-    backgroundView.layer.backgroundColor = [[NSColor blackColor] colorWithAlphaComponent:0.3].CGColor;
-    backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:backgroundView];
-    
-    // 设置背景视图约束
-    [NSLayoutConstraint activateConstraints:@[
-        [backgroundView.topAnchor constraintEqualToAnchor:self.topAnchor],
-        [backgroundView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
-        [backgroundView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
-        [backgroundView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor]
-    ]];
+    self.animation = [[TFYAnimationEnhancer alloc] init];
     
     // 创建器视图
-    NSVisualEffectView *containerView = [[NSVisualEffectView alloc] init];
-    containerView.wantsLayer = YES;
-    containerView.material = NSVisualEffectMaterialHUDWindow;
-    containerView.blendingMode = NSVisualEffectBlendingModeBehindWindow;
-    containerView.state = NSVisualEffectStateActive;
-    containerView.layer.cornerRadius = 10.0;
-    containerView.layer.masksToBounds = YES;
-    self.containerView = containerView;
-    [self addSubview:containerView];
+    self.containerView = [[NSView alloc] init];
+    [self addSubview:self.containerView];
     
     // 创建子视图
     [self setupSubviews];
@@ -112,6 +80,7 @@
     [self setupInitialState];
     
     // 设置布局
+    [self.layoutManager setupHUDConstraints:self];
     [self.layoutManager setupConstraintsForHUD:self];
     [self.layoutManager setupAdaptiveLayoutForHUD:self];
     [self.layoutManager setupSubviewsConstraints:self];
@@ -119,16 +88,11 @@
 
 - (void)setupSubviews {
     // 活动指示器（加载圈）
-    self.activityIndicator = [[NSProgressIndicator alloc] init];
-    self.activityIndicator.style = NSProgressIndicatorStyleSpinning;
-    self.activityIndicator.controlSize = NSControlSizeRegular;
-    self.activityIndicator.indeterminate = YES;
-    self.activityIndicator.usesThreadedAnimation = YES;
-    self.activityIndicator.translatesAutoresizingMaskIntoConstraints = NO;
-    self.activityIndicator.wantsLayer = YES;
-    self.activityIndicator.layer.backgroundColor = [NSColor clearColor].CGColor;
-    self.activityIndicator.appearance = [NSAppearance appearanceNamed:NSAppearanceNameDarkAqua];
+    self.activityIndicator = [[TFYProgressIndicator alloc] init];
     [self.containerView addSubview:self.activityIndicator];
+    
+    self.progressView = [[TFYProgressView alloc] initWithStyle:TFYProgressViewStyleRing];
+    [self.containerView addSubview:self.progressView];
     
     // 状态标签
     self.statusLabel = [[NSTextField alloc] init];
@@ -151,53 +115,6 @@
     self.customImageView.imageScaling = NSImageScaleProportionallyDown;
     self.customImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.containerView addSubview:self.customImageView];
-    
-    // 设置customImageView的约束
-    [NSLayoutConstraint activateConstraints:@[
-        [self.customImageView.centerXAnchor constraintEqualToAnchor:self.containerView.centerXAnchor],
-        [self.customImageView.topAnchor constraintEqualToAnchor:self.containerView.topAnchor constant:20],
-        [self.customImageView.widthAnchor constraintEqualToConstant:32],
-        [self.customImageView.heightAnchor constraintEqualToConstant:32]
-    ]];
-    
-    // 如果状态标签存在，添加与customImageView的约束
-    if (self.statusLabel) {
-        [NSLayoutConstraint activateConstraints:@[
-            [self.statusLabel.topAnchor constraintEqualToAnchor:self.customImageView.bottomAnchor constant:12]
-        ]];
-    }
-    
-    // 设置容器视图约束
-    self.containerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [NSLayoutConstraint activateConstraints:@[
-        // 容器视图居中
-        [self.containerView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor],
-        [self.containerView.centerYAnchor constraintEqualToAnchor:self.centerYAnchor],
-        
-        // 容器视图最小尺寸
-        [self.containerView.widthAnchor constraintGreaterThanOrEqualToConstant:120],
-        [self.containerView.heightAnchor constraintGreaterThanOrEqualToConstant:120],
-        
-        // 容器视图内边距
-        [self.containerView.leadingAnchor constraintGreaterThanOrEqualToAnchor:self.leadingAnchor constant:40],
-        [self.containerView.trailingAnchor constraintLessThanOrEqualToAnchor:self.trailingAnchor constant:-40]
-    ]];
-    
-    // 设置活动指示器约束
-    [NSLayoutConstraint activateConstraints:@[
-        [self.activityIndicator.centerXAnchor constraintEqualToAnchor:self.containerView.centerXAnchor],
-        [self.activityIndicator.topAnchor constraintEqualToAnchor:self.containerView.topAnchor constant:20],
-        [self.activityIndicator.widthAnchor constraintEqualToConstant:32],
-        [self.activityIndicator.heightAnchor constraintEqualToConstant:32]
-    ]];
-    
-    // 设置状态标签约束
-    [NSLayoutConstraint activateConstraints:@[
-        [self.statusLabel.topAnchor constraintEqualToAnchor:self.activityIndicator.bottomAnchor constant:12],
-        [self.statusLabel.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor constant:16],
-        [self.statusLabel.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor constant:-16],
-        [self.statusLabel.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor constant:-16]
-    ]];
 }
 
 #pragma mark - 显示控制
@@ -205,8 +122,6 @@
 - (void)show {
     self.hidden = NO;
     self.alphaValue = 1.0;
-    // 应用主题
-    [self.themeManager applyThemeToHUD:self];
     // 确保视图在最上层
     if (self.superview) {
         [self.superview addSubview:self positioned:NSWindowAbove relativeTo:nil];
@@ -241,7 +156,7 @@
 
 - (void)showProgress:(float)progress status:(NSString *)status {
     self.mode = TFYHUDModeDeterminate;
-    self.progressView.doubleValue = progress;
+    self.progressView.progress = progress;
     self.statusLabel.stringValue = status ?: @"";
     [self show];
 }
@@ -261,28 +176,6 @@
     }
     self.statusLabel.stringValue = status ?: @"";
     [self show];
-}
-
-#pragma mark - 动画
-
-- (CAAnimation *)fadeInAnimation {
-    CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    fadeIn.fromValue = @0.0;
-    fadeIn.toValue = @1.0;
-    fadeIn.duration = 0.2;
-    fadeIn.fillMode = kCAFillModeForwards;
-    fadeIn.removedOnCompletion = NO;
-    return fadeIn;
-}
-
-- (CAAnimation *)fadeOutAnimation {
-    CABasicAnimation *fadeOut = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    fadeOut.fromValue = @1.0;
-    fadeOut.toValue = @0.0;
-    fadeOut.duration = 0.2;
-    fadeOut.fillMode = kCAFillModeForwards;
-    fadeOut.removedOnCompletion = NO;
-    return fadeOut;
 }
 
 #pragma mark - 便方法
@@ -316,21 +209,12 @@
 
 - (void)dealloc {
     [self.hideTimer invalidate];
-    [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - 初始状态设置方法
 
 - (void)setupInitialState {
-    // 设置HUD为透明
-    self.layer.backgroundColor = [NSColor clearColor].CGColor;
-    
-    // 设置状态标签的颜色
-    self.statusLabel.textColor = [NSColor labelColor];
-    
-    // 设置活动指示器
-    self.activityIndicator.controlSize = NSControlSizeRegular;
-    self.activityIndicator.style = NSProgressIndicatorStyleSpinning;
+    [self.themeManager applyThemeToHUD:self];
     
     // 隐藏所有指示器
     [self hideAllIndicators];
@@ -340,28 +224,10 @@
     self.alphaValue = 0.0;
 }
 
-- (void)systemAppearanceDidChange:(NSNotification *)notification {
-    // 系统外观改变时更新视图
-    [self updateAppearance];
-}
-
-- (void)updateAppearance {
-    // 更新状态标签颜色
-    self.statusLabel.textColor = [NSColor labelColor];
-    
-    // 更新容器视图外观
-    NSVisualEffectView *containerView = (NSVisualEffectView *)self.containerView;
-    containerView.material = NSVisualEffectMaterialHUDWindow;
-    
-    // 确保活动指示器背景透明
-    self.activityIndicator.layer.backgroundColor = [NSColor clearColor].CGColor;
-    self.activityIndicator.appearance = [NSAppearance appearanceNamed:NSAppearanceNameDarkAqua];
-}
-
 #pragma mark - 隐藏所有指示器的方法
 
 - (void)hideAllIndicators {
-    [self.activityIndicator stopAnimation:nil];
+    [self.activityIndicator stopAnimation];
     self.activityIndicator.hidden = YES;
     self.progressView.hidden = YES;
     self.customImageView.hidden = YES;
@@ -379,7 +245,7 @@
         case TFYHUDModeIndeterminate:
         case TFYHUDModeLoading:
             self.activityIndicator.hidden = NO;
-            [self.activityIndicator startAnimation:nil];
+            [self.activityIndicator startAnimation];
             self.statusLabel.hidden = NO;
             break;
             
@@ -474,7 +340,7 @@
         
         // 显示加载圈
         hud.activityIndicator.hidden = NO;
-        [hud.activityIndicator startAnimation:nil];
+        [hud.activityIndicator startAnimation];
         
         // 显示状态文本
         hud.statusLabel.stringValue = status ?: @"";
@@ -492,6 +358,15 @@
         TFYProgressMacOSHUD *hud = [self sharedHUD];
         hud.mode = TFYHUDModeDeterminate;
         [hud showProgress:progress status:status];
+    });
+}
+
++ (void)showImage:(NSImage *)image status:(NSString *)status {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        TFYProgressMacOSHUD *hud = [self sharedHUD];
+        hud.mode = TFYHUDModeCustomView;
+        [hud showImage:image status:status];
+        [hud hideAfterDelay:3.0];
     });
 }
 
@@ -531,7 +406,7 @@
     path.lineJoinStyle = NSLineJoinStyleRound;
     
     // 设置颜色并绘制
-    [[NSColor whiteColor] setStroke];
+    [[NSColor greenColor] setStroke];
     [path stroke];
     
     [image unlockFocus];

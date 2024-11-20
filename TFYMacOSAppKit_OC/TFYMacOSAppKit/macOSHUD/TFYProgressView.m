@@ -1,4 +1,15 @@
+//
+//  TFYProgressIndicator.m
+//  TFYMacOSAppKit_OC
+//
+//  Created by 田风有 on 2024/11/19.
+//
+
+
+
 #import "TFYProgressView.h"
+#import <QuartzCore/QuartzCore.h>
+#import <QuartzCore/CAAnimation.h>
 
 @interface TFYProgressView ()
 
@@ -21,11 +32,10 @@
         _progress = 0.0;
         _animated = YES;
         _animationDuration = 0.3;
-        _lineWidth = 2.0;
+        _lineWidth = 3.0;
         _progressColor = [NSColor systemBlueColor];
         _trackColor = [NSColor lightGrayColor];
         _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        
         [self commonInit];
     }
     return self;
@@ -34,7 +44,7 @@
 - (instancetype)initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
     if (self) {
-        _style = TFYProgressViewStyleDefault;
+        _style = TFYProgressViewStyleRing;
         _progress = 0.0;
         _animated = YES;
         _animationDuration = 0.3;
@@ -80,9 +90,7 @@
     CGRect bounds = self.bounds;
     CGPoint center = CGPointMake(NSMidX(bounds), NSMidY(bounds));
     CGFloat radius = MIN(NSWidth(bounds), NSHeight(bounds)) / 2 - self.lineWidth;
-    
     switch (self.style) {
-        case TFYProgressViewStyleCircular:
         case TFYProgressViewStyleRing: {
             CGPathRef circlePath = CGPathCreateWithEllipseInRect(
                 CGRectMake(center.x - radius, center.y - radius, radius * 2, radius * 2),
@@ -93,7 +101,6 @@
             CGPathRelease(circlePath);
             break;
         }
-        
         case TFYProgressViewStyleHorizontal: {
             CGMutablePathRef path = CGPathCreateMutable();
             CGPathMoveToPoint(path, NULL, NSMinX(bounds), NSMidY(bounds));
@@ -103,20 +110,6 @@
             CGPathRelease(path);
             break;
         }
-        
-        case TFYProgressViewStylePie: {
-            CGMutablePathRef piePath = CGPathCreateMutable();
-            CGPathMoveToPoint(piePath, NULL, center.x, center.y);
-            CGPathAddArc(piePath, NULL, center.x, center.y, radius, -M_PI_2, 3 * M_PI_2, NO);
-            CGPathCloseSubpath(piePath);
-            self.trackLayer.path = piePath;
-            self.progressLayer.path = piePath;
-            CGPathRelease(piePath);
-            self.progressLayer.fillColor = self.progressColor.CGColor;
-            self.trackLayer.fillColor = self.trackColor.CGColor;
-            break;
-        }
-            
         default:
             break;
     }
@@ -135,12 +128,10 @@
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated completion:(void(^)(void))completion {
     // 确保进度值在有效范围内
     progress = MIN(1.0, MAX(0.0, progress));
-    
     if (_progress == progress) {
         if (completion) completion();
         return;
     }
-    
     self.lastProgress = _progress;
     _progress = progress;
     self.completionBlock = completion;

@@ -7,15 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "TFYAnimationView.h"
-#import "TFYProgressView.h"
-#import "TFYAnimationController.h"
 #import "TFYAnimationEnhancer.h"
 #import "TFYGestureHandler.h"
 #import "TFYLayoutManager.h"
-#import "TFYPerformanceMonitor.h"
 #import "TFYThemeManager.h"
-#import "TFYAnimationMacOSUtility.h"
+#import "TFYProgressView.h"
+#import "TFYProgressIndicator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,8 +29,8 @@ typedef NS_ENUM(NSInteger, TFYHUDMode) {
 // 基本属性
 @property (nonatomic, strong, readonly) NSView *containerView;
 @property (nonatomic, strong, readonly) NSTextField *statusLabel;
-@property (nonatomic, strong, readonly) NSProgressIndicator *activityIndicator;
-@property (nonatomic, strong, readonly) NSProgressIndicator *progressView;
+@property (nonatomic, strong, readonly) TFYProgressIndicator *activityIndicator;
+@property (nonatomic, strong, readonly) TFYProgressView *progressView;
 @property (nonatomic, strong, readonly) NSImageView *customImageView;
 @property (nonatomic, assign) TFYHUDMode mode;
 
@@ -49,6 +46,7 @@ typedef NS_ENUM(NSInteger, TFYHUDMode) {
 + (void)showMessage:(NSString *)status;
 + (void)showLoading:(NSString *)status;
 + (void)showProgress:(float)progress status:(nullable NSString *)status;
++ (void)showImage:(NSImage *)image status:(NSString *)status;
 
 // 隐藏方法
 + (void)hideHUD;
