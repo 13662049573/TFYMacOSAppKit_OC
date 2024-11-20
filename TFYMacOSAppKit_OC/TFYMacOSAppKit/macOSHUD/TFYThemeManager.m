@@ -153,39 +153,7 @@
     NSColor *progressColor = self.currentTheme[@"progressColor"];
     if ([progressColor isKindOfClass:[NSColor class]]) {
         hud.progressView.progressColor = progressColor;
-        [hud.activityIndicator setColor:progressColor];
     }
-}
-
-- (void)updateSpinnerColor:(NSColor *)color hub:(TFYProgressMacOSHUD *)hud {
-    // 方法1：使用 Core Image 滤镜
-//    CIFilter *colorFilter = [CIFilter filterWithName:@"CIColorMonochrome"];
-//    [colorFilter setDefaults];
-//    [colorFilter setValue:[[CIColor alloc] initWithColor:color] forKey:@"inputColor"];
-//    [colorFilter setValue:@1.0 forKey:@"inputIntensity"];
-//    hud.activityIndicator.contentFilters = @[colorFilter];
-    
-    // 先转换为 RGB 颜色空间
-        NSColor *rgbColor = [color colorUsingColorSpace:NSColorSpace.sRGBColorSpace];
-        if (!rgbColor) {
-            // 如果转换失败，使用默认外观
-            hud.activityIndicator.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
-            return;
-        }
-        
-        CGFloat brightness = 0;
-        CGFloat red = 0, green = 0, blue = 0, alpha = 0;
-        [rgbColor getRed:&red green:&green blue:&blue alpha:&alpha];
-        
-        // 计算亮度 (使用感知亮度公式)
-        brightness = (red * 0.299 + green * 0.587 + blue * 0.114);
-        
-        if (brightness > 0.5) {
-            hud.activityIndicator.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
-        } else {
-            hud.activityIndicator.appearance = [NSAppearance appearanceNamed:NSAppearanceNameDarkAqua];
-        }
-   
 }
 
 - (void)observeSystemThemeChanges {
