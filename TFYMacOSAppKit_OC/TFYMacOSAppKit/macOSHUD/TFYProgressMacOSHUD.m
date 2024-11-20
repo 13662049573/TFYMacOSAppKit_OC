@@ -295,7 +295,7 @@
         }
         
         [hud showImage:errorImage status:status];
-        [hud hideAfterDelay:3.0];
+        [hud hideAfterDelay:2.0];
     });
 }
 
@@ -312,7 +312,7 @@
         }
         
         [hud showImage:infoImage status:status];
-        [hud hideAfterDelay:3.0];
+        [hud hideAfterDelay:2.0];
     });
 }
 
@@ -366,7 +366,7 @@
         TFYProgressMacOSHUD *hud = [self sharedHUD];
         hud.mode = TFYHUDModeCustomView;
         [hud showImage:image status:status];
-        [hud hideAfterDelay:3.0];
+        [hud hideAfterDelay:2.0];
     });
 }
 
