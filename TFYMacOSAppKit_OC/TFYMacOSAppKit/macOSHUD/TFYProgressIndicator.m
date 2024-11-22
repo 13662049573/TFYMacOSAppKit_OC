@@ -48,6 +48,7 @@
     self.progressIndicator.contentFilters = @[colorFilter];
     
     // 方法2：尝试直接设置层属性
+    self.progressIndicator.wantsLayer = YES;
     self.progressIndicator.layer.backgroundColor = NSColor.clearColor.CGColor;
     
     // 方法3：根据颜色设置外观
